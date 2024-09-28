@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Pedram's Homepage"
+title                    : "Sadjad's Homepage"
 title_separator          : "-"
-name                     : &name "Sayed Pedram Haeri"
+name                     : &name "Sadjad Alikhani"
 description              : &description "personal description"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,15 +80,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Sayed Pedram Haeri"
-  avatar           : "FullSizeRender.jpeg"
-  bio              : "Research Assistant <br/> Ph.D. | Clemson University <br/> Computer Science <br/> AI & Data Scientist"
-  location         : "Clemson, SC, USA"
+  name             : "Sadjad Alikhani"
+  avatar           : "sadjad.jpeg"
+  bio              : "Graduate Research Associate <br/> Ph.D. | Arizona State University <br/> Electrical Engineering <br/> AI & Data Scientist"
+  location         : "Tempe, AZ, USA"
   employer         : 
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=RL_CijgAAAAJ&hl=en&oi=ao"
-  email            : "shaerib@g.clemson.edu"
-  researchgate     : "https://www.researchgate.net/profile/Sayed-Pedram-Haeri"
+  googlescholar    : "https://scholar.google.com/citations?user=PKjnTR4AAAAJ&hl=en"
+  email            : "alikhani@asu.edu"
+  researchgate     : 
   uri              :
   bitbucket        :
   codepen          :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         : 
   foursquare       :
-  github           : "PedramHaeri"
+  github           : "sadjadalikhani"
   google_plus      :
   keybase          :
-  instagram        : "pedram_haeri"
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  instagram        : 
+  impactstory      : 
   lastfm           :
-  linkedin         : "sayed-pedram-haeri-6484a8172"
-  orcid            : "https://orcid.org/0000-0002-7913-1147"
+  linkedin         : "sadjadalikhani"
+  orcid            : "https://orcid.org/0009-0004-8249-9606"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
-  twitter          : #"MorBeh142"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
