@@ -1,5 +1,14 @@
 # main links links
 main:
+- title: "LWM"
+  url: /LWM/
+
+- title: "Digital Twin I"
+  url: /dt_1/
+
+- title: "DIgital Twin II"
+  url: /dt_2/
+  
 #  - title: "Publications"
 #    url: /publications/
 
