@@ -1,7 +1,7 @@
 # main links links
 main:
-- title: "LWM"
-  url: /LWM/
+- title: "Our Foundation Model!"
+  url: /lwm/
 
 - title: "Dataset Similarity"
   url: /dataset_similarity/
