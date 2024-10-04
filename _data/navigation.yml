@@ -3,11 +3,14 @@ main:
 - title: "LWM"
   url: /LWM/
 
-- title: "Digital Twin I"
-  url: /dt_1/
+- title: "Dataset Similarity"
+  url: /dataset_similarity/
 
-- title: "DIgital Twin II"
-  url: /dt_2/
+- title: "Digital Twins I"
+  url: /digital_twins_1/
+
+- title: "Digital Twins II"
+  url: /digital_twins_2/
   
 #  - title: "Publications"
 #    url: /publications/
