@@ -1,0 +1,3 @@
+Large Wireless Model (LWM) is the first foundation model in wireless communications!
+
+You’ve probably heard of large language models (LLMs) like GPT, which have revolutionized the way we process text. Similarly, LWM is specifically built to transform how we understand wireless channels, applying the same groundbreaking principles to this domain. LWM is a powerful, pre-trained model specifically designed for advanced feature extraction from wireless channel datasets like DeepMIMO. LWM leverages state-of-the-art transformer architectures to offer a deep, contextual understanding of wireless channels, making it the first of its kind tailored for wireless communications.
