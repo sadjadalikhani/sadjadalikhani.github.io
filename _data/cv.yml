@@ -2,96 +2,128 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Sadjad Alikhani
+    - name: Affiliation
+      value: Ph.D. student, Electrical Engineering, Arizona State University
+    - name: Lab
+      value: Wireless Intelligence Lab (Prof. Ahmed Alkhateeb)
+    - name: Email
+      value: alikhani@asu.edu
+    - name: Phone
+      value: +1 (602) 384-0687
+    - name: Location
+      value: Tempe, Arizona, USA
+
+- title: Research Interests
+  type: list
+  contents:
+    - Wireless communications
+    - Digital twins for communication and sensing
+    - Large foundation models for RF data
+    - Mathematical optimization and machine learning
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Electrical Engineering
+      institution: Arizona State University, Tempe, USA
+      year: Jan 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - GPA 4.00/4.00
+        - Supervisor - Prof. Ahmed Alkhateeb
+    - title: M.Sc. in Communications Engineering
+      institution: University of Tehran, Tehran, Iran
+      year: Nov 2020 - Sep 2023
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 3.75/4.00
+        - Thesis - Joint active and passive beamforming via reduced CSI in IRS-assisted MU-MIMO systems
+        - Supervisor - Prof. Amir Masoud Rabiei
+    - title: B.Sc. in Electrical Engineering
+      institution: Ferdowsi University of Mashhad, Mashhad, Iran
+      year: Sep 2016 - Sep 2020
+      description:
+        - GPA 3.19/4.00
+        - Thesis - Detection, demodulation, and displaying DVB-T signals with software-defined radio
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Associate
+      institution: Wireless Intelligence Lab, Arizona State University
+      year: Jan 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Lead research on large wireless models for channel representation learning
+        - Develop digital twin-aided channel estimation and calibration pipelines
+        - Build dataset similarity evaluation tools for wireless communication and sensing tasks
+    - title: Research Intern
+      institution: Nokia Bell Labs, Murray Hill, USA (remote)
+      year: Jun 2025 - Aug 2025
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Built a scalable multi-modal wireless dataset generation pipeline
+        - Pretrained foundation models for environment-aware communication and sensing
+    - title: Research Assistant
+      institution: University of Erlangen-Nuremberg, Germany (remote)
+      year: Sep 2022 - Nov 2022
       description:
+        - Designed IRS-aided MIMO algorithms under limited channel state information
+        - Produced simulation studies supporting theoretical findings
+    - title: Engineering Intern
+      institution: Mashhad Electric Power Distribution Company, Iran
+      year: Jun 2019 - Sep 2019
+      description:
+        - Assisted with deployment and maintenance of antennas, switches, and routers for substations
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Service and Teaching
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Competition Organizer
+      institution: LWM Multi-Task Optimization Challenge (ASU x ITU)
+      year: May 2025 - Oct 2025
+      description:
+        - Co-organized a global challenge with 65 participating teams
+        - Built the end-to-end competition package and datasets
+    - title: Peer Reviewer
+      institution: IEEE Journals (TCCN, TCOM, TSP)
+      year: Jan 2024 - Present
+      description:
+        - Reviewed seven journal submissions across cognitive communications and signal processing
+    - title: Teaching Assistant - Neural Networks
+      institution: University of Tehran
+      year: Sep 2022 - Jan 2023
+      description:
+        - Delivered reinforcement learning tutorials and designed assignments for 80+ students
+    - title: Teaching Assistant (multiple courses)
+      institution: Ferdowsi University of Mashhad
+      year: Sep 2017 - Jan 2021
+      description:
+        - Supported courses in circuits, communications, and mathematics for cohorts of 60 students per semester
 
-- title: Honors and Awards
+- title: Selected Skills
+  type: map
+  contents:
+    - name: Programming
+      value: Python, MATLAB, C, HTML/CSS
+    - name: Frameworks
+      value: PyTorch, TensorFlow, Keras, CVX, NumPy, Pandas
+    - name: Tools
+      value: Wireless InSite, Sionna-RT, CARLA, Blender, Altium Designer, Cisco Packet Tracer
+    - name: Soft Skills
+      value: Problem solving, teamwork, communication, leadership
+
+- title: Awards and Honors
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Emerging Talents Initiative (ETI) Grant, University of Erlangen-Nuremberg
+    - year: 2020
       items:
-        - Max Planck Medal
+        - Finalist, Iranian Electrical Engineering Olympiad
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Selected Academic Projects
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Precoding with reduced CSI in RIS-aided MIMO (MATLAB, CVX) - optimized active/passive beamforming under limited channel knowledge.
+    - Proactive eavesdropping in RIS-assisted communications - developed alternating optimization and SDR-based solutions.
+    - Low-complexity non-convex optimization - reinforcement learning approach for IRS-aided wireless problems benchmarked against AO/SDR.
+    - Music genre classification - built a 1,373-song Persian dataset and applied classical ML classifiers and clustering methods.

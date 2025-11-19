@@ -1,25 +1,39 @@
 ---
 layout: about
-title: about
+title: Sadjad Alikhani
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. student at the <a href="https://wireless.engineering.asu.edu/">Wireless Intelligence Lab</a>, Arizona State University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Wireless Intelligence Lab</p>
+    <p>Arizona State University</p>
+    <p>Tempe, AZ 85287</p>
+    <p><a href="mailto:alikhani@asu.edu">alikhani@asu.edu</a></p>
+    <p>+1 (602) 384-0687</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. student in Electrical Engineering at Arizona State University where I work with Prof. Ahmed Alkhateeb in the Wireless Intelligence Lab. My research focuses on building large wireless models, creating data driven digital twins, and understanding how multi-modal wireless datasets transfer across communication and sensing tasks.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I currently lead the LWM foundation model effort, spanning dataset generation, sparse spatio-temporal attention architectures, and evaluation pipelines that map directly to real-world network constraints. I also collaborate closely with industry partners, most recently during a research internship with Nokia Bell Labs, to translate these ideas into deployable prototypes.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## Research interests
+- Wireless communications and sensing co-design
+- Digital twin calibration for channel estimation and spectrum sharing
+- Large foundation models for baseband, spectrogram, and ray-tracing modalities
+- Mathematical optimization, reinforcement learning, and transfer learning
+
+## Recent highlights
+- Released the Large Wireless Model (LWM) arXiv preprint and open benchmark suite.
+- Co-organized the 2025 ITU x ASU LWM multi-task optimization challenge, supporting 65 global teams.
+- Developed a scalable, multi-modal wireless dataset engine during my Nokia Bell Labs internship.
+
+## Collaboration
+I am always interested in teaming up on large scale wireless datasets, evaluation benchmarks, or practical deployments of environment aware communication systems. Email is the fastest way to reach me, and you can also find me on <a href="https://linkedin.com/in/sadjadalikhani">LinkedIn</a>, <a href="https://github.com/sadjadalikhani">GitHub</a>, and <a href="https://huggingface.co/wi-lab">Hugging Face</a>.
