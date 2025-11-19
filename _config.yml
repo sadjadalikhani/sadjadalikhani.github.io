@@ -638,7 +638,7 @@ third_party_libraries:
 jekyll-twitter-plugin:
   api:
     enabled: false
-    
+
 jekyll_get_json:
   - data: resume
     json: assets/json/resume.json # it can also be an url

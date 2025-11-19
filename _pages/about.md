@@ -25,15 +25,18 @@ I am a Ph.D. student in Electrical Engineering at Arizona State University where
 I currently lead the LWM foundation model effort, spanning dataset generation, sparse spatio-temporal attention architectures, and evaluation pipelines that map directly to real-world network constraints. I also collaborate closely with industry partners, most recently during a research internship with Nokia Bell Labs, to translate these ideas into deployable prototypes.
 
 ## Research interests
+
 - Wireless communications and sensing co-design
 - Digital twin calibration for channel estimation and spectrum sharing
 - Large foundation models for baseband, spectrogram, and ray-tracing modalities
 - Mathematical optimization, reinforcement learning, and transfer learning
 
 ## Recent highlights
+
 - Released the Large Wireless Model (LWM) arXiv preprint and open benchmark suite.
 - Co-organized the 2025 ITU x ASU LWM multi-task optimization challenge, supporting 65 global teams.
 - Developed a scalable, multi-modal wireless dataset engine during my Nokia Bell Labs internship.
 
 ## Collaboration
+
 I am always interested in teaming up on large scale wireless datasets, evaluation benchmarks, or practical deployments of environment aware communication systems. Email is the fastest way to reach me, and you can also find me on <a href="https://linkedin.com/in/sadjadalikhani">LinkedIn</a>, <a href="https://github.com/sadjadalikhani">GitHub</a>, and <a href="https://huggingface.co/wi-lab">Hugging Face</a>.
