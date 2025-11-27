@@ -1,34 +1,50 @@
 ---
 layout: about
-title: about
+title: Sadjad Alikhani
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. student at the <a href="https://wireless.engineering.asu.edu/">Wireless Intelligence Lab</a>, Arizona State University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+    <p>Wireless Intelligence Lab</p>
+    <p>School of Electrical, Computer and Energy Engineering</p>
+    <p>Arizona State University, Tempe, AZ</p>
+    <p><a href="mailto:alikhani@asu.edu">alikhani@asu.edu</a></p>
+    <p>+1 (602) 384-0687</p>
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 5
 
+selected_papers: true
+social: true
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. student in Electrical Engineering at Arizona State University where I work with Prof. Ahmed Alkhateeb in the Wireless Intelligence Lab. My research focuses on building large wireless models, multimodal digital twins, and dataset similarity tools that enable practical generalization across communication and sensing tasks.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I currently lead the Large Wireless Model (LWM) effort, which spans scalable data generation pipelines, sparse spatio-temporal attention architectures, and transfer evaluation suites. I also collaborate closely with industry partners—most recently with Nokia Bell Labs—to translate these ideas into deployable prototypes for environment-aware networks.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## Research interests
+
+- Foundation models for wireless channels and spectrograms
+- Digital twin calibration for channel estimation, spectrum sharing, and sensing
+- Dataset similarity metrics for communication and sensing workloads
+- Mathematical optimization, reinforcement learning, and transfer learning
+
+## Highlights
+
+- Released the LWM arXiv preprint and public benchmark suite for universal wireless feature extraction.
+- Co-organized the 2025 ITU × ASU LWM multi-task optimization challenge, supporting 65 global teams and evaluating all submissions.
+- Built a multi-modal, city-scale wireless dataset pipeline during my Nokia Bell Labs internship to pretrain environment-aware foundation models.
+
+## Collaboration
+
+I am always interested in teaming up on large-scale wireless datasets, evaluation benchmarks, or practical deployments of digital twin-guided communication systems. Email is the best way to reach me, and you can also find me on <a href="https://linkedin.com/in/sadjadalikhani">LinkedIn</a>, <a href="https://github.com/sadjadalikhani">GitHub</a>, and <a href="https://huggingface.co/wi-lab">Hugging Face</a>.
