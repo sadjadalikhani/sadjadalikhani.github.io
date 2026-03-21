@@ -1,221 +1,340 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Sadjad Alikhani",
+    "label": "Ph.D. Student in Electrical Engineering",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "alikhani@asu.edu",
+    "phone": "",
+    "url": "https://sadjadalikhani.github.io/",
+    "summary": "Ph.D. student at Arizona State University working with Professor Ahmed Alkhateeb on wireless foundation models, digital twins, and data-centric evaluation for communication and sensing.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "city": "Tempe",
       "countryCode": "US",
-      "region": "California"
+      "region": "Arizona"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "sadjadalikhani",
+        "url": "https://linkedin.com/in/sadjadalikhani"
+      },
+      {
+        "network": "GitHub",
+        "username": "sadjadalikhani",
+        "url": "https://github.com/sadjadalikhani"
+      },
+      {
+        "network": "Hugging Face",
+        "username": "wi-lab",
+        "url": "https://huggingface.co/wi-lab"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "PKjnTR4AAAAJ",
+        "url": "https://scholar.google.com/citations?user=PKjnTR4AAAAJ"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "Arizona State University, Tempe, United States",
+      "position": "Research Associate, Wireless Intelligence Lab",
+      "url": "https://wi-lab.net/",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "summary": "Advisor: Professor Ahmed Alkhateeb",
+      "highlights": [
+        "Focus: Foundation models for wireless channels, digital twin aided systems, and dataset similarity."
+      ]
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "name": "Nokia Bell Labs, Murray Hill, United States (Remote)",
+      "position": "Research Intern",
+      "url": "https://www.bell-labs.com/",
+      "startDate": "2025-06-01",
+      "endDate": "2025-08-01",
+      "summary": "Summer research internship",
+      "highlights": [
+        "Developed a large-scale multimodal digital twin dataset pipeline.",
+        "Used the dataset to pretrain environment-aware foundation models for communication and sensing."
+      ]
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "University of Erlangen-Nuremberg, Erlangen, Germany (Remote)",
+      "position": "Research Assistant",
+      "url": "https://www.fau.eu/",
+      "startDate": "2022-09-01",
+      "endDate": "2022-11-01",
+      "summary": "Advisor: Professor Ralf Mueller",
+      "highlights": [
+        "Designed and simulated algorithms for RIS-aided MIMO communication under limited CSI."
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "Arizona State University, Tempe, United States",
+      "location": "Tempe, Arizona, United States",
+      "position": "Competition Organizer",
+      "url": "#",
+      "startDate": "2025-05-01",
+      "endDate": "2025-10-01",
+      "summary": "LWMMulti-Task Optimization Challenge",
+      "highlights": [
+        "Co-organized the ITU Large Wireless Models challenge.",
+        "Prepared the competition package, supported participants, and evaluated submissions from 65 teams."
+      ]
+    },
+    {
+      "organization": "Arizona State University, Tempe, United States",
+      "location": "Tempe, Arizona, United States",
+      "position": "Peer Reviewer",
+      "url": "#",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "summary": "Professional service",
+      "highlights": [
+        "Journals: IEEE TCCN, IEEE TCOM, IEEE TSP, IEEE TWC.",
+        "Conferences: IEEE SPAWC, IEEE ICC."
+      ]
+    },
+    {
+      "organization": "University of Tehran, Tehran, Iran",
+      "location": "Tehran, Iran",
+      "position": "Teaching Assistant",
+      "url": "#",
+      "startDate": "2022-09-01",
+      "endDate": "2023-01-01",
+      "summary": "Courses: Neural Networks, Advanced Communication Theory",
+      "highlights": [
+        "Prepared a hands-on introduction to reinforcement learning with Python.",
+        "Designed assignments and graded work for more than 80 students."
+      ]
+    },
+    {
+      "organization": "Ferdowsi University of Mashhad, Mashhad, Iran",
+      "location": "Mashhad, Iran",
+      "position": "Teaching Assistant",
+      "url": "#",
+      "startDate": "2017-09-01",
+      "endDate": "2021-01-01",
+      "summary": "Courses in circuits, signals and systems, communication systems, electrical engineering, and general mathematics",
+      "highlights": [
+        "Tutored approximately 60 students per semester.",
+        "Supported weekly sessions, graded assignments, and prepared quizzes and projects."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Arizona State University, Tempe, United States",
+      "location": "Tempe, Arizona, United States",
+      "url": "https://asu.edu/",
+      "area": "Electrical Engineering",
+      "studyType": "Doctor of Philosophy",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "score": "3.97/4.00",
+      "courses": [
+        "Supervisor: Professor Ahmed Alkhateeb"
+      ]
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
-      "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "University of Tehran, Tehran, Iran",
+      "location": "Tehran, Iran",
+      "url": "https://ut.ac.ir/en",
+      "area": "Communications Engineering",
+      "studyType": "Master of Science",
+      "startDate": "2020-11-01",
+      "endDate": "2023-09-01",
+      "score": "3.75/4.00",
+      "courses": [
+        "Thesis: Joint active and passive beamforming via reduced channel state information in reconfigurable intelligent surface assisted multiuser multiple input multiple output systems.",
+        "Supervisor: Professor Amir Masoud Rabiei"
+      ]
+    },
+    {
+      "institution": "Ferdowsi University of Mashhad, Mashhad, Iran",
+      "location": "Mashhad, Iran",
+      "url": "https://um.ac.ir/en",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2016-09-01",
+      "endDate": "2020-09-01",
+      "score": "3.19/4.00",
+      "courses": [
+        "Thesis: Detection, demodulation, and displaying digital video broadcasting terrestrial television signals with software defined radio.",
+        "Supervisor: Professor Mehdi Saberi"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Emerging Talents Initiative Grant",
+      "date": "2022-09-01",
+      "awarder": "University of Erlangen-Nuremberg",
+      "url": "#",
+      "summary": "Awarded for academic excellence and research potential."
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
-      "summary": ""
+      "title": "Finalist, Iranian Electrical Engineering Olympiad",
+      "date": "2020-09-01",
+      "awarder": "Iranian Electrical Engineering Olympiad",
+      "url": "#",
+      "summary": "Recognized as a finalist in the national competition."
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "LWM-Temporal: Sparse spatio-temporal attention for wireless channel representation learning",
+      "publisher": "Submitted to IEEE ICC",
+      "releaseDate": "2026-01-01",
+      "url": "#",
+      "summary": "S. Alikhani, A. Malhotra, S. Hamidi-Rad, and A. Alkhateeb."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "LWM-Spectro: A foundation model for wireless baseband signal spectrograms",
+      "publisher": "Submitted to IEEE ICC",
+      "releaseDate": "2026-01-01",
+      "url": "#",
+      "summary": "N. Kim, S. Alikhani, and A. Alkhateeb."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "LWM: A pre-trained wireless foundation model for universal feature extraction",
+      "publisher": "IEEE ICMLCN",
+      "releaseDate": "2025-01-01",
+      "url": "#",
+      "summary": "S. Alikhani, G. Charan, and A. Alkhateeb, pp. 1-6."
+    },
+    {
+      "name": "Digital twin aided channel estimation: Zone specific subspace prediction and calibration",
+      "publisher": "IEEE ICMLCN",
+      "releaseDate": "2025-01-01",
+      "url": "#",
+      "summary": "S. Alikhani and A. Alkhateeb, pp. 1-6."
+    },
+    {
+      "name": "Large wireless model: A foundation model for wireless channels",
+      "publisher": "arXiv preprint arXiv:2411.08872",
+      "releaseDate": "2024-11-01",
+      "url": "https://arxiv.org/abs/2411.08872",
+      "summary": "S. Alikhani, G. Charan, and A. Alkhateeb."
+    },
+    {
+      "name": "A dataset similarity evaluation framework for wireless communications and sensing",
+      "publisher": "Asilomar Conference on Signals, Systems, and Computers",
+      "releaseDate": "2024-01-01",
+      "url": "#",
+      "summary": "J. Morais, S. Alikhani, A. Malhotra, S. Hamidi-Rad, and A. Alkhateeb."
+    },
+    {
+      "name": "Digital twin aided reconfigurable intelligent surface communication: Robust beamforming and interference management",
+      "publisher": "IEEE VTC",
+      "releaseDate": "2024-01-01",
+      "url": "#",
+      "summary": "S. Alikhani and A. Alkhateeb, pp. 1-6."
+    },
+    {
+      "name": "Digital twin for spectrum sharing and coexistence: Coordinating the uncoordinated",
+      "publisher": "IEEE SPAWC",
+      "releaseDate": "2024-01-01",
+      "url": "#",
+      "summary": "S. Alikhani and A. Alkhateeb, pp. 796-800."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Technical",
+      "level": "",
+      "icon": "fa-solid fa-code",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Python",
+        "MATLAB",
+        "PyTorch",
+        "TensorFlow",
+        "CVX",
+        "Wireless InSite",
+        "Sionna-RT",
+        "CARLA Simulator",
+        "Blender"
+      ]
+    },
+    {
+      "name": "Soft",
+      "level": "",
+      "icon": "fa-solid fa-people-group",
+      "keywords": [
+        "Problem solving",
+        "Teamwork",
+        "Communication",
+        "Leadership",
+        "Adaptability"
       ]
     }
   ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
+  "languages": [],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
+      "name": "Research Interests",
+      "icon": "fa-solid fa-satellite-dish",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Wireless communications",
+        "Mathematical optimization",
+        "Machine learning",
+        "Digital twins"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    },
-    {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    }
-  ],
+  "references": [],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
+      "name": "Precoding with reduced CSI in RIS-aided MIMO",
+      "summary": "Studied precoding strategies for RIS-assisted MIMO systems under limited CSI using convex optimization tools.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Proactive eavesdropping in RIS-assisted communications",
+      "summary": "Developed optimization-based methods for proactive eavesdropping using alternating optimization and semidefinite relaxation.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Music genre classification and clustering",
+      "summary": "Built a dataset of Persian songs, extracted features, and performed supervised and unsupervised learning for music genre analysis.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Low-complexity non-convex optimization",
+      "summary": "Designed an RL-based algorithm for non-convex optimization in RIS-aided communications and compared it with conventional methods.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Simulation of signal processing papers",
+      "summary": "Reproduced published results on semi-blind channel estimation and adaptive beamforming with MATLAB-based simulations.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Smart restaurant model",
+      "summary": "Designed a prototype with a website, RFID-based entry, database-backed ordering, and a customer notification pipeline.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Detection and demodulation of DVB-T signals",
+      "summary": "Implemented demodulation, error correction, and decompression of digital video broadcasting terrestrial signals using software defined radio.",
+      "highlights": [],
+      "url": "#"
+    },
+    {
+      "name": "Network design",
+      "summary": "Designed and simulated network architectures with VLANs, spanning tree, subnetting, trunking, FTP, and OSPF routing in Cisco Packet Tracer.",
+      "highlights": [],
+      "url": "#"
     }
   ]
 }

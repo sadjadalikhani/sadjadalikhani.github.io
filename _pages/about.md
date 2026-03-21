@@ -1,34 +1,46 @@
 ---
 layout: about
-title: about
+title: Sadjad Alikhani
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. student at the Wireless Intelligence Lab, ASU
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: sadjad.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+    <p>Wireless Intelligence Lab</p>
+    <p>ASU, Tempe, AZ</p>
+    <p><a href="mailto:alikhani@asu.edu">alikhani@asu.edu</a></p>
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 10
 
+selected_papers: true
+social: true
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. student in Electrical Engineering at Arizona State University where I work under Prof. <a href="https://scholar.google.com/citations?user=dLHw2qcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Ahmed Alkhateeb</a> in the <a href="https://wi-lab.net/">Wireless Intelligence Lab</a>. My research focuses on building Large Wireless Models, digital twins, and dataset similarity frameworks that enable practical generalization across communication and sensing tasks.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I currently lead the <a href="https://lwm-wireless.net/">Large Wireless Model (LWM)</a> effort, which spans scalable data generation pipelines, sparse spatio-temporal attention architectures, and transfer evaluation suites. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<div class="lwm-links">
+  <a class="lwm-pill primary" href="https://lwm-wireless.net/" target="_blank" rel="noopener noreferrer">LWM website</a>
+  <a class="lwm-pill" href="https://huggingface.co/wi-lab" target="_blank" rel="noopener noreferrer">Hugging Face (wi-lab)</a>
+  <a class="lwm-pill" href="https://github.com/sadjadalikhani" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a class="lwm-pill" href="https://www.linkedin.com/in/sadjadalikhani/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a class="lwm-pill" href="https://scholar.google.com/citations?user=PKjnTR4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+</div>
+
+## research interests
+
+- **Foundation models** for wireless communication and sensing
+- **Digital twin** construction, applications, and calibration
+- Asymmetric task-specific/agnostic **dataset similarity** frameworks
+- **Environmental perception** for wireless sensing and digital twins

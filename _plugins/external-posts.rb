@@ -23,12 +23,17 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
+      rss_url = src['rss_url'].to_s.strip
+      if rss_url.empty?
+        puts "Skipping #{src['name'] || 'external source'}: rss_url missing."
+        return
+      end
+      xml = HTTParty.get(rss_url).body
       return if xml.nil?
       begin
         feed = Feedjira.parse(xml)
       rescue StandardError => e
-        puts "Error parsing RSS feed from #{src['rss_url']} - #{e.message}"
+        puts "Error parsing RSS feed from #{rss_url} - #{e.message}"
         return
       end
       process_entries(site, src, feed.entries)
@@ -42,11 +47,11 @@ module ExternalPosts
           content: e.content,
           summary: e.summary,
           published: e.published
-        }, src)
+        })
       end
     end
 
-    def create_document(site, source_name, url, content, src = {})
+    def create_document(site, source_name, url, content)
       # check if title is composed only of whitespace or foreign characters
       if content[:title].gsub(/[^\w]/, '').strip.empty?
         # use the source name and last url segment as fallback
@@ -67,25 +72,21 @@ module ExternalPosts
       doc.data['description'] = content[:summary]
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
-      
-      # Apply default categories and tags from source configuration
-      if src['categories'] && src['categories'].is_a?(Array) && !src['categories'].empty?
-        doc.data['categories'] = src['categories']
-      end
-      if src['tags'] && src['tags'].is_a?(Array) && !src['tags'].empty?
-        doc.data['tags'] = src['tags']
-      end
-      
       doc.content = content[:content]
       site.collections['posts'].docs << doc
     end
 
     def fetch_from_urls(site, src)
       src['posts'].each do |post|
-        puts "...fetching #{post['url']}"
-        content = fetch_content_from_url(post['url'])
+        post_url = post['url'].to_s.strip
+        if post_url.empty?
+          puts "Skipping post for #{src['name'] || 'external source'}: url missing."
+          next
+        end
+        puts "...fetching #{post_url}"
+        content = fetch_content_from_url(post_url)
         content[:published] = parse_published_date(post['published_date'])
-        create_document(site, src['name'], post['url'], content, src)
+        create_document(site, src['name'], post_url, content)
       end
     end
 

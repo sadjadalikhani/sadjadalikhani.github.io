@@ -45,3 +45,20 @@ nav_order: 4
   {% endfor %}
 </div>
 {% endif %}
+
+{% if site.data.repositories.huggingface_repos %}
+
+<div class="my-5"></div>
+
+## Hugging Face Models
+
+<p class="text-muted">
+  Demos, checkpoints, and evaluation packages that live on the 🤗 Hub. These are the same artifacts powering the LWM publications and competition tracks.
+</p>
+
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for repo in site.data.repositories.huggingface_repos %}
+    {% include repository/hf_repo.liquid repo=repo %}
+  {% endfor %}
+</div>
+{% endif %}

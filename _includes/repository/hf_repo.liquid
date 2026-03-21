@@ -1,0 +1,50 @@
+<div class="hf-repo-card">
+  <div class="hf-repo-header">
+    <div class="hf-repo-logo">
+      <span>🤗</span>
+    </div>
+    <div>
+      <p class="hf-label text-uppercase">Hugging Face</p>
+      <h3 class="hf-title m-0">
+        <a href="{{ include.repo.url }}" target="_blank" rel="noopener">{{ include.repo.name }}</a>
+      </h3>
+    </div>
+  </div>
+  <p class="hf-description">{{ include.repo.description }}</p>
+  {% if include.repo.tags %}
+  <div class="hf-tags">
+    {% for tag in include.repo.tags %}
+    <span class="hf-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="hf-cta">
+    <div class="hf-cta-group">
+      <a class="hf-button" href="{{ include.repo.url }}" target="_blank" rel="noopener">
+        Model
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </a>
+      {% if include.repo.paper_url %}
+      <a class="hf-button" href="{{ include.repo.paper_url }}" target="_blank" rel="noopener">
+        Paper
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </a>
+      {% endif %}
+      {% if include.repo.lab_url %}
+      <a class="hf-button" href="{{ include.repo.lab_url }}" target="_blank" rel="noopener">
+        Lab
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

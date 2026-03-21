@@ -1,33 +1,30 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: Released LWM 1.0, the first foundation model for wireless channels
+date: 2024-11-13 16:11:00-0400
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+> The most effective methods in AI are those that leverage computation and general-purpose approaches, rather than relying on hand-engineered knowledge or human-designed representations.
+<span style="color:#888;">—Richard Sutton, The Bitter Lesson</span>
 
----
+LWM, the first **large wireless foundation model**, is now publicly available.  
+It is trained on diverse digital-twin data and designed to act as a **universal feature extractor** for wireless communication and sensing tasks.
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+### LWM resources
 
-#### Hipster list
-
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
-
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
-
----
-
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
-
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+<div class="lwm-links">
+  <a class="lwm-pill primary" href="https://lwm-wireless.net" target="_blank" rel="noopener">Website</a>
+  <a class="lwm-pill" href="https://huggingface.co/wi-lab/lwm" target="_blank" rel="noopener">LWM 1.0 (HF)</a>
+  <a class="lwm-pill" href="https://huggingface.co/wi-lab/lwm-v1.1" target="_blank" rel="noopener">LWM 1.1 (HF)</a>
+  <a class="lwm-pill" href="https://huggingface.co/spaces/wi-lab/lwm-interactive-demo" target="_blank" rel="noopener">Interactive Lab I</a>
+  <a class="lwm-pill" href="https://huggingface.co/spaces/wi-lab/dataset-distancing-lab" target="_blank" rel="noopener">Interactive Lab II</a>
+  <a class="lwm-pill" href="https://lwm-wireless.net/challenge" target="_blank" rel="noopener">LWM Competition Page</a>
+  <a class="lwm-pill" href="https://huggingface.co/wi-lab/lwm-competition-2025" target="_blank" rel="noopener">Competition Package</a>
+  <a class="lwm-pill" href="https://deepmimo.net" target="_blank" rel="noopener">DeepMIMO Dataset</a>
+  <a class="lwm-pill" href="https://speakerdeck.com/lwm-temporal" target="_blank" rel="noopener">Slides</a>
+  <a class="lwm-pill" href="https://medium.com/@wi-lab/lwm-temporal-sparse-spatio-temporal-attention-for-wireless-channel-representation-learning" target="_blank" rel="noopener">Blog Post</a>
+  <a class="lwm-pill" href="https://lwm-wireless.net/tutorials" target="_blank" rel="noopener">Tutorial Videos</a>
+  <a class="lwm-pill" href="https://colab.research.google.com/drive/1uA4ua8xqdc5XUZjzqIK8fRp8FhYtTxKB?authuser=1#scrollTo=4xPULSHkyWv1" target="_blank" rel="noopener">Colab Notebooks</a>
+</div>

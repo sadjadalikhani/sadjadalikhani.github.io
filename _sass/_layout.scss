@@ -2,8 +2,6 @@
  * Content
  ******************************************************************************/
 
-@use "variables" as v;
-
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -21,7 +19,7 @@ body {
 
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
-  padding-top: 57px;
+  padding-top: 56px;
 }
 
 body.sticky-bottom-footer {
@@ -30,29 +28,246 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: v.$max-content-width;
+  max-width: $max-content-width;
 }
 
 // Profile
 .profile {
+  // Keep image responsive
   img {
     width: 100%;
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    transform-origin: center center;
+  }
+
+  // Contain the zoom effect inside the profile box
+  overflow: hidden;
+
+  // Zoom image on hover
+  &:hover img {
+    transform: scale(1.1);
   }
 }
 
-// Content layout uses Bootstrap's grid system with responsive columns
-// Main content flows naturally through container-mt-5 and Bootstrap grid classes
-// See _layouts/default.liquid and _includes/projects.liquid for examples
+// News list styling
+.news {
+  .news-item {
+    .news-title {
+      // inherit default font-weight
+    }
+
+    .news-link-icon {
+      margin-left: 0.5rem;
+      color: var(--global-theme-color);
+      opacity: 0.8;
+      text-decoration: none;
+      font-size: 0.9em;
+
+      i {
+        vertical-align: middle;
+      }
+
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// LWM resources pill links
+.lwm-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.lwm-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--global-text-color);
+  background-color: var(--global-card-bg-color);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    color: var(--global-hover-text-color);
+    background-color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  &.primary {
+    border-color: var(--global-theme-color);
+  }
+}
+
+// TODO: redefine content layout.
 
 /******************************************************************************
  * Publications
  ******************************************************************************/
 
-// Publications layout is defined in _includes/bib_search.liquid
-// Uses jekyll-scholar for BibTeX parsing and Bootstrap cards for display
+// TODO: redefine publications layout.
 
 /*****************************************************************************
 * Projects
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/******************************************************************************
+ * Hugging Face repo cards
+ ******************************************************************************/
+
+.hf-repo-card {
+  background: linear-gradient(135deg, #fff7cc, #ffe1ec 65%, #f6f8ff);
+  color: #2d1b2f;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(249, 168, 212, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hf-repo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.hf-repo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(249, 168, 212, 0.35);
+}
+
+.hf-repo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.hf-repo-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hf-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 0.2rem;
+}
+
+.hf-title a {
+  color: #2d1b2f;
+  text-decoration: none;
+}
+
+.hf-title a:hover {
+  text-decoration: underline;
+}
+
+.hf-description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.hf-tags {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.hf-tag {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.hf-repo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.6), transparent 55%);
+  pointer-events: none;
+}
+
+.dark
+  .hf-repo-card {
+  background: linear-gradient(135deg, #43235c, #272034 65%, #1e2235);
+  color: #f7e9ff;
+  box-shadow: 0 12px 28px rgba(15, 9, 21, 0.6);
+}
+
+.dark
+  .hf-repo-card::after {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark
+  .hf-repo-card::before {
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 55%);
+}
+
+.hf-cta {
+  margin-top: 1rem;
+}
+
+.hf-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  background: #ff8dc7;
+  color: #4a213e;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(255, 141, 199, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hf-button:hover {
+  transform: translateX(3px);
+  box-shadow: 0 12px 28px rgba(255, 141, 199, 0.5);
+}
+
+.about-page .clearfix p,
+.about-page .clearfix li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}

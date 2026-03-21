@@ -17,11 +17,41 @@
         {% for item in news limit: news_limit %}
           <tr>
             <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
+            <td class="news-item">
+              {% assign inline_content = item.content | remove: '<p>' | remove: '</p>' | emojify | strip %}
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% if item.news_url %}
+                  <span class="news-title">{{ inline_content }}</span>
+                  <a
+                    class="news-link-icon"
+                    href="{{ item.news_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    aria-label="Open announcement link"
+                  >
+                    <i class="ti ti-arrow-up-right"></i>
+                  </a>
+                {% else %}
+                  {{ inline_content }}
+                {% endif %}
               {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <span class="news-title">{{ item.title }}</span>
+                {% if item.news_url %}
+                  {% assign link_url = item.news_url %}
+                {% else %}
+                  {% assign link_url = item.url | relative_url %}
+                {% endif %}
+                <a
+                  class="news-link-icon"
+                  href="{{ link_url }}"
+                  {% if item.news_url %}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  {% endif %}
+                  aria-label="Open full announcement"
+                >
+                  <i class="ti ti-arrow-up-right"></i>
+                </a>
               {% endif %}
             </td>
           </tr>

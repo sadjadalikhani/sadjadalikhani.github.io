@@ -1,14 +1,31 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - sadjadalikhani
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - sadjadalikhani/Digital-twin-aided-channel-estimation
+  - sadjadalikhani/Digital-twin-aided-RIS-communication
+  - sadjadalikhani/Digital-twin-aided-spectrum-coexistence
+  - sadjadalikhani/Semi-blind-channel-estimation
+  - sadjadalikhani/Adaptive-reduced-rank-beamforming
+
+huggingface_repos:
+  - name: Large Wireless Model (LWM)
+    url: https://huggingface.co/wi-lab/lwm
+    description: Foundation model checkpoints and inference scripts for universal wireless feature extraction.
+    tags: [foundation-model, universal]
+  - name: LWM-Spectro
+    url: https://huggingface.co/wi-lab/lwm-spectro
+    description: Spectrogram-focused encoder/decoder stack for wireless sensing and spectrum analytics.
+    tags: [spectrogram, sensing]
+  - name: LWM-Temporal
+    url: https://huggingface.co/wi-lab/lwm-temporal
+    paper_url: https://arxiv.org/abs/2603.10024
+    lab_url: https://huggingface.co/spaces/wi-lab/lwm-temporal-lab
+    description: Sparse spatio-temporal attention models for channel prediction and beam recommendation.
+    tags: [temporal, attention]
+  - name: LWM Competition 2025
+    url: https://huggingface.co/wi-lab/lwm-competition-2025
+    description: Data loaders, baselines, and evaluation harness released for the ITU × ASU optimization challenge.
+    tags: [challenge, benchmark]

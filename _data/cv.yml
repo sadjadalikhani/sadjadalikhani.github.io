@@ -1,189 +1,153 @@
-cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Sadjad Alikhani
+    - name: Email
+      value: alikhani@asu.edu
+    - name: Location
+      value: Tempe, Arizona, United States
+    - name: LinkedIn
+      value: https://linkedin.com/in/sadjadalikhani
+    - name: GitHub
+      value: https://github.com/sadjadalikhani
+    - name: Google Scholar
+      value: https://scholar.google.com/citations?user=PKjnTR4AAAAJ
+    - name: Research Group
+      value: https://lwm-wireless.net/
 
-  social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
+- title: Research Interests
+  type: list
+  contents:
+    - Wireless communications
+    - Mathematical optimization
+    - Machine learning
+    - Digital twins
 
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+- title: Education
+  type: time_table
+  contents:
+    - title: Doctor of Philosophy in Electrical Engineering
+      institution: Arizona State University, Tempe, United States
+      year: Jan 2024 - Present
+      description:
+        - "GPA: 3.97/4.00"
+        - "Supervisor: Professor Ahmed Alkhateeb"
+    - title: Master of Science in Communications Engineering
+      institution: University of Tehran, Tehran, Iran
+      year: Nov 2020 - Sep 2023
+      description:
+        - "GPA: 3.75/4.00"
+        - "Thesis: Joint active and passive beamforming via reduced channel state information in reconfigurable intelligent surface assisted multiuser multiple input multiple output systems."
+        - "Supervisor: Professor Amir Masoud Rabiei"
+    - title: Bachelor of Science in Electrical Engineering
+      institution: Ferdowsi University of Mashhad, Mashhad, Iran
+      year: Sep 2016 - Sep 2020
+      description:
+        - "GPA: 3.19/4.00"
+        - "Thesis: Detection, demodulation, and displaying digital video broadcasting terrestrial television signals with software defined radio."
+        - "Supervisor: Professor Mehdi Saberi"
 
-  sections:
-    Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
+- title: Publications
+  type: time_table
+  contents:
+    - year: 2026
+      items:
+        - "S. Alikhani, A. Malhotra, S. Hamidi-Rad, and A. Alkhateeb, LWM-Temporal: Sparse spatio-temporal attention for wireless channel representation learning, submitted to IEEE ICC."
+        - "N. Kim, S. Alikhani, and A. Alkhateeb, LWM-Spectro: A foundation model for wireless baseband signal spectrograms, submitted to IEEE ICC."
+    - year: 2025
+      items:
+        - "S. Alikhani, G. Charan, and A. Alkhateeb, LWM: A pre-trained wireless foundation model for universal feature extraction, in IEEE ICMLCN, pp. 1-6."
+        - "S. Alikhani and A. Alkhateeb, Digital twin aided channel estimation: Zone specific subspace prediction and calibration, in IEEE ICMLCN, pp. 1-6."
+    - year: 2024
+      items:
+        - "S. Alikhani, G. Charan, and A. Alkhateeb, Large wireless model: A foundation model for wireless channels, arXiv preprint arXiv:2411.08872."
+        - "J. Morais, S. Alikhani, A. Malhotra, S. Hamidi-Rad, and A. Alkhateeb, A dataset similarity evaluation framework for wireless communications and sensing, in Asilomar Conference on Signals, Systems, and Computers, Pacific Grove, California, United States."
+        - "S. Alikhani and A. Alkhateeb, Digital twin aided reconfigurable intelligent surface communication: Robust beamforming and interference management, in IEEE VTC, pp. 1-6."
+        - "S. Alikhani and A. Alkhateeb, Digital twin for spectrum sharing and coexistence: Coordinating the uncoordinated, in IEEE SPAWC, pp. 796-800."
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Research Associate, Wireless Intelligence Lab
+      institution: Arizona State University, Tempe, United States
+      year: Jan 2024 - Present
+      description:
+        - "Focus: Foundation models for wireless channels, digital twin aided systems, and dataset similarity."
+    - title: Research Intern
+      institution: Nokia Bell Labs, Murray Hill, United States (Remote)
+      year: Jun 2025 - Aug 2025
+      description:
+        - "Focus: Developed a large-scale multimodal digital twin dataset pipeline and used it to pretrain environment-aware foundation models for communication and sensing."
+    - title: Research Assistant
+      institution: University of Erlangen-Nuremberg, Erlangen, Germany (Remote)
+      year: Sep 2022 - Nov 2022
+      description:
+        - "Focus: Designed and simulated algorithms for RIS-aided MIMO communication under limited CSI."
+        - "Advisor: Professor Ralf Mueller"
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
+- title: Service and Teaching Experience
+  type: time_table
+  contents:
+    - title: Competition Organizer
+      institution: Arizona State University, Tempe, United States
+      year: May 2025 - Oct 2025
+      description:
+        - "LWMMulti-Task Optimization Challenge: Co-organized the ITU Large Wireless Models challenge, prepared the competition package, supported participants, and evaluated submissions from 65 teams."
+    - title: Peer Reviewer
+      institution: Arizona State University, Tempe, United States
+      year: Jan 2024 - Present
+      description:
+        - "Journals: IEEE TCCN, IEEE TCOM, IEEE TSP, IEEE TWC."
+        - "Conferences: IEEE SPAWC, IEEE ICC."
+    - title: Teaching Assistant
+      institution: University of Tehran, Tehran, Iran
+      year: Sep 2022 - Jan 2023
+      description:
+        - "Courses: Neural Networks, Advanced Communication Theory."
+        - "Responsibilities: Prepared a hands-on introduction to reinforcement learning with Python, designed assignments, and graded work for more than 80 students."
+    - title: Teaching Assistant
+      institution: Ferdowsi University of Mashhad, Mashhad, Iran
+      year: Sep 2017 - Jan 2021
+      description:
+        - "Courses: Electrical Circuits, Signals and Systems, Principles of Communication Systems, Principles of Electrical Engineering, General Mathematics."
+        - "Responsibilities: Tutored approximately 60 students per semester, supported weekly sessions, graded assignments, and prepared quizzes and projects."
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
+- title: Skills
+  type: map
+  contents:
+    - name: Technical
+      value: Python, MATLAB, PyTorch, TensorFlow, CVX, Wireless InSite, Sionna-RT, CARLA Simulator, Blender
+    - name: Soft
+      value: Problem solving, teamwork, communication, leadership, adaptability
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+- title: Awards and Honors
+  type: time_table
+  contents:
+    - year: Sep 2022
+      items:
+        - "Emerging Talents Initiative Grant, University of Erlangen-Nuremberg."
+    - year: Sep 2020
+      items:
+        - "Finalist, Iranian Electrical Engineering Olympiad."
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+- title: Selected Academic Projects
+  type: list
+  contents:
+    - "Precoding with reduced CSI in RIS-aided MIMO: Studied precoding strategies for RIS-assisted MIMO systems under limited CSI using convex optimization."
+    - "Proactive eavesdropping in RIS-assisted communications: Developed optimization-based methods for proactive eavesdropping using alternating optimization and semidefinite relaxation."
+    - "Music genre classification and clustering: Built a dataset of Persian songs, extracted features, and performed supervised and unsupervised learning for music genre analysis."
+    - "Low-complexity non-convex optimization: Designed an RL-based algorithm to solve non-convex optimization problems in RIS-aided communications and compared it with conventional methods."
+    - "Simulation of signal processing papers: Reproduced results on semi-blind channel estimation and adaptive beamforming using MATLAB simulations."
+    - "Smart restaurant model: Designed a prototype with a website, RFID-based entry, database-backed ordering, and a customer notification pipeline."
+    - "Detection and demodulation of digital video broadcasting terrestrial signals: Implemented demodulation, error correction, and decompression with software defined radio."
+    - "Network design: Designed and simulated network architectures with VLANs, spanning tree, subnetting, trunking, FTP, and OSPF routing in Cisco Packet Tracer."
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+- title: Selected Courses
+  type: list
+  contents:
+    - Mathematical Foundations of Machine Learning
+    - Neural Networks
+    - Machine Learning
+    - Adaptive Filters Theory
+    - Detection and Estimation Theory
