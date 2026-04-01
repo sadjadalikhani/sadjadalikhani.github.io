@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-sparse-spatio-temporal-attention-ssta",
+        },{id: "post-mixture-of-experts-scaling-ai-without-breaking-the-bank",
+        
+          title: "Mixture of Experts: Scaling AI Without Breaking the Bank",
+        
+        description: "How Mixture-of-Experts architectures let language models reach trillion-parameter scale while keeping per-token compute tractable.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mixture-of-experts/";
+          
+        },
+      },{id: "post-sparse-spatio-temporal-attention-ssta",
         
           title: "Sparse Spatio-Temporal Attention (SSTA)",
         
