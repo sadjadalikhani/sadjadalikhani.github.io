@@ -2,6 +2,8 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
+future: true  # show posts whose date is today or later (needed for auto-published posts)
+
 title: Sadjad Alikhani # the website title (if blank, full name will be used instead)
 first_name: Sadjad
 middle_name:
