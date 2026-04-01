@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/mixture-of-experts/";
           
         },
+      },{id: "post-flash-attention-making-transformers-faster-than-ever",
+        
+          title: "Flash Attention: Making Transformers Faster Than Ever",
+        
+        description: "A deep dive into Flash Attention — the IO-aware exact attention algorithm that makes training large language models dramatically faster while using far less memory.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/flash-attention/";
+          
+        },
       },{id: "post-sparse-spatio-temporal-attention-ssta",
         
           title: "Sparse Spatio-Temporal Attention (SSTA)",
