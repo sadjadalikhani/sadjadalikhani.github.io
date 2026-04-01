@@ -29,21 +29,21 @@ This method shines when scaling deep learning models, like those seen in large l
 
 To understand MoE, we must dissect its critical components: top-k routing, softmax gating, and a load-balancing auxiliary loss. 
 
-First, consider the gating function, $$ g(\mathbf{x}) = \text{softmax}(\mathbf{W}_g \mathbf{x}) $$, which computes a distribution over experts, effectively a soft indicator of expertise suitability. The input \( \mathbf{x} \) is multiplied by a learnable weight matrix \( \mathbf{W}_g \), creating a score for each expert.
+First, consider the gating function, $$ g(\mathbf{x}) = \text{softmax}(\mathbf{W}_g \mathbf{x}) $$, which computes a distribution over experts, effectively a soft indicator of expertise suitability. The input $$\mathbf{x}$$ is multiplied by a learnable weight matrix $$\mathbf{W}_g$$, creating a score for each expert.
 
 The top-k selection mechanism pulls the top k experts according to this softmax score, efficiently routing the model's attention to the most promising candidates. This dynamic selection reduces computational overhead as only k paths are traversed, rather than a dense activation of all experts.
 
-Finally, the load-balancing auxiliary loss, denoted as \( L_{\text{aux}} \), ensures efficient distribution of workload across experts. This loss term penalizes scenarios where certain experts dominate the workload, encouraging even participation across the model:
+Finally, the load-balancing auxiliary loss, denoted as $$L_{\text{aux}}$$, ensures efficient distribution of workload across experts. This loss term penalizes scenarios where certain experts dominate the workload, encouraging even participation across the model:
 
 $$
 L_{\text{aux}} = \sum_i \left(p_i \log \left(\frac{p_i}{q_i}\right) + q_i \log \left(\frac{q_i}{p_i}\right)\right)
 $$
 
-Here \( p_i \) represents the actual usage distribution of experts, while \( q_i \) is a uniform distribution indicating the desired balance.
+Here $$p_i$$ represents the actual usage distribution of experts, while $$q_i$$ is a uniform distribution indicating the desired balance.
 
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
-    {% include video.liquid path="https://www.youtube.com/embed/UUs4DF5lFyw" class="img-fluid rounded z-depth-1" %}
+    <a href="https://www.youtube.com/results?search_query=Mixture+of+Experts+LLM+Scaling" target="_blank" class="btn btn-sm z-depth-0" role="button" style="background:#ff0000;color:#fff;">&#9654; Watch on YouTube</a>
   </div>
 </div>
 <div class="caption">Watch this concise visual explanation of MoE's mechanics.</div>
@@ -81,7 +81,7 @@ class MoE(nn.Module):
 moe = MoE(input_dim=128, num_experts=16)
 x = torch.randn(32, 128)  # Batch size 32, input dimension 128
 output = moe(x)  # Forward pass
-```
+```text
 
 This implementation showcases the core concept of MoE by creating multiple experts and a gating mechanism to dynamically select which experts to activate based on the input.
 
@@ -116,7 +116,7 @@ An insightful way to appreciate the leap in efficiency MoE offers is by comparin
     ]
   }]
 }
-```
+```text
 
 MoE models like Switch Transformer, GLaM, and Mixtral 8×7B demonstrate remarkable efficiency, trading off some parameter activeness for substantially higher throughput and lower memory usage while maintaining competitive MMLU (Massive Multitask Language Understanding) scores.
 
