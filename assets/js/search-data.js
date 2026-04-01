@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/mixture-of-experts/";
           
         },
+      },{id: "post-mamba-and-state-space-models-the-sequence-modelling-revolution",
+        
+          title: "Mamba and State Space Models: The Sequence Modelling Revolution",
+        
+        description: "State Space Models and Mamba&#39;s input-selective mechanism — linear-time sequence modelling that rivals Transformers on long sequences.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mamba-state-space-models/";
+          
+        },
       },{id: "post-flash-attention-making-transformers-faster-than-ever",
         
           title: "Flash Attention: Making Transformers Faster Than Ever",
