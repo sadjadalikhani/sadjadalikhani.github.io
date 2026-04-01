@@ -81,7 +81,7 @@ class MoE(nn.Module):
 moe = MoE(input_dim=128, num_experts=16)
 x = torch.randn(32, 128)  # Batch size 32, input dimension 128
 output = moe(x)  # Forward pass
-```text
+```
 
 This implementation showcases the core concept of MoE by creating multiple experts and a gating mechanism to dynamically select which experts to activate based on the input.
 
@@ -116,7 +116,7 @@ An insightful way to appreciate the leap in efficiency MoE offers is by comparin
     ]
   }]
 }
-```text
+```
 
 MoE models like Switch Transformer, GLaM, and Mixtral 8×7B demonstrate remarkable efficiency, trading off some parameter activeness for substantially higher throughput and lower memory usage while maintaining competitive MMLU (Massive Multitask Language Understanding) scores.
 

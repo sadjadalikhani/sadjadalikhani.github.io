@@ -74,7 +74,7 @@ def flash_attention(Q, K, V, tile_size=64):
             output[:, i:i + tile_size, :, :] += torch.einsum('bhnm,bmhd->bnhd', attn_probs, V_tile)
 
     return output
-```text
+```
 
 This implementation highlights the efficiency of Flash Attention, dynamically allocating and processing only what's necessary at any given time.
 
@@ -99,7 +99,7 @@ To truly appreciate the advantages of Flash Attention, we turn to benchmarks tha
     { "name": "FA3", "type": "bar", "data": [8200, 4700, 2400, 1150, 570, 280] }
   ]
 }
-```text
+```
 
 Here, we observe how Flash Attention variants (FA1, FA2, FA3) continuously outperform standard attention by wide margins, especially as sequence lengths increase. This makes them particularly valuable for training and deploying large-scale models where longer sequences are commonplace.
 
