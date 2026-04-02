@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-mixture-of-experts-scaling-ai-without-breaking-the-bank",
+        },{id: "post-rlhf-and-dpo-teaching-language-models-to-be-helpful-and-harmless",
+        
+          title: "RLHF and DPO: Teaching Language Models to Be Helpful and Harmless",
+        
+        description: "The complete alignment pipeline — from SFT to RLHF with PPO, to Direct Preference Optimization that eliminates the reward model entirely.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/rlhf-dpo-alignment/";
+          
+        },
+      },{id: "post-mixture-of-experts-scaling-ai-without-breaking-the-bank",
         
           title: "Mixture of Experts: Scaling AI Without Breaking the Bank",
         

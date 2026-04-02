@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sadjadalikhani.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sadjadalikhani.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-04-01T09:01:09+00:00</updated><id>https://sadjadalikhani.github.io/feed.xml</id><title type="html">Sadjad Alikhani</title><entry><title type="html">Flash Attention: Making Transformers Faster Than Ever</title><link href="https://sadjadalikhani.github.io/blog/2026/flash-attention/" rel="alternate" type="text/html" title="Flash Attention: Making Transformers Faster Than Ever"/><published>2026-04-01T09:00:00+00:00</published><updated>2026-04-01T09:00:00+00:00</updated><id>https://sadjadalikhani.github.io/blog/2026/flash-attention</id><content type="html" xml:base="https://sadjadalikhani.github.io/blog/2026/flash-attention/"><![CDATA[<p>Every so often, a breakthrough shifts the landscape of machine learning, leading us to question assumptions once held firmly. Flash Attention is one such innovation—an algorithm that has considerably altered the way we think about transformer efficiency. Imagine training massive transformers with drastically less memory usage while speeding up operations. What follows is a deep dive into the enigma of Flash Attention, an IO-aware exact attention algorithm that has become a cornerstone for accelerating large language models.</p> <blockquote> <p>“Intelligence is quickness in seeing things as they are.”<br/> — George Santayana, 1920</p> </blockquote> <h2 id="the-core-intuition">The Core Intuition</h2> <p>To understand Flash Attention, we first recognize the problem it aims to solve: the quadratic memory complexity of standard attention mechanisms. Traditional transformers consume memory in a manner proportional to the square of the sequence length, $O(N^2)$, severely limiting scalability. At the heart of this limitation lies the high-bandwidth memory (HBM) bottleneck—where the massive data transfer between memory and processors becomes the key obstacle.</p> <p>Flash Attention attempts to sidestep these memory constraints through a clever use of tiling, a concept borrowed from computer graphics. By splitting the attention computation into smaller, more manageable “tiles,” it operates within the faster, on-die SRAM, avoiding the need to shuttle vast amounts of data to and from slower external memory. These tiles ensure that even as we work on parts of the data in isolation, the exactness of the overall computation is preserved.</p> <h2 id="the-mathematics">The Mathematics</h2> <p>To see how tiling preserves the exact evaluation of the attention mechanism, consider the traditional softmax function used in transformers:</p> \[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{d_k}}\right)\mathbf{V}\] <p>where $\mathbf{Q}$, $\mathbf{K}$, and $\mathbf{V}$ are the query, key, and value matrices, respectively, and $d_k$ is the dimension of the key vectors.</p> <p>Flash Attention introduces a “log-sum-exp” trick applied in an online, tiled fashion:</p> <ol> <li><strong>Divide</strong> matrices $\mathbf{Q}$, $\mathbf{K}$, and $\mathbf{V}$ into smaller blocks that fit into SRAM.</li> <li> <p><strong>Compute</strong> softmax for each tile using the log-sum-exp trick to maintain numerical stability:</p> \[\text{softmax}(x_i) = \frac{e^{x_i - \max(x)}}{\sum_j e^{x_j - \max(x)}}\] </li> </ol> <p>By recomputing the necessary values only when needed, the algorithm efficiently manages intermediate results while keeping SRAM usage minimal. Importantly, the backward pass leverages recomputation, recalculating parts of the forward pass only when necessary, which significantly reduces memory usage.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <iframe src="https://www.youtube.com/embed/gMOAud7hZg4" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"/> </figure> </div> </div> <div class="caption">Visualizing Flash Attention: the cutting-edge technique for efficient transformers.</div> <h2 id="architecture--implementation">Architecture &amp; Implementation</h2> <p>The implementation of Flash Attention in PyTorch is succinct yet powerful. The key lies in efficiently mapping these mathematical operations into CUDA kernels while respecting the limited on-die memory. Here’s a simplified idiomatic PyTorch implementation of the forward pass using tiled computation.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sadjadalikhani.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sadjadalikhani.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-04-02T09:01:32+00:00</updated><id>https://sadjadalikhani.github.io/feed.xml</id><title type="html">Sadjad Alikhani</title><entry><title type="html">RLHF and DPO: Teaching Language Models to Be Helpful and Harmless</title><link href="https://sadjadalikhani.github.io/blog/2026/rlhf-dpo-alignment/" rel="alternate" type="text/html" title="RLHF and DPO: Teaching Language Models to Be Helpful and Harmless"/><published>2026-04-02T09:00:00+00:00</published><updated>2026-04-02T09:00:00+00:00</updated><id>https://sadjadalikhani.github.io/blog/2026/rlhf-dpo-alignment</id><content type="html" xml:base="https://sadjadalikhani.github.io/blog/2026/rlhf-dpo-alignment/"><![CDATA[<p>The challenge of aligning advanced language models with human values is as much philosophical as it is technical. How do you teach a non-sentient algorithm to be not just intelligent, but also helpful and harmless? In this post, we unravel how the path from Supervised Fine-Tuning (SFT) to Reinforcement Learning from Human Feedback (RLHF) to Direct Preference Optimization (DPO) is paving the way for more aligned AI systems.</p> <blockquote> <p>“The real problem is not whether machines think, but whether men do.”<br/> — B.F. Skinner, 1953</p> </blockquote> <h2 id="the-core-intuition">The Core Intuition</h2> <p>Imagine attempting to train a child to play a musical instrument. Initially, the child mimics an instructor’s specific piece — the Supervised Fine-Tuning (SFT) phase in machine learning terms. But is mere mimicry sufficient for musical excellence? More intricate feedback is needed. Now, consider adding evaluative feedback from experts and peers — a parallel to the reward model assessing outputs based on human preferences. The true breakthrough, however, comes when the child learns through practicing with real-time feedback, balancing creativity with guidance — this is akin to RLHF using Proximal Policy Optimization (PPO).</p> <p>In practice, RLHF comprises three stages: first, a model learns from supervised data (SFT), then, a reward model is trained to gauge outputs according to human values, and finally, the model is fine-tuned using PPO. Here, PPO infuses robustness by adding a KL-penalty to maintain a balance between the new fine-tuned policy and the initial.</p> <p>Yet, real-world applications require even more sophistication. Enter DPO — a novel approach that bypasses the reward model by optimizing preference directly, yielding more efficient training without losing alignment fidelity.</p> <h2 id="the-mathematics">The Mathematics</h2> <p>The RLHF process is considerably augmented by mathematical rigor, particularly with PPO’s objective function and its constrained optimization through a KL-divergence penalty. The PPO clipped objective is given by:</p> \[\mathcal{L}_{\text{PPO}} = \mathbb{E} \left[ \min \left( r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) \right]\] <p>where \(r_t(\theta)\) is the probability ratio of the new and old policy, and \(\hat{A}_t\) is the advantage function. The KL-divergence ensures not too much deviation from the original policy:</p> \[\text{KL}(\pi_\theta || \pi_{\text{old}}) &lt; \delta\] <p>DPO, on the other hand, avoids the reward model by directly using preference data to construct a closed-form loss function:</p> \[\mathcal{L}_{\text{DPO}} = -\log \sigma\left( \beta \left[ \log \frac{\pi_\theta(a \mid s)}{\pi_{\text{ref}}(a \mid s)} - \log \frac{\pi_\theta(a_{\text{reject}} \mid s)}{\pi_{\text{ref}}(a_{\text{reject}} \mid s)} \right] \right)\] <p>This equation highlights DPO’s efficiency in directly aligning model output with human preferences without the need for intermediary reward models.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <iframe src="https://www.youtube.com/embed/hhiLw5Q_UFg" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"/> </figure> </div> </div> <div class="caption">Explaining Reinforcement Learning from Human Feedback (RLHF) with practical insights.</div> <h2 id="architecture--implementation">Architecture &amp; Implementation</h2> <p>Implementing DPO requires an adept blend of PyTorch and HuggingFace’s TRL (Transformers Reinforcement Learning) library. Here’s how a basic DPO training step might look:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">AutoModelForCausalLM</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+<span class="kn">from</span> <span class="n">trl</span> <span class="kn">import</span> <span class="n">PPOTrainer</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">device</span><span class="p">(</span><span class="sh">"</span><span class="s">cuda</span><span class="sh">"</span> <span class="k">if</span> <span class="n">torch</span><span class="p">.</span><span class="n">cuda</span><span class="p">.</span><span class="nf">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="sh">"</span><span class="s">cpu</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Load pre-trained models
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="sh">"</span><span class="s">gpt2</span><span class="sh">"</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="sh">"</span><span class="s">gpt2</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Define preferences
+</span><span class="n">references</span> <span class="o">=</span> <span class="p">[...]</span>  <span class="c1"># List of reference probabilities
+</span><span class="n">choices</span> <span class="o">=</span> <span class="p">[...]</span>  <span class="c1"># List of chosen probabilities
+</span>
+<span class="k">def</span> <span class="nf">compute_dpo_loss</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">references</span><span class="p">,</span> <span class="n">choices</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="n">log_probs_choices</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">log_softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">chosen_probs</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">gather</span><span class="p">(</span><span class="n">log_probs_choices</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">choices</span><span class="p">.</span><span class="nf">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)).</span><span class="nf">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ref_probs</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">gather</span><span class="p">(</span><span class="n">log_probs_choices</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">references</span><span class="p">.</span><span class="nf">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)).</span><span class="nf">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">log_ratios</span> <span class="o">=</span> <span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">chosen_probs</span> <span class="o">-</span> <span class="n">ref_probs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">torch</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">sigmoid</span><span class="p">(</span><span class="n">log_ratios</span><span class="p">)).</span><span class="nf">mean</span><span class="p">()</span>
+
+<span class="c1"># Training loop
+</span><span class="n">trainer</span> <span class="o">=</span> <span class="nc">PPOTrainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">torch</span><span class="p">.</span><span class="n">optim</span><span class="p">.</span><span class="n">Adam</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
+    <span class="c1"># Sample batch...
+</span>    <span class="n">logits</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="nf">compute_dpo_loss</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">references</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
+    <span class="n">loss</span><span class="p">.</span><span class="nf">backward</span><span class="p">()</span>
+    <span class="n">trainer</span><span class="p">.</span><span class="n">optimizer</span><span class="p">.</span><span class="nf">step</span><span class="p">()</span>
+    <span class="n">trainer</span><span class="p">.</span><span class="n">optimizer</span><span class="p">.</span><span class="nf">zero_grad</span><span class="p">()</span>
+</code></pre></div></div> <p>In this snippet, the DPO loss function directly calculates the difference in log probabilities related to preferred choices, optimizing the policy without a distinct reward model.</p> <h2 id="benchmarks--performance">Benchmarks &amp; Performance</h2> <p>To understand the trade-offs in model training, we use an ECharts scatter plot examining the Pareto front between helpfulness and harmlessness across various training methods (SFT, RLHF-PPO, DPO, and Constitutional AI):</p> <pre><code class="language-echarts">{
+  "title": { "text": "Helpfulness vs Harmlessness Trade-offs" },
+  "tooltip": { "trigger": "item" },
+  "legend": { "data": ["SFT", "RLHF-PPO", "DPO", "CAI"] },
+  "xAxis": { "name": "Helpfulness", "min": 0, "max": 100 },
+  "yAxis": { "name": "Harmlessness", "min": 0, "max": 100 },
+  "series": [
+    {
+      "name": "SFT",
+      "type": "scatter",
+      "data": [[70, 50], [65, 55], [66, 54]]
+    },
+    {
+      "name": "RLHF-PPO",
+      "type": "scatter",
+      "data": [[75, 60], [80, 58], [78, 62]]
+    },
+    {
+      "name": "DPO",
+      "type": "scatter",
+      "data": [[85, 70], [83, 72], [82, 71]]
+    },
+    {
+      "name": "CAI",
+      "type": "scatter",
+      "data": [[88, 75], [87, 77], [89, 76]]
+    }
+  ]
+}
+</code></pre> <p>The chart showcases a marked improvement in both helpfulness and harmlessness when employing DPO and CAI methods compared to traditional RLHF approaches. These advances address core limitations of previous methods and shine new light on ethical AI deployment.</p> <h2 id="real-world-impact--open-problems">Real-World Impact &amp; Open Problems</h2> <p>The journey from SFT through RLHF to DPO is addressing fundamental issues related to Goodhart’s Law and reward hacking, phenomena known to plague AI systems once they optimize metric-specific rewards at the cost of unintended consequences. While DPO presents a promising direction by eliminating the reward model, challenges remain, such as defining universally acceptable human values and adequately addressing varying cultural contexts.</p> <p>Moreover, Anthropic’s approach via Constitutional AI (CAI), which integrates self-critique and Reinforcement Learning with AI Feedback (RLAIF), exemplifies an explosive avenue for further research and ethical robustness. As AI systems continue to encroach upon more decision-autonomous roles, fine-tuning such models for ethical consistency is paramount.</p> <blockquote> <h5 id="tip">TIP</h5> <p>Focusing on preference directly, as in DPO, reduces the complexity and potential pitfalls associated with reward model training.</p> </blockquote> <blockquote> <h5 id="warning">WARNING</h5> <p>A common mistake is assuming preference alignment eliminates all unethical behaviors. Complexity in human values requires continuous multidisciplinary research.</p> </blockquote> <h2 id="further-reading">Further Reading</h2> <ol> <li>“Deep Reinforcement Learning from Human Preferences” — Christiano et al., 2017.</li> <li>“Proximal Policy Optimization Algorithms” — Schulman et al., 2017.</li> <li>“Aligning AI With Human Values via Scalable Supervision” — Leike et al., 2018.</li> <li>“Learning from Human Preferences” — Ziegler et al., 2019.</li> <li>“Constitutional AI: A Model for Ethical AI Decision-Making” — Anthropic, 2023.</li> </ol> <p>As models become more powerful, aligning them with human intentions and values becomes both a technical challenge and a moral imperative. The combined methodologies explored within RLHF and DPO offer a promising pathway but demand continued vigilance and innovation.</p>]]></content><author><name></name></author><category term="alignment"/><category term="rlhf"/><category term="dpo"/><category term="alignment"/><category term="safety"/><category term="preference"/><summary type="html"><![CDATA[The complete alignment pipeline — from SFT to RLHF with PPO, to Direct Preference Optimization that eliminates the reward model entirely.]]></summary></entry><entry><title type="html">Flash Attention: Making Transformers Faster Than Ever</title><link href="https://sadjadalikhani.github.io/blog/2026/flash-attention/" rel="alternate" type="text/html" title="Flash Attention: Making Transformers Faster Than Ever"/><published>2026-04-01T09:00:00+00:00</published><updated>2026-04-01T09:00:00+00:00</updated><id>https://sadjadalikhani.github.io/blog/2026/flash-attention</id><content type="html" xml:base="https://sadjadalikhani.github.io/blog/2026/flash-attention/"><![CDATA[<p>Every so often, a breakthrough shifts the landscape of machine learning, leading us to question assumptions once held firmly. Flash Attention is one such innovation—an algorithm that has considerably altered the way we think about transformer efficiency. Imagine training massive transformers with drastically less memory usage while speeding up operations. What follows is a deep dive into the enigma of Flash Attention, an IO-aware exact attention algorithm that has become a cornerstone for accelerating large language models.</p> <blockquote> <p>“Intelligence is quickness in seeing things as they are.”<br/> — George Santayana, 1920</p> </blockquote> <h2 id="the-core-intuition">The Core Intuition</h2> <p>To understand Flash Attention, we first recognize the problem it aims to solve: the quadratic memory complexity of standard attention mechanisms. Traditional transformers consume memory in a manner proportional to the square of the sequence length, $O(N^2)$, severely limiting scalability. At the heart of this limitation lies the high-bandwidth memory (HBM) bottleneck—where the massive data transfer between memory and processors becomes the key obstacle.</p> <p>Flash Attention attempts to sidestep these memory constraints through a clever use of tiling, a concept borrowed from computer graphics. By splitting the attention computation into smaller, more manageable “tiles,” it operates within the faster, on-die SRAM, avoiding the need to shuttle vast amounts of data to and from slower external memory. These tiles ensure that even as we work on parts of the data in isolation, the exactness of the overall computation is preserved.</p> <h2 id="the-mathematics">The Mathematics</h2> <p>To see how tiling preserves the exact evaluation of the attention mechanism, consider the traditional softmax function used in transformers:</p> \[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{d_k}}\right)\mathbf{V}\] <p>where $\mathbf{Q}$, $\mathbf{K}$, and $\mathbf{V}$ are the query, key, and value matrices, respectively, and $d_k$ is the dimension of the key vectors.</p> <p>Flash Attention introduces a “log-sum-exp” trick applied in an online, tiled fashion:</p> <ol> <li><strong>Divide</strong> matrices $\mathbf{Q}$, $\mathbf{K}$, and $\mathbf{V}$ into smaller blocks that fit into SRAM.</li> <li> <p><strong>Compute</strong> softmax for each tile using the log-sum-exp trick to maintain numerical stability:</p> \[\text{softmax}(x_i) = \frac{e^{x_i - \max(x)}}{\sum_j e^{x_j - \max(x)}}\] </li> </ol> <p>By recomputing the necessary values only when needed, the algorithm efficiently manages intermediate results while keeping SRAM usage minimal. Importantly, the backward pass leverages recomputation, recalculating parts of the forward pass only when necessary, which significantly reduces memory usage.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <iframe src="https://www.youtube.com/embed/gMOAud7hZg4" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"/> </figure> </div> </div> <div class="caption">Visualizing Flash Attention: the cutting-edge technique for efficient transformers.</div> <h2 id="architecture--implementation">Architecture &amp; Implementation</h2> <p>The implementation of Flash Attention in PyTorch is succinct yet powerful. The key lies in efficiently mapping these mathematical operations into CUDA kernels while respecting the limited on-die memory. Here’s a simplified idiomatic PyTorch implementation of the forward pass using tiled computation.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
 
 <span class="k">def</span> <span class="nf">flash_attention</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">tile_size</span><span class="o">=</span><span class="mi">64</span><span class="p">):</span>
     <span class="c1"># Assumptions: Q, K, V are [batch, seq_len, num_heads, head_dim]
@@ -241,448 +302,4 @@
 \ENDPROCEDURE
 \end{algorithmic}
 \end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://sadjadalikhani.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://sadjadalikhani.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://sadjadalikhani.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
-
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
-
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
-
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
-
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
-
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
-
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
-
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
-
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
-
-   var hoganTemplates = require('./templates/diff2html-templates.js');
-
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
-
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
-
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
-
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
-
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
-
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
-
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
-
-@@ -53,6 +53,7 @@
-
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
-
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
-
- ## Diff2HtmlUI Helper
-
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry></feed>
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry></feed>
