@@ -29,6 +29,7 @@ PAPER_FIELDS   = "title,authors,year,venue,externalIds,openAccessPdf,publication
 AUTHOR_NAME    = "Sadjad Alikhani"
 
 BIB_FILE       = Path(__file__).parent.parent / "_bibliography" / "papers.bib"
+RESUME_FILE    = Path(__file__).parent.parent / "assets" / "json" / "resume.json"
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 def ss_get(url: str, params: dict = {}) -> dict:
@@ -140,6 +141,56 @@ def make_bibtex(paper: dict) -> str:
     return "\n".join(lines)
 
 
+# ── Resume JSON sync ───────────────────────────────────────────────────────────
+def sync_resume(papers: list[dict], known_titles: set[str]) -> int:
+    """Add new papers to the publications array in resume.json. Returns count added."""
+    import json
+
+    resume = json.loads(RESUME_FILE.read_text(encoding="utf-8"))
+    existing = {p["name"].strip().lower() for p in resume.get("publications", [])}
+
+    added = 0
+    for paper in sorted(papers, key=lambda p: p.get("year") or 0, reverse=True):
+        title = (paper.get("title") or "").strip()
+        if not title or title.lower() in existing:
+            continue
+
+        authors = paper.get("authors") or []
+        author_str = ", ".join(
+            # Format as "F. Lastname"
+            (f"{a['name'].split()[0][0]}. {a['name'].split()[-1]}" if len(a["name"].split()) > 1 else a["name"])
+            for a in authors
+        )
+
+        ext    = paper.get("externalIds") or {}
+        arxiv  = ext.get("ArXiv", "")
+        doi    = ext.get("DOI", "")
+        url    = f"https://arxiv.org/abs/{arxiv}" if arxiv else (f"https://doi.org/{doi}" if doi else "#")
+        venue  = paper.get("venue") or "arXiv preprint"
+        year   = paper.get("year") or ""
+        date   = f"{year}-01-01" if year else ""
+
+        entry = {
+            "name": title,
+            "publisher": venue,
+            "releaseDate": date,
+            "url": url,
+            "summary": f"{author_str}.",
+        }
+
+        resume.setdefault("publications", []).insert(0, entry)
+        existing.add(title.lower())
+        print(f"  + resume.json: {title[:70]}")
+        added += 1
+
+    if added:
+        RESUME_FILE.write_text(
+            json.dumps(resume, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8"
+        )
+    return added
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
     print(f"Looking up '{AUTHOR_NAME}' on Semantic Scholar …")
@@ -174,16 +225,23 @@ def main():
         new_entries.append(make_bibtex(paper))
         time.sleep(0.3)
 
-    if not new_entries:
+    if new_entries:
+        separator = "\n\n% ── Auto-added ──────────────────────────────────────\n\n"
+        BIB_FILE.write_text(
+            bib_text.rstrip() + separator + "\n\n".join(new_entries) + "\n",
+            encoding="utf-8"
+        )
+        print(f"\n✓ Added {len(new_entries)} new entry/entries to papers.bib")
+    else:
         print("No new publications found — papers.bib is up to date.")
-        return
 
-    separator = "\n\n% ── Auto-added ──────────────────────────────────────\n\n"
-    BIB_FILE.write_text(
-        bib_text.rstrip() + separator + "\n\n".join(new_entries) + "\n",
-        encoding="utf-8"
-    )
-    print(f"\n✓ Added {len(new_entries)} new entry/entries to {BIB_FILE}")
+    # Sync all fetched papers into resume.json as well
+    print("\nSyncing resume.json …")
+    n = sync_resume(papers, known_titles)
+    if n == 0:
+        print("  resume.json is already up to date.")
+    else:
+        print(f"  ✓ Added {n} entry/entries to resume.json")
 
 
 if __name__ == "__main__":

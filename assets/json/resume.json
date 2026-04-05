@@ -187,6 +187,34 @@
   "certificates": [],
   "publications": [
     {
+      "name": "Large Wireless Model (LWM): A Foundation Model for Wireless Channels",
+      "publisher": "arXiv.org",
+      "releaseDate": "2024-01-01",
+      "url": "https://arxiv.org/abs/2411.08872",
+      "summary": "S. Alikhani, G. Charan, A. Alkhateeb."
+    },
+    {
+      "name": "Digital Twin Aided RIS Communication: Robust Beamforming and Interference Management",
+      "publisher": "2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)",
+      "releaseDate": "2024-01-01",
+      "url": "https://arxiv.org/abs/2406.04188",
+      "summary": "S. Alikhani, A. Alkhateeb."
+    },
+    {
+      "name": "Digital Twin Aided Channel Estimation: Zone-Specific Subspace Prediction and Calibration",
+      "publisher": "2025 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)",
+      "releaseDate": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.02758",
+      "summary": "S. Alikhani, A. Alkhateeb."
+    },
+    {
+      "name": "Wireless Dataset Similarity: Measuring Distances in Supervised and Unsupervised Machine Learning",
+      "publisher": "arXiv.org",
+      "releaseDate": "2026-01-01",
+      "url": "https://arxiv.org/abs/2601.01023",
+      "summary": "J. Morais, S. Alikhani, A. Malhotra, S. Hamidi-Rad, A. Alkhateeb."
+    },
+    {
       "name": "LWM-Temporal: Sparse spatio-temporal attention for wireless channel representation learning",
       "publisher": "Submitted to IEEE ICC",
       "releaseDate": "2026-01-01",
