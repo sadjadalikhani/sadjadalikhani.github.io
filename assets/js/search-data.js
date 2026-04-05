@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-rlhf-and-dpo-teaching-language-models-to-be-helpful-and-harmless",
+        },{id: "post-diffusion-models-the-probabilistic-engine-behind-generative-ai",
+        
+          title: "Diffusion Models: The Probabilistic Engine Behind Generative AI",
+        
+        description: "A rigorous but accessible walkthrough of DDPM, score matching, and latent diffusion — the mathematical backbone of Stable Diffusion and DALL·E.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/diffusion-models-deep-dive/";
+          
+        },
+      },{id: "post-rlhf-and-dpo-teaching-language-models-to-be-helpful-and-harmless",
         
           title: "RLHF and DPO: Teaching Language Models to Be Helpful and Harmless",
         
