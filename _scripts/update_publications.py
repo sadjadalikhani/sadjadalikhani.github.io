@@ -12,8 +12,11 @@ Usage:
     python3 _scripts/update_publications.py
 """
 
+import os
 import re
+import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -242,6 +245,120 @@ def main():
         print("  resume.json is already up to date.")
     else:
         print(f"  ✓ Added {n} entry/entries to resume.json")
+
+    # Update LaTeX CV if new papers were found
+    if new_entries or n > 0:
+        print("\nUpdating cv-latex repo …")
+        update_cv_latex(papers)
+
+
+# ── CV LaTeX updater ───────────────────────────────────────────────────────────
+def update_cv_latex(papers: list[dict]) -> None:
+    """Clone cv-latex, ask GPT-4o-mini to update publications section, push back."""
+    import json
+
+    gh_pat      = os.environ.get("GH_PAT", "")
+    openai_key  = os.environ.get("OPENAI_API_KEY", "")
+    cv_repo     = "sadjadalikhani/cv-latex"
+    tex_file    = "CV_Sadjad_Alikhani.tex"
+
+    if not gh_pat:
+        print("  Skipping cv-latex update — GH_PAT not set.")
+        return
+    if not openai_key:
+        print("  Skipping cv-latex update — OPENAI_API_KEY not set.")
+        return
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        clone_url = f"https://x-access-token:{gh_pat}@github.com/{cv_repo}.git"
+
+        print("  Cloning cv-latex …")
+        subprocess.run(["git", "clone", "--depth=1", clone_url, str(tmp / "repo")],
+                       check=True, capture_output=True)
+
+        repo_dir = tmp / "repo"
+        tex_path = repo_dir / tex_file
+        if not tex_path.exists():
+            print(f"  ERROR: {tex_file} not found in cv-latex repo.")
+            return
+
+        current_tex = tex_path.read_text(encoding="utf-8")
+
+        # Build list of all papers for the prompt
+        paper_list = []
+        for p in sorted(papers, key=lambda x: x.get("year") or 0, reverse=True):
+            title   = p.get("title", "")
+            authors = ", ".join(a["name"] for a in (p.get("authors") or []))
+            venue   = p.get("venue") or "arXiv preprint"
+            year    = p.get("year") or ""
+            ext     = p.get("externalIds") or {}
+            arxiv   = ext.get("ArXiv", "")
+            arxiv_str = f" arXiv:{arxiv}" if arxiv else ""
+            paper_list.append(f'- "{title}" by {authors}. {venue}{arxiv_str}, {year}.')
+        papers_text = "\n".join(paper_list)
+
+        prompt = f"""You are a LaTeX CV editor. Below is my current CV LaTeX source.
+Your task: update ONLY the Publications section to include all papers listed below.
+Keep the exact same LaTeX formatting style as existing entries (\\item \\justifying ...).
+Keep existing entries unchanged. Add missing ones in reverse chronological order (newest first).
+Return the COMPLETE updated LaTeX file, nothing else — no explanation, no markdown fences.
+
+COMPLETE PAPER LIST (use these as the ground truth):
+{papers_text}
+
+CURRENT LaTeX CV:
+{current_tex}
+"""
+
+        print("  Calling GPT-4o-mini …")
+        resp = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {openai_key}",
+                     "Content-Type": "application/json"},
+            json={"model": "gpt-4o-mini",
+                  "max_tokens": 16000,
+                  "messages": [{"role": "user", "content": prompt}]},
+            timeout=120,
+        )
+        if resp.status_code != 200:
+            print(f"  OpenAI error {resp.status_code}: {resp.text[:300]}")
+            return
+
+        updated_tex = resp.json()["choices"][0]["message"]["content"].strip()
+
+        # Strip any accidental markdown fences
+        if updated_tex.startswith("```"):
+            updated_tex = re.sub(r'^```[^\n]*\n', '', updated_tex)
+            updated_tex = re.sub(r'\n```$', '', updated_tex.rstrip())
+
+        tex_path.write_text(updated_tex, encoding="utf-8")
+
+        # Commit and push
+        git_env = {"GIT_AUTHOR_NAME": "github-actions[bot]",
+                   "GIT_AUTHOR_EMAIL": "github-actions[bot]@users.noreply.github.com",
+                   "GIT_COMMITTER_NAME": "github-actions[bot]",
+                   "GIT_COMMITTER_EMAIL": "github-actions[bot]@users.noreply.github.com",
+                   **dict(__import__("os").environ)}
+
+        subprocess.run(["git", "config", "user.email",
+                        "github-actions[bot]@users.noreply.github.com"],
+                       cwd=repo_dir, check=True)
+        subprocess.run(["git", "config", "user.name", "github-actions[bot]"],
+                       cwd=repo_dir, check=True)
+        subprocess.run(["git", "add", tex_file], cwd=repo_dir, check=True)
+
+        diff = subprocess.run(["git", "diff", "--staged", "--quiet"],
+                              cwd=repo_dir).returncode
+        if diff == 0:
+            print("  cv-latex tex unchanged — no commit needed.")
+            return
+
+        subprocess.run(["git", "commit", "-m",
+                        f"cv: auto-update publications {time.strftime('%Y-%m-%d')}"],
+                       cwd=repo_dir, check=True, env=git_env)
+        subprocess.run(["git", "push"], cwd=repo_dir, check=True)
+        print("  ✓ cv-latex updated and pushed — PDF will recompile automatically.")
 
 
 if __name__ == "__main__":
