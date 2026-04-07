@@ -45,7 +45,7 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "nav-wordle",
-          title: "Wordle",
+          title: "wordle",
           description: "A daily word puzzle — a new word every day at 2 AM.",
           section: "Navigation",
           handler: () => {
