@@ -142,8 +142,14 @@ def main() -> None:
         save_state(curr)
         commit_state(f"gs-notif: citations {prev['total']} → {curr['total']}")
     else:
-        # No change — do NOT commit; avoids a noisy commit every 15 minutes.
         print(f"  No change (still {curr['total']}).")
+        # Commit a daily heartbeat so the repo shows the checker is alive,
+        # but not on every 15-min run (that would be 96 commits/day).
+        last_checked_date = (prev.get("last_checked") or "")[:10]
+        today_str = datetime.utcnow().strftime("%Y-%m-%d")
+        if last_checked_date != today_str:
+            save_state(curr)
+            commit_state(f"gs-notif: checked {today_str}, still {curr['total']} citations")
 
 
 if __name__ == "__main__":
