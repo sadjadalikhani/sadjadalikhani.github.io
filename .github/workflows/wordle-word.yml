@@ -1,0 +1,62 @@
+name: Daily Wordle Word
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # 02:00 MDT (UTC-6)
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Generate and commit daily word
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python - <<'EOF'
+          import json, os
+          from datetime import date
+          from openai import OpenAI
+
+          today = date.today().isoformat()
+          client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+          resp = client.chat.completions.create(
+              model="gpt-4o-mini",
+              messages=[{"role": "user", "content":
+                  f"Give me one common 5-letter English word for today's Wordle ({today}). "
+                  "No proper nouns, no hyphens. Reply with ONLY the uppercase word."}],
+              max_tokens=10,
+              temperature=1.2,
+          )
+          word = "".join(c for c in resp.choices[0].message.content.strip().upper() if c.isalpha())
+          assert len(word) == 5, f"Bad word: {word!r}"
+          with open("assets/json/wordle.json", "w") as f:
+              json.dump({"word": word, "date": today}, f, indent=2)
+              f.write("\n")
+          print(f"Word: {word}")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git add assets/json/wordle.json
+          git diff --cached --quiet || git commit -m "wordle: daily word for $(date -u +%Y-%m-%d)"
+          git push
