@@ -44,7 +44,36 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-diffusion-models-the-probabilistic-engine-behind-generative-ai",
+        },{id: "nav-wordle",
+          title: "Wordle",
+          description: "A daily word puzzle — a new word every day at 2 AM.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/wordle/";
+          },
+        },{id: "post-rope-and-alibi-giving-transformers-unlimited-memory",
+        
+          title: "RoPE and ALiBi: Giving Transformers Unlimited Memory",
+        
+        description: "How RoPE, ALiBi, and YaRN enable language models to handle context windows from 4 k to over 1 million tokens.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/rotary-positional-embeddings-rope/";
+          
+        },
+      },{id: "post-vision-transformers-how-attention-conquered-computer-vision",
+        
+          title: "Vision Transformers: How Attention Conquered Computer Vision",
+        
+        description: "From patch embeddings to DINOv2 — the complete story of how Transformers revolutionized computer vision.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/vision-transformers-vit/";
+          
+        },
+      },{id: "post-diffusion-models-the-probabilistic-engine-behind-generative-ai",
         
           title: "Diffusion Models: The Probabilistic Engine Behind Generative AI",
         
