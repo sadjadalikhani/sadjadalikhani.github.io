@@ -1,0 +1,460 @@
+---
+layout: page
+title: Wordle
+permalink: /wordle/
+description: A daily word puzzle — a new word every day at 2 AM.
+nav: true
+nav_order: 9
+---
+
+<style>
+  /* ── Layout ────────────────────────────────────────────────────── */
+  #wordle-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0 32px;
+  }
+
+  /* ── Toast ─────────────────────────────────────────────────────── */
+  #wl-toast {
+    position: fixed;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--wl-toast-bg, #1a1a1b);
+    color: var(--wl-toast-text, #fff);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    white-space: nowrap;
+  }
+  #wl-toast.show { opacity: 1; }
+
+  /* ── Grid ──────────────────────────────────────────────────────── */
+  #wl-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .wl-row {
+    display: flex;
+    gap: 5px;
+  }
+  .wl-tile {
+    width: 58px;
+    height: 58px;
+    border: 2px solid var(--wl-tile-border, #d3d6da);
+    background: var(--wl-tile-bg, transparent);
+    color: var(--wl-tile-text, #1a1a1b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    user-select: none;
+    box-sizing: border-box;
+    transition: border-color 0.05s;
+  }
+  .wl-tile.filled    { border-color: var(--wl-tile-filled-border, #878a8c); }
+  .wl-tile.correct   { background: #6aaa64; border-color: #6aaa64; color: #fff; }
+  .wl-tile.present   { background: #c9b458; border-color: #c9b458; color: #fff; }
+  .wl-tile.absent    { background: #787c7e; border-color: #787c7e; color: #fff; }
+
+  @keyframes wl-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.12); }
+    100% { transform: scale(1); }
+  }
+  .wl-tile.pop { animation: wl-pop 0.1s ease; }
+
+  @keyframes wl-flip-out { to { transform: rotateX(90deg); } }
+  @keyframes wl-flip-in  { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
+
+  @keyframes wl-shake {
+    0%,100% { transform: translateX(0); }
+    20%      { transform: translateX(-5px); }
+    40%      { transform: translateX(5px); }
+    60%      { transform: translateX(-5px); }
+    80%      { transform: translateX(5px); }
+  }
+  .wl-row.shake { animation: wl-shake 0.4s ease; }
+
+  @keyframes wl-bounce {
+    0%,100% { transform: translateY(0); }
+    40%     { transform: translateY(-20px); }
+    60%     { transform: translateY(-10px); }
+  }
+
+  /* ── Keyboard ──────────────────────────────────────────────────── */
+  #wl-keyboard { width: 100%; }
+  .wl-kb-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  .wl-key {
+    height: 58px;
+    min-width: 43px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 4px;
+    background: var(--wl-key-bg, #d3d6da);
+    color: var(--wl-key-text, #1a1a1b);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    transition: background 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wl-key.wide { min-width: 65px; font-size: 0.75rem; }
+  .wl-key.correct { background: #6aaa64 !important; color: #fff; }
+  .wl-key.present { background: #c9b458 !important; color: #fff; }
+  .wl-key.absent  { background: var(--wl-key-absent-bg, #787c7e) !important; color: #fff; }
+
+  /* ── Stats ─────────────────────────────────────────────────────── */
+  #wl-stats {
+    text-align: center;
+    display: none;
+  }
+  #wl-stats p { margin: 4px 0; }
+  #wl-emoji-grid {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 8px auto;
+    font-family: monospace;
+    white-space: pre;
+  }
+  #wl-share-btn {
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: #6aaa64;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  #wl-share-btn:hover { background: #538d4e; }
+
+  /* ── Dark mode ─────────────────────────────────────────────────── */
+  html[data-theme="dark"] {
+    --wl-toast-bg: #fff;
+    --wl-toast-text: #1a1a1b;
+    --wl-tile-bg: transparent;
+    --wl-tile-text: #fff;
+    --wl-tile-border: #3a3a3c;
+    --wl-tile-filled-border: #565758;
+    --wl-key-bg: #818384;
+    --wl-key-text: #fff;
+    --wl-key-absent-bg: #3a3a3c;
+  }
+</style>
+
+<div id="wl-toast"></div>
+
+<div id="wordle-wrap">
+  <div id="wl-grid"></div>
+  <div id="wl-keyboard"></div>
+  <div id="wl-stats">
+    <p id="wl-result-msg" style="font-size:1.1rem;font-weight:700"></p>
+    <div id="wl-emoji-grid"></div>
+    <button id="wl-share-btn" onclick="wlShare()">Share &#x1F4CB;</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Constants ─────────────────────────────────────────────────── */
+  const ROWS = 6, COLS = 5;
+  const STORAGE_KEY = 'wl-state-v1';
+  const WORD_URL = '/assets/json/wordle.json';
+
+  /* ── State ─────────────────────────────────────────────────────── */
+  let TARGET = '';
+  let wordDate = '';
+  let guesses = [];          // [{guess, result:[]}]
+  let current = '';          // letters typed in current row
+  let done = false;
+  let shareText = '';
+
+  /* ── Build grid ────────────────────────────────────────────────── */
+  const gridEl = document.getElementById('wl-grid');
+  for (let r = 0; r < ROWS; r++) {
+    const row = document.createElement('div');
+    row.className = 'wl-row';
+    row.id = 'wl-row-' + r;
+    for (let c = 0; c < COLS; c++) {
+      const tile = document.createElement('div');
+      tile.className = 'wl-tile';
+      tile.id = 'wl-t-' + r + '-' + c;
+      row.appendChild(tile);
+    }
+    gridEl.appendChild(row);
+  }
+
+  /* ── Build keyboard ────────────────────────────────────────────── */
+  const kbEl = document.getElementById('wl-keyboard');
+  const KB_ROWS = [
+    ['Q','W','E','R','T','Y','U','I','O','P'],
+    ['A','S','D','F','G','H','J','K','L'],
+    ['Enter','Z','X','C','V','B','N','M','⌫']
+  ];
+  KB_ROWS.forEach(keys => {
+    const row = document.createElement('div');
+    row.className = 'wl-kb-row';
+    keys.forEach(k => {
+      const btn = document.createElement('button');
+      btn.className = 'wl-key' + (k.length > 1 ? ' wide' : '');
+      btn.textContent = k;
+      btn.dataset.key = k;
+      btn.addEventListener('click', () => onKey(k === '⌫' ? 'Backspace' : k));
+      row.appendChild(btn);
+    });
+    kbEl.appendChild(row);
+  });
+
+  /* ── Physical keyboard ─────────────────────────────────────────── */
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === 'Enter') onKey('Enter');
+    else if (e.key === 'Backspace') onKey('Backspace');
+    else if (/^[a-zA-Z]$/.test(e.key)) onKey(e.key.toUpperCase());
+  });
+
+  /* ── Toast ─────────────────────────────────────────────────────── */
+  let toastTimer = null;
+  function toast(msg, ms = 2000) {
+    const el = document.getElementById('wl-toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    if (ms > 0) toastTimer = setTimeout(() => el.classList.remove('show'), ms);
+  }
+
+  /* ── Tile helpers ──────────────────────────────────────────────── */
+  function tile(r, c) { return document.getElementById('wl-t-' + r + '-' + c); }
+
+  function setTile(r, c, letter, state) {
+    const t = tile(r, c);
+    t.textContent = letter;
+    t.className = 'wl-tile' +
+      (letter ? ' filled' : '') +
+      (state  ? ' ' + state : '');
+  }
+
+  /* ── Key handler ───────────────────────────────────────────────── */
+  function onKey(key) {
+    if (done) return;
+    if (key === 'Backspace') {
+      if (current.length) {
+        current = current.slice(0, -1);
+        setTile(guesses.length, current.length, '', '');
+      }
+    } else if (key === 'Enter') {
+      submitGuess();
+    } else if (/^[A-Z]$/.test(key) && current.length < COLS) {
+      current += key;
+      const t = tile(guesses.length, current.length - 1);
+      t.textContent = key;
+      t.className = 'wl-tile filled pop';
+      // Remove pop class after animation
+      setTimeout(() => t.classList.remove('pop'), 120);
+    }
+  }
+
+  /* ── Evaluate guess ────────────────────────────────────────────── */
+  function evaluate(guess) {
+    const result = new Array(COLS).fill('absent');
+    const tgt = TARGET.split('');
+    const usedT = new Array(COLS).fill(false);
+    const usedG = new Array(COLS).fill(false);
+    // Correct
+    for (let i = 0; i < COLS; i++) {
+      if (guess[i] === tgt[i]) {
+        result[i] = 'correct'; usedT[i] = true; usedG[i] = true;
+      }
+    }
+    // Present
+    for (let i = 0; i < COLS; i++) {
+      if (usedG[i]) continue;
+      for (let j = 0; j < COLS; j++) {
+        if (usedT[j]) continue;
+        if (guess[i] === tgt[j]) {
+          result[i] = 'present'; usedT[j] = true; break;
+        }
+      }
+    }
+    return result;
+  }
+
+  /* ── Reveal row with flip animation ────────────────────────────── */
+  function revealRow(r, guess, result) {
+    return new Promise(resolve => {
+      guess.split('').forEach((letter, c) => {
+        const t = tile(r, c);
+        const delay = c * 300;
+        setTimeout(() => {
+          t.style.animation = 'wl-flip-out 0.3s ease forwards';
+          setTimeout(() => {
+            t.className = 'wl-tile ' + result[c];
+            t.textContent = letter;
+            t.style.animation = 'wl-flip-in 0.3s ease forwards';
+            setTimeout(() => { t.style.animation = ''; }, 300);
+            if (c === COLS - 1) setTimeout(resolve, 350);
+          }, 300);
+        }, delay);
+      });
+    });
+  }
+
+  /* ── Update keyboard colors ─────────────────────────────────────── */
+  const PRIO = { correct: 3, present: 2, absent: 1 };
+  function updateKeys(guess, result) {
+    guess.split('').forEach((letter, i) => {
+      const btn = document.querySelector(`.wl-key[data-key="${letter}"]`);
+      if (!btn) return;
+      const cur = btn.classList.contains('correct') ? 'correct'
+                : btn.classList.contains('present') ? 'present'
+                : btn.classList.contains('absent')  ? 'absent' : null;
+      if (!cur || PRIO[result[i]] > PRIO[cur]) {
+        btn.classList.remove('correct', 'present', 'absent');
+        btn.classList.add(result[i]);
+      }
+    });
+  }
+
+  /* ── Win bounce ─────────────────────────────────────────────────── */
+  function bounceRow(r) {
+    for (let c = 0; c < COLS; c++) {
+      const t = tile(r, c);
+      setTimeout(() => {
+        t.style.animation = 'wl-bounce 0.4s ease';
+        setTimeout(() => { t.style.animation = ''; }, 400);
+      }, c * 80);
+    }
+  }
+
+  /* ── Submit guess ───────────────────────────────────────────────── */
+  async function submitGuess() {
+    if (current.length < COLS) {
+      shakeRow(guesses.length);
+      toast('Not enough letters');
+      return;
+    }
+    const guess = current;
+    current = '';
+    const result = evaluate(guess);
+    await revealRow(guesses.length, guess, result);
+    updateKeys(guess, result);
+    guesses.push({ guess, result });
+    save();
+
+    const won = result.every(r => r === 'correct');
+    if (won) {
+      done = true;
+      save();
+      bounceRow(guesses.length - 1);
+      const msgs = ['Genius!','Magnificent!','Impressive!','Splendid!','Great!','Phew!'];
+      toast(msgs[guesses.length - 1] || 'Nice!', 3000);
+      setTimeout(showStats, 3200);
+    } else if (guesses.length >= ROWS) {
+      done = true;
+      save();
+      toast(TARGET, 4000);
+      setTimeout(showStats, 4200);
+    }
+  }
+
+  function shakeRow(r) {
+    const row = document.getElementById('wl-row-' + r);
+    row.classList.add('shake');
+    setTimeout(() => row.classList.remove('shake'), 400);
+  }
+
+  /* ── Persist state ──────────────────────────────────────────────── */
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ wordDate, guesses, done }));
+  }
+  function loadSaved() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch { return null; }
+  }
+
+  /* ── Restore board from saved state ────────────────────────────── */
+  function restoreBoard(saved) {
+    guesses = saved.guesses;
+    done    = saved.done;
+    guesses.forEach(({ guess, result }, r) => {
+      guess.split('').forEach((letter, c) => setTile(r, c, letter, result[c]));
+      updateKeys(guess, result);
+    });
+    if (done) {
+      const won = guesses.length > 0 &&
+                  guesses[guesses.length - 1].result.every(r => r === 'correct');
+      if (!won) {
+        const el = document.getElementById('wl-toast');
+        el.textContent = TARGET;
+        el.classList.add('show');
+      }
+      showStats();
+    }
+  }
+
+  /* ── Stats & share ──────────────────────────────────────────────── */
+  function showStats() {
+    const won = guesses.length > 0 &&
+                guesses[guesses.length - 1].result.every(r => r === 'correct');
+    const EM = { correct: '🟩', present: '🟨', absent: '⬛' };
+    const grid = guesses.map(({ result }) => result.map(r => EM[r]).join('')).join('\n');
+    document.getElementById('wl-result-msg').textContent =
+      won ? `You got it in ${guesses.length}/${ROWS}!` : 'Better luck tomorrow!';
+    document.getElementById('wl-emoji-grid').textContent = grid;
+    shareText = `Wordle ${wordDate}  ${won ? guesses.length : 'X'}/${ROWS}\n\n${grid}\nhttps://sadjadalikhani.github.io/wordle/`;
+    document.getElementById('wl-stats').style.display = 'block';
+  }
+
+  window.wlShare = function () {
+    navigator.clipboard.writeText(shareText)
+      .then(() => toast('Copied to clipboard!', 1500))
+      .catch(() => toast('Copy failed', 1500));
+  };
+
+  /* ── Init ───────────────────────────────────────────────────────── */
+  async function init() {
+    try {
+      const resp = await fetch(WORD_URL + '?v=' + Math.floor(Date.now() / 300000));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      TARGET   = data.word.toUpperCase();
+      wordDate = data.date;
+
+      const saved = loadSaved();
+      if (saved && saved.wordDate === wordDate) {
+        restoreBoard(saved);
+      }
+    } catch (err) {
+      toast('Failed to load today\'s word. Try refreshing.', 0);
+      console.error('Wordle init error:', err);
+    }
+  }
+
+  init();
+})();
+</script>
