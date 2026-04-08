@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-rope-and-alibi-giving-transformers-unlimited-memory",
+        },{id: "post-retrieval-augmented-generation-grounding-llms-in-facts",
+        
+          title: "Retrieval-Augmented Generation: Grounding LLMs in Facts",
+        
+        description: "How RAG systems combine dense vector retrieval with language model generation to produce factually grounded, up-to-date answers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/retrieval-augmented-generation/";
+          
+        },
+      },{id: "post-rope-and-alibi-giving-transformers-unlimited-memory",
         
           title: "RoPE and ALiBi: Giving Transformers Unlimited Memory",
         
