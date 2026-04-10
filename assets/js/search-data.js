@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-chain-of-thought-why-thinking-out-loud-makes-ai-smarter",
+        },{id: "post-neural-scaling-laws-the-power-laws-governing-every-llm",
+        
+          title: "Neural Scaling Laws: The Power Laws Governing Every LLM",
+        
+        description: "Kaplan&#39;s and Chinchilla&#39;s scaling laws demystified — the power laws every major LLM training run is designed around.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/neural-scaling-laws/";
+          
+        },
+      },{id: "post-chain-of-thought-why-thinking-out-loud-makes-ai-smarter",
         
           title: "Chain-of-Thought: Why Thinking Out Loud Makes AI Smarter",
         
