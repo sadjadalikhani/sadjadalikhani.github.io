@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-multimodal-foundation-models-teaching-ai-to-see-and-read-together",
+        },{id: "post-sparse-autoencoders-the-dictionary-of-concepts-inside-llms",
+        
+          title: "Sparse Autoencoders: The Dictionary of Concepts Inside LLMs",
+        
+        description: "How sparse autoencoders are helping researchers discover millions of monosemantic features inside large language models — a breakthrough in AI interpretability.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sparse-autoencoders-llm-features/";
+          
+        },
+      },{id: "post-multimodal-foundation-models-teaching-ai-to-see-and-read-together",
         
           title: "Multimodal Foundation Models: Teaching AI to See and Read Together",
         
