@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-sparse-autoencoders-the-dictionary-of-concepts-inside-llms",
+        },{id: "post-speculative-decoding-3-faster-llm-inference-for-free",
+        
+          title: "Speculative Decoding: 3× Faster LLM Inference for Free",
+        
+        description: "How speculative decoding uses a small draft model and one parallel verification pass to dramatically accelerate autoregressive inference.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/speculative-decoding/";
+          
+        },
+      },{id: "post-sparse-autoencoders-the-dictionary-of-concepts-inside-llms",
         
           title: "Sparse Autoencoders: The Dictionary of Concepts Inside LLMs",
         
