@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-speculative-decoding-3-faster-llm-inference-for-free",
+        },{id: "post-mechanistic-interpretability-reverse-engineering-the-transformer",
+        
+          title: "Mechanistic Interpretability: Reverse-Engineering the Transformer",
+        
+        description: "How researchers use circuits, activation patching, and the logit lens to understand exactly what computations happen inside Transformer models.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mechanistic-interpretability/";
+          
+        },
+      },{id: "post-speculative-decoding-3-faster-llm-inference-for-free",
         
           title: "Speculative Decoding: 3× Faster LLM Inference for Free",
         
