@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-mechanistic-interpretability-reverse-engineering-the-transformer",
+        },{id: "post-the-transformer-architecture-a-first-principles-deep-dive",
+        
+          title: "The Transformer Architecture: A First-Principles Deep Dive",
+        
+        description: "A rigorous technical walkthrough of every sublayer in the original Transformer — the architecture underpinning virtually all modern AI.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/transformer-architecture-deep-dive/";
+          
+        },
+      },{id: "post-mechanistic-interpretability-reverse-engineering-the-transformer",
         
           title: "Mechanistic Interpretability: Reverse-Engineering the Transformer",
         
