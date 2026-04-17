@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-contrastive-self-supervised-learning-clip-simclr-and-dino",
+        },{id: "post-graph-neural-networks-and-foundation-models-for-science",
+        
+          title: "Graph Neural Networks and Foundation Models for Science",
+        
+        description: "How GNNs and graph-aware Transformers are enabling breakthroughs in drug discovery, materials science, and protein structure prediction.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/graph-neural-networks-foundation/";
+          
+        },
+      },{id: "post-contrastive-self-supervised-learning-clip-simclr-and-dino",
         
           title: "Contrastive Self-Supervised Learning: CLIP, SimCLR, and DINO",
         
