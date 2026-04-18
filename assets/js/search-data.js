@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-graph-neural-networks-and-foundation-models-for-science",
+        },{id: "post-knowledge-distillation-teaching-small-models-to-think-big",
+        
+          title: "Knowledge Distillation: Teaching Small Models to Think Big",
+        
+        description: "How knowledge distillation, pruning, and quantization compress state-of-the-art models into deployable systems — without sacrificing capability.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/knowledge-distillation/";
+          
+        },
+      },{id: "post-graph-neural-networks-and-foundation-models-for-science",
         
           title: "Graph Neural Networks and Foundation Models for Science",
         
