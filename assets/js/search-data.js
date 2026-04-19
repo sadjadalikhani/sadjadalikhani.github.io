@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-knowledge-distillation-teaching-small-models-to-think-big",
+        },{id: "post-in-context-learning-how-llms-learn-without-gradient-updates",
+        
+          title: "In-Context Learning: How LLMs Learn Without Gradient Updates",
+        
+        description: "The mysterious emergent ability of large language models to perform new tasks from just a handful of examples in the prompt — no gradient updates required.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/in-context-learning/";
+          
+        },
+      },{id: "post-knowledge-distillation-teaching-small-models-to-think-big",
         
           title: "Knowledge Distillation: Teaching Small Models to Think Big",
         
