@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-in-context-learning-how-llms-learn-without-gradient-updates",
+        },{id: "post-flash-attention-making-transformers-faster-than-ever",
+        
+          title: "Flash Attention: Making Transformers Faster Than Ever",
+        
+        description: "A deep dive into Flash Attention — the IO-aware exact attention algorithm that makes training large language models dramatically faster while using far less memory.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/flash-attention/";
+          
+        },
+      },{id: "post-in-context-learning-how-llms-learn-without-gradient-updates",
         
           title: "In-Context Learning: How LLMs Learn Without Gradient Updates",
         
