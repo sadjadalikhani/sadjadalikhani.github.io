@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-mamba-and-state-space-models-the-sequence-modelling-revolution",
+        },{id: "post-rlhf-and-dpo-teaching-language-models-to-be-helpful-and-harmless",
+        
+          title: "RLHF and DPO: Teaching Language Models to Be Helpful and Harmless",
+        
+        description: "The complete alignment pipeline — from SFT to RLHF with PPO, to Direct Preference Optimization that eliminates the reward model entirely.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/rlhf-dpo-alignment/";
+          
+        },
+      },{id: "post-mamba-and-state-space-models-the-sequence-modelling-revolution",
         
           title: "Mamba and State Space Models: The Sequence Modelling Revolution",
         
