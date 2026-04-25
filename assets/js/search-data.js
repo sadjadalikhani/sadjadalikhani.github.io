@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-diffusion-models-the-probabilistic-engine-behind-generative-ai",
+        },{id: "post-vision-transformers-how-attention-conquered-computer-vision",
+        
+          title: "Vision Transformers: How Attention Conquered Computer Vision",
+        
+        description: "From patch embeddings to DINOv2 — the complete story of how Transformers revolutionized computer vision.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/vision-transformers-vit/";
+          
+        },
+      },{id: "post-diffusion-models-the-probabilistic-engine-behind-generative-ai",
         
           title: "Diffusion Models: The Probabilistic Engine Behind Generative AI",
         
