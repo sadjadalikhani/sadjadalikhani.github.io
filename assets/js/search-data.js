@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-rope-and-alibi-giving-transformers-unlimited-memory",
+        },{id: "post-lora-and-qlora-fine-tuning-70-b-models-on-a-consumer-gpu",
+        
+          title: "LoRA and QLoRA: Fine-Tuning 70 B Models on a Consumer GPU",
+        
+        description: "LoRA, QLoRA, and the PEFT ecosystem — how the intrinsic dimensionality hypothesis lets us fine-tune billion-parameter models on a single GPU.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/lora-parameter-efficient-finetuning/";
+          
+        },
+      },{id: "post-rope-and-alibi-giving-transformers-unlimited-memory",
         
           title: "RoPE and ALiBi: Giving Transformers Unlimited Memory",
         
