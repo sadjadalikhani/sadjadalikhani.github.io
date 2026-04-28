@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-lora-and-qlora-fine-tuning-70-b-models-on-a-consumer-gpu",
+        },{id: "post-retrieval-augmented-generation-grounding-llms-in-facts",
+        
+          title: "Retrieval-Augmented Generation: Grounding LLMs in Facts",
+        
+        description: "How RAG systems combine dense vector retrieval with language model generation to produce factually grounded, up-to-date answers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/retrieval-augmented-generation/";
+          
+        },
+      },{id: "post-lora-and-qlora-fine-tuning-70-b-models-on-a-consumer-gpu",
         
           title: "LoRA and QLoRA: Fine-Tuning 70 B Models on a Consumer GPU",
         
