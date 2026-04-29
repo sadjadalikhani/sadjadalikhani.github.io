@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-retrieval-augmented-generation-grounding-llms-in-facts",
+        },{id: "post-chain-of-thought-why-thinking-out-loud-makes-ai-smarter",
+        
+          title: "Chain-of-Thought: Why Thinking Out Loud Makes AI Smarter",
+        
+        description: "Chain-of-thought prompting, self-consistency, Tree-of-Thoughts, and the new era of reasoning models that scale test-time compute.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/chain-of-thought-reasoning/";
+          
+        },
+      },{id: "post-retrieval-augmented-generation-grounding-llms-in-facts",
         
           title: "Retrieval-Augmented Generation: Grounding LLMs in Facts",
         
