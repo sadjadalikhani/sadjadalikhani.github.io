@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-neural-scaling-laws-the-power-laws-governing-every-llm",
+        },{id: "post-multimodal-foundation-models-teaching-ai-to-see-and-read-together",
+        
+          title: "Multimodal Foundation Models: Teaching AI to See and Read Together",
+        
+        description: "CLIP, LLaVA, Flamingo, and GPT-4V — how modern AI systems fuse vision and language into unified world representations.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/multimodal-foundation-models/";
+          
+        },
+      },{id: "post-neural-scaling-laws-the-power-laws-governing-every-llm",
         
           title: "Neural Scaling Laws: The Power Laws Governing Every LLM",
         
