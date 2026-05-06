@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/wordle/";
           },
-        },{id: "post-the-transformer-architecture-a-first-principles-deep-dive",
+        },{id: "post-contrastive-self-supervised-learning-clip-simclr-and-dino",
+        
+          title: "Contrastive Self-Supervised Learning: CLIP, SimCLR, and DINO",
+        
+        description: "SimCLR, MoCo, BYOL, and DINO — the elegant mathematics of learning powerful representations by contrasting augmented views, without any labels.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/contrastive-self-supervised-learning/";
+          
+        },
+      },{id: "post-the-transformer-architecture-a-first-principles-deep-dive",
         
           title: "The Transformer Architecture: A First-Principles Deep Dive",
         
