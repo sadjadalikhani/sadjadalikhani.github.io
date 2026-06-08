@@ -843,13 +843,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/CV_Sadjad_Alikhani.pdf", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
