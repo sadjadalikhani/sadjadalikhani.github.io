@@ -1,0 +1,116 @@
+---
+layout: page
+title: playground
+permalink: /playground/
+description: A crew of agents that build playable things — and the measurements underneath them.
+nav: true
+nav_order: 9
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/playground.css' | relative_url }}" />
+
+<style>
+  /* The playground ships its own design system, so keep the theme's page
+     furniture out of its way while letting the site header and footer stand. */
+  .playground-host { margin: 0 -1rem; }
+  .playground-host .shell { padding-top: 1rem; }
+  .playground-host body,
+  .playground-host .hero { background: none; }
+  .pg-mode {
+    max-width: 780px; margin: 0 auto 1.5rem; padding: 0 1.25rem;
+    font-size: 0.82rem; line-height: 1.6;
+  }
+  .pg-mode code { font-size: 0.78rem; }
+</style>
+
+<div class="playground-host">
+  <main class="shell">
+    <header class="hero">
+      <div class="hero-mark" aria-hidden="true">🛰️</div>
+      <h1>Ask the crew.</h1>
+      <p class="lede">
+        Specialists behind one prompt box. Describe what you want and the concierge hands it to
+        whoever builds that sort of thing — a puzzle, a case, a quiz. Everything you are told
+        about your play is a measured number with a paper behind it.
+      </p>
+    </header>
+
+    <section class="roster" id="roster" aria-label="The agents"></section>
+
+    <form class="ask" id="ask-form" autocomplete="off">
+      <label class="sr-only" for="prompt">What do you want?</label>
+      <div class="ask-row">
+        <textarea id="prompt" name="prompt" rows="1" maxlength="500"
+          placeholder="a wordle about volcanoes"></textarea>
+        <button type="submit" id="send" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <div class="ask-opts" id="ask-opts" hidden>
+        <span class="opts-label">If it's a playlist:</span>
+        <div class="seg" role="radiogroup" aria-label="What to do with a generated playlist">
+          <button type="button" class="seg-btn" role="radio" data-save="none" aria-checked="true">Preview only</button>
+          <button type="button" class="seg-btn" role="radio" data-save="private" aria-checked="false">Save, keep off profile</button>
+          <button type="button" class="seg-btn" role="radio" data-save="public" aria-checked="false">Save to profile</button>
+          <button type="button" class="seg-btn" role="radio" data-save="collaborative" aria-checked="false">Save collaborative</button>
+        </div>
+        <p class="opts-note" id="opts-note"></p>
+      </div>
+
+      <div class="chips" id="chips"></div>
+    </form>
+
+    <section class="trace-wrap" id="trace-wrap" hidden>
+      <button class="trace-toggle" id="trace-toggle" aria-expanded="true">
+        <span class="spark" id="spark"></span>
+        <span id="trace-title">Working…</span>
+        <svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <ol class="trace" id="trace"></ol>
+    </section>
+
+    <section id="stage" class="stage" aria-live="polite"></section>
+
+    <footer class="foot"><span id="foot-note"></span></footer>
+  </main>
+</div>
+
+<div class="pg-mode" id="pg-mode"></div>
+
+<script>
+  /* Point this at a deployed instance of the agent server for the full
+     experience — every agent generating fresh content, Mafia and the Spy Game
+     and the Haggle included. Leave it empty and the offline shim below serves
+     pre-baked packs for the games whose content can be settled in advance.
+
+     The API key never belongs here. It lives on the server, or in Actions
+     secrets for the nightly pack job. */
+  window.PLAYGROUND_API = "{{ site.playground_api | default: '' }}";
+  window.PLAYGROUND_PACKS = "{{ '/assets/json' | relative_url }}";
+  window.PLAYGROUND_AUDIO = "{{ '/assets/audio/piano' | relative_url }}";
+</script>
+<script src="{{ '/assets/js/playground/playground-offline.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/playground/app.js' | relative_url }}" type="module"></script>
+<script>
+  (function () {
+    var note = document.getElementById("pg-mode");
+    if (window.PLAYGROUND_API) {
+      note.innerHTML =
+        "Running against a live agent server, so everything here is generated on request.";
+    } else {
+      note.innerHTML =
+        "<strong>Offline mode.</strong> This copy has no backend. Six agents still run: the " +
+        "wordle, connections, quiz and alibi come from packs an agent wrote ahead of time on a " +
+        "schedule, the piano lessons likewise, and the poetry shelf fetches its verse live from " +
+        "the public-domain archive. Judging happens in your browser, so for the puzzles the " +
+        "answers are technically in the page. Mafia, the Spy Game and the Haggle write their " +
+        "dialogue as you play and need a live server, so they aren't available here rather than " +
+        "being faked. " +
+        "<a href=\"{{ '/playground/profiler/' | relative_url }}\">The Profiler</a> needs no " +
+        "backend at all and runs in full.";
+    }
+  })();
+</script>

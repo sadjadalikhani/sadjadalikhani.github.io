@@ -1,0 +1,96 @@
+name: Playground content packs
+
+# Regenerates the pre-baked puzzles the playground serves when no agent server
+# is configured. Replaces the old daily-wordle job, which did the same thing for
+# a single word.
+#
+# The OpenAI key lives in Actions secrets and never reaches the site. Nothing
+# generated here is secret — the packs contain answers by necessity, because
+# offline judging happens in the browser.
+
+# Manual-only until the playground repo below actually exists. A cron pointing
+# at a missing repo just fails every Monday and mails about it; uncomment the
+# schedule once the checkout step can succeed.
+on:
+  # schedule:
+  #   - cron: "0 8 * * 1" # 02:00 MDT Mondays
+  workflow_dispatch:
+    inputs:
+      wordle:
+        description: "How many wordle puzzles"
+        default: "14"
+      connections:
+        description: "How many connections grids"
+        default: "10"
+      trivia:
+        description: "How many quizzes"
+        default: "6"
+      alibi:
+        description: "How many alibi cases"
+        default: "6"
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Checkout the agent playground
+        uses: actions/checkout@v4
+        with:
+          repository: sadjadalikhani/agent-playground
+          path: playground
+          # Remove this line once the playground repo is public.
+          token: ${{ secrets.PLAYGROUND_REPO_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install
+        working-directory: playground
+        run: npm ci || npm install
+
+      - name: Bake packs
+        working-directory: playground
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          npm run packs -- \
+            --out "$GITHUB_WORKSPACE/assets/json" \
+            --wordle "${{ github.event.inputs.wordle || 14 }}" \
+            --connections "${{ github.event.inputs.connections || 10 }}" \
+            --trivia "${{ github.event.inputs.trivia || 6 }}" \
+            --alibi "${{ github.event.inputs.alibi || 6 }}"
+
+      - name: Sanity-check what was generated
+        run: |
+          for f in wordle connections trivia alibi; do
+            path="assets/json/pack-$f.json"
+            [ -s "$path" ] || { echo "::error::$path missing or empty"; exit 1; }
+            node -e "
+              const j = require('./$path');
+              const k = Object.keys(j).find((x) => x !== 'stamp');
+              if (!Array.isArray(j[k]) || j[k].length === 0) {
+                console.error('::error::$path has no items'); process.exit(1);
+              }
+              console.log('$f: ' + j[k].length + ' items');
+            "
+          done
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/json/pack-*.json
+          if git diff --cached --quiet; then
+            echo "packs unchanged"
+          else
+            git commit -m "playground: refresh content packs"
+            git push
+          fi

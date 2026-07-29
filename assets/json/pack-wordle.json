@@ -1,0 +1,117 @@
+{
+ "stamp": "2026-07-29",
+ "puzzles": [
+  {
+   "answer": "BRINE",
+   "theme": "Sea",
+   "hint": "What the cook leaves behind after the pickling is done — and what the ocean has in abundance.",
+   "fact": "Brine comes from an old Germanic root meaning “salt,” and it long referred both to salty water and to the liquid used for preserving food.",
+   "intro": "A salty little Wordle from the deep. Look for something the ocean has plenty of, but the clue is trying not to be too obvious.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "MAGMA",
+   "theme": "Volcanoes",
+   "hint": "What the mountain keeps under pressure, long before it has anything to say.",
+   "fact": "The word comes from Greek via Latin and originally referred to an unguent or thick paste before it became the molten rock beneath Earth’s crust.",
+   "intro": "A hot one from below: five letters, all pressure, no patience. See if you can name the stuff before it becomes a spectacle.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "STORM",
+   "theme": "Weather",
+   "hint": "The sky’s bad mood, in five letters and one syllable.",
+   "fact": "Storm comes from Old English and shares roots with words for disturbance and tumult; it’s been a weather word for centuries, but also a metaphor for any sudden upheaval.",
+   "intro": "A little meteorology, a little mischief: solve the five-letter weather word from the clue. Keep an eye on the sky.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "MIXER",
+   "theme": "Kitchens",
+   "hint": "It brings the batter together without asking for credit.",
+   "fact": "‘Mixer’ extends the ordinary idea of mixing into the kitchen, where the appliance turned a hand job into a powered one and became a staple of modern baking.",
+   "intro": "A room full of tools, smells, and half-finished intentions. See if you can land on the thing that fits the clue best.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "COMET",
+   "theme": "Night sky",
+   "hint": "A visitor with a tail, rarely punctual, and never signed to stay.",
+   "fact": "The word comes from Greek komētēs, meaning 'long-haired,' a nod to the glowing tail that made these objects seem star-like and wild to early observers.",
+   "intro": "A quick glance upward, and the clue might seem obvious—until it isn’t. Keep your eyes on the heavens and your guesses on earth.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "MYNAH",
+   "theme": "Birds",
+   "hint": "A talkative import with a flair for imitating the neighbors.",
+   "fact": "The myna bird is famous for mimicry; some species can copy human speech, which is why it became a popular cage bird and a symbol of chatter.",
+   "intro": "A feathered five-letter answer is hiding here. Think less field guide, more sly clue.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "TRACK",
+   "theme": "Railways",
+   "hint": "Where the wheels keep their vows, and the game is always measured in pairs.",
+   "fact": "“Track” comes from the notion of a path or course, and on railways it became the standard word for the paired running surface that guides the wheels.",
+   "intro": "All aboard: a five-letter answer hides in the world of railways. Solve the clue, then ride the letters to the station.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "MOCHA",
+   "theme": "Coffee",
+   "hint": "A café order that also names a tan tone and a chocolatey dessert cousin.",
+   "fact": "The name comes from Mocha, the Yemeni port that long exported coffee to the world, and the term later broadened to describe coffee-and-chocolate flavors.",
+   "intro": "A cup, a roast, a buzz — something in that orbit is hiding here. The clue is indirect on purpose, so think café menu more than dictionary entry.",
+   "difficulty": "gentle"
+  },
+  {
+   "answer": "INDEX",
+   "theme": "Libraries",
+   "hint": "The card catalog’s old mastermind: it points you to everything else.",
+   "fact": "An index is a finding aid, and library indexes helped readers navigate collections long before search bars turned every shelf into a query.",
+   "intro": "A quiet place with a lot of hidden paths. Solve the five-letter word that belongs in the stacks.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "FROST",
+   "theme": "Winter",
+   "hint": "The first white on the windshield, or the finishing touch on a cake.",
+   "fact": "Old English had this word as forst, and its twin life in weather and baking gives it a neat double meaning: the same look of white that can greet both a morning commute and a pastry case.",
+   "intro": "A cold-season Wordle: five letters, one wintry answer. The clue is meant to feel more like a little riddle than a definition.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "REELS",
+   "theme": "Cinema",
+   "hint": "What moviegoers used to unwind after a screening, and what a gossip-filled feed still gives you in snippets.",
+   "fact": "The word comes from the small cylinders that held early film stock; even after movies went digital, 'reel' stayed behind as a stubborn cinema fossil.",
+   "intro": "Lights down, eyes forward: this one lives somewhere between the marquee and the projector room. See if you can catch the word before the credits roll.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "HEDGE",
+   "theme": "Gardens",
+   "hint": "A living wall trimmed to a line, not bricks.",
+   "fact": "Hedges have long been used to mark boundaries and shelter garden beds; the word comes from Old English and is tied to the idea of enclosure.",
+   "intro": "Here’s a little five-letter puzzle rooted in the garden. Think of something that can shape a space without a shovel or stone.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "CHORD",
+   "theme": "Music",
+   "hint": "The thing you strike when several notes decide to get along.",
+   "fact": "“Chord” comes via French from a musical sense of “agreement,” which is why it can still imply harmony or accord outside music.",
+   "intro": "A small music-themed Wordle: five letters, one answer. Listen for the clue, then see what fits.",
+   "difficulty": "standard"
+  },
+  {
+   "answer": "ATLAS",
+   "theme": "Maps",
+   "hint": "A titan’s burden, if you’re looking for the book beside the globe.",
+   "fact": "The word comes from the Titan Atlas, who in Greek myth was imagined as bearing the heavens; map collections took his name in the 16th century and it stuck.",
+   "intro": "A cartographic little mystery: solve the five-letter word that fits the theme. Think of shelves, margins, and the thing that helps you orient the world.",
+   "difficulty": "standard"
+  }
+ ]
+}

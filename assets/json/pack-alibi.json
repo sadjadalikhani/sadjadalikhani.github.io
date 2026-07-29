@@ -1,0 +1,227 @@
+{
+ "stamp": "2026-07-29",
+ "cases": [
+  {
+   "crime": "A velvet jewelry case vanished from the hotel safe deposit office.",
+   "setting": "The case unfolds inside the Grand Mariston Hotel, all hushed carpets, service corridors, and brass-caged lifts after midnight.",
+   "hour": "between eleven and midnight",
+   "brief": "A velvet jewelry case disappeared from the safe deposit office of the Grand Mariston Hotel during the late-night lull. In a maze of carpeted corridors, shuttered lounges, and service passages, four members of the house account for the same hour.",
+   "culprit": "The Concierge",
+   "clash": [
+    "The Concierge",
+    "The Curator"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "Between eleven and midnight, I was at the Palm Court Bar behind the shuttered tea lounge with The Concierge. That is where I remained for the hour.",
+     "place": "the palm court bar behind the shuttered tea lounge",
+     "with": "The Concierge"
+    },
+    {
+     "name": "The Setter",
+     "statement": "Between eleven and midnight, I was in the linen storeroom off the third-floor service hall with The Quizmaster. I was there the whole time.",
+     "place": "the linen storeroom off the third-floor service hall",
+     "with": "The Quizmaster"
+    },
+    {
+     "name": "The Quizmaster",
+     "statement": "Between eleven and midnight, I was at the linen storeroom off the third-floor service hall. I was there with The Setter.",
+     "place": "the linen storeroom off the third-floor service hall",
+     "with": "The Setter"
+    },
+    {
+     "name": "The Concierge",
+     "statement": "Between eleven and midnight, I was at the brass-caged lift outside the safe deposit office with The Curator. That is where I was, and that is who was with me.",
+     "place": "the brass-caged lift outside the safe deposit office",
+     "with": "The Curator"
+    }
+   ]
+  },
+  {
+   "crime": "A silver prop dagger vanished from the locked props cabinet.",
+   "setting": "An old theatre of red velvet, paint dust, rope lines, and cramped backstage passages just off the stage and under the flies.",
+   "hour": "between eight and nine",
+   "brief": "During the hour before the house opened, a silver prop dagger disappeared from the props cabinet in an ageing theatre full of backstage nooks, draughty passages, and velvet shadows.",
+   "culprit": "The Piano Teacher",
+   "clash": [
+    "The Piano Teacher",
+    "The Quizmaster"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "Between eight and nine, I was at the paint-splattered scene dock by the loading doors with The Smith. That is where I was, plainly, the whole hour.",
+     "place": "the paint-splattered scene dock by the loading doors",
+     "with": "The Smith"
+    },
+    {
+     "name": "The Quizmaster",
+     "statement": "Between eight and nine, I was in the green room with its foxed mirrors and cold tea tray, with The Piano Teacher. That is where I was.",
+     "place": "the green room with its foxed mirrors and cold tea tray",
+     "with": "The Piano Teacher"
+    },
+    {
+     "name": "The Smith",
+     "statement": "I was at the paint-splattered scene dock by the loading doors. I was with The Curator.",
+     "place": "the paint-splattered scene dock by the loading doors",
+     "with": "The Curator"
+    },
+    {
+     "name": "The Piano Teacher",
+     "statement": "Between eight and nine, I was at the dim orchestra pit below the apron with The Quizmaster. I was there the whole time.",
+     "place": "the dim orchestra pit below the apron",
+     "with": "The Quizmaster"
+    }
+   ]
+  },
+  {
+   "crime": "A small enameled reliquary vanished from a locked medieval gallery after closing.",
+   "setting": "The museum had gone dark for the night, with only work lights glowing in back corridors, conservation rooms, and the echoing galleries beyond the velvet ropes.",
+   "hour": "between nine and ten",
+   "brief": "After closing, a small enameled reliquary disappeared from the medieval wing of a darkened museum. Four members of the house account for the same hour among conservation rooms, service spaces, and locked galleries.",
+   "culprit": "The Smith",
+   "clash": [
+    "The Concierge",
+    "The Smith"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "Between nine and ten, I was in the textile conservation lab behind the Flemish tapestries with The Piano Teacher. That is where I was.",
+     "place": "the textile conservation lab behind the Flemish tapestries",
+     "with": "The Piano Teacher"
+    },
+    {
+     "name": "The Smith",
+     "statement": "I was at the service lift vestibule by the crated Roman busts. I was with The Concierge.",
+     "place": "the service lift vestibule by the crated Roman busts",
+     "with": "The Concierge"
+    },
+    {
+     "name": "The Concierge",
+     "statement": "Between nine and ten, I was at the loading dock beside the rain-slick fire door with The Smith. That is where I was for that hour.",
+     "place": "the loading dock beside the rain-slick fire door",
+     "with": "The Smith"
+    },
+    {
+     "name": "The Piano Teacher",
+     "statement": "Between nine and ten, I was in the textile conservation lab behind the Flemish tapestries with The Curator. I was there the whole hour.",
+     "place": "the textile conservation lab behind the Flemish tapestries",
+     "with": "The Curator"
+    }
+   ]
+  },
+  {
+   "crime": "A passenger's lacquered dispatch case vanished from the purser's office.",
+   "setting": "The case unfolds aboard a night ferry, with steel companionways, a wind-scoured outer deck, and cramped service rooms humming below the passenger lounges.",
+   "hour": "between nine and ten",
+   "brief": "A lacquered dispatch case disappeared aboard a night ferry during the hour between nine and ten. The accounts come from the ferry's passages and lounges, from the purser's corridor to the wind-shielded promenade.",
+   "culprit": "The Quizmaster",
+   "clash": [
+    "The Concierge",
+    "The Quizmaster"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "Between nine and ten, I was in the passage outside the map case by the purser’s office, with The Setter. That is where I was, plainly, and nowhere else.",
+     "place": "the purser's office passage outside the map case",
+     "with": "The Setter"
+    },
+    {
+     "name": "The Quizmaster",
+     "statement": "Between nine and ten, I was at the aft observation lounge beneath the salt-fogged windows, with The Concierge. That is where I was, plainly stated.",
+     "place": "the aft observation lounge beneath the salt-fogged windows",
+     "with": "The Concierge"
+    },
+    {
+     "name": "The Setter",
+     "statement": "Between nine and ten, I was in the purser’s office passage outside the map case, with The Curator. That is where I was, plainly, and with company.",
+     "place": "the purser's office passage outside the map case",
+     "with": "The Curator"
+    },
+    {
+     "name": "The Concierge",
+     "statement": "Between nine and ten, I was at the lee-side promenade by the lifebuoy racks with The Quizmaster. That is where I was, plainly and without ambiguity.",
+     "place": "the lee-side promenade by the lifebuoy racks",
+     "with": "The Quizmaster"
+    }
+   ]
+  },
+  {
+   "crime": "A brass eyepiece from the main telescope has gone missing.",
+   "setting": "The matter unfolds in an old hilltop observatory, all echoing domes, red-lit stairwells, frost-rimmed catwalks, and instrument rooms smelling of oil and dust.",
+   "hour": "between eleven and midnight",
+   "brief": "A brass eyepiece vanished from the hilltop observatory during the late watch, while the suspects placed themselves among the domes, archives, and narrow service rooms. Sort out who truly kept company with whom between eleven and midnight.",
+   "culprit": "The Concierge",
+   "clash": [
+    "The Concierge",
+    "The Smith"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "I was at the chart archive under the west dome between eleven and midnight, with The Piano Teacher. That is where I was, and that is the truth.",
+     "place": "the chart archive under the west dome",
+     "with": "The Piano Teacher"
+    },
+    {
+     "name": "The Smith",
+     "statement": "Between eleven and midnight, I was at the copper-ladder well beneath the main telescope. The Concierge was with me.",
+     "place": "the copper-ladder well beneath the main telescope",
+     "with": "The Concierge"
+    },
+    {
+     "name": "The Piano Teacher",
+     "statement": "Between eleven and midnight, I was at the chart archive under the west dome with The Curator. I remained there the whole hour.",
+     "place": "the chart archive under the west dome",
+     "with": "The Curator"
+    },
+    {
+     "name": "The Concierge",
+     "statement": "Between eleven and midnight, I was at the shuttered transit room overlooking the south slit with The Smith. That is where I was for that hour.",
+     "place": "the shuttered transit room overlooking the south slit",
+     "with": "The Smith"
+    }
+   ]
+  },
+  {
+   "crime": "A tin of saffron buns vanished from the cooling rack before dawn prep.",
+   "setting": "The case unfolds in Briar & Crust, a narrow old bakery with a flour-dusted basement mixer room, a tiled proving kitchen, a warm front shop behind the glass cases, and a cramped back alley by the delivery door.",
+   "hour": "between five and six in the morning",
+   "brief": "Before sunrise at Briar & Crust, a tray of saffron buns disappeared from the cooling rack. The hour in question runs through the front shop, the basement mixer room, and the alley by the delivery door.",
+   "culprit": "The Smith",
+   "clash": [
+    "The Concierge",
+    "The Smith"
+   ],
+   "suspects": [
+    {
+     "name": "The Curator",
+     "statement": "Between five and six in the morning, I was at the front shop by the glass cases with The Piano Teacher. That is where I was, plainly.",
+     "place": "the front shop by the glass cases",
+     "with": "The Piano Teacher"
+    },
+    {
+     "name": "The Smith",
+     "statement": "Between five and six in the morning, I was in the basement mixer room beside the old spiral dough hook. I was with The Concierge.",
+     "place": "the basement mixer room beside the old spiral dough hook",
+     "with": "The Concierge"
+    },
+    {
+     "name": "The Concierge",
+     "statement": "Between five and six in the morning, I was at the back alley by the delivery door with The Smith. That is where I was during the hour the tin of saffron buns went missing.",
+     "place": "the back alley at the delivery door",
+     "with": "The Smith"
+    },
+    {
+     "name": "The Piano Teacher",
+     "statement": "Between five and six in the morning, I was at the front shop by the glass cases with The Curator. That is where I was, and that is who was with me.",
+     "place": "the front shop by the glass cases",
+     "with": "The Curator"
+    }
+   ]
+  }
+ ]
+}

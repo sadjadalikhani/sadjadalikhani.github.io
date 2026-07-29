@@ -1,0 +1,545 @@
+{
+ "stamp": "2026-07-29",
+ "quizzes": [
+  {
+   "title": "Voyager Missions Quiz",
+   "questions": [
+    {
+     "question": "Which two planets were the primary original targets of Voyager 1 and Voyager 2?",
+     "choices": [
+      "Mars and Venus",
+      "Jupiter and Saturn",
+      "Uranus and Neptune",
+      "Mercury and Venus"
+     ],
+     "answerIndex": 1,
+     "explanation": "The Voyager mission was designed first and foremost for flybys of Jupiter and Saturn. Voyager 2 later continued on to Uranus and Neptune because planetary alignment made a 'Grand Tour' possible.",
+     "b": -1
+    },
+    {
+     "question": "Despite its name, what unusual fact is true about Voyager 1 compared with Voyager 2?",
+     "choices": [
+      "Voyager 1 launched before Voyager 2",
+      "Voyager 1 was built after Voyager 2",
+      "Voyager 1 reached Jupiter first even though it launched later",
+      "Voyager 1 never visited Saturn"
+     ],
+     "answerIndex": 2,
+     "explanation": "Voyager 2 launched first, but Voyager 1 took a faster trajectory and reached Jupiter and Saturn earlier. The numbering reflects planned encounter sequence, not launch order.",
+     "b": 0
+    },
+    {
+     "question": "Which moon did Voyager 1 reveal to be the most volcanically active body known in the Solar System?",
+     "choices": [
+      "Europa",
+      "Titan",
+      "Io",
+      "Triton"
+     ],
+     "answerIndex": 2,
+     "explanation": "Voyager 1's images of Io showed active volcanic plumes erupting from its surface. That discovery transformed scientists' understanding of how tidal heating can power geology far from the Sun.",
+     "b": 0
+    },
+    {
+     "question": "Why did Voyager 1 not continue on to Uranus and Neptune after Saturn?",
+     "choices": [
+      "It ran out of fuel at Saturn",
+      "Its instruments failed after the Titan flyby",
+      "NASA chose to send it into the Sun",
+      "Its trajectory was bent by the Titan encounter onto a path out of the plane of the planets"
+     ],
+     "answerIndex": 3,
+     "explanation": "Voyager 1's close flyby of Titan was scientifically valuable but changed its path dramatically. That gravity assist sent it northward out of the ecliptic, ending any chance of visiting Uranus and Neptune.",
+     "b": 1
+    },
+    {
+     "question": "What is the name of the record mounted on each Voyager spacecraft as a message from Earth?",
+     "choices": [
+      "The Pioneer Plaque",
+      "The Arecibo Disc",
+      "The Golden Record",
+      "The Earth Archive"
+     ],
+     "answerIndex": 2,
+     "explanation": "Each Voyager carries a gold-plated copper phonograph record with sounds, music, images, and greetings from Earth. Carl Sagan chaired the committee that selected its contents.",
+     "b": -1
+    },
+    {
+     "question": "Voyager 2 remains the only spacecraft to have visited which planets?",
+     "choices": [
+      "Mars and Venus",
+      "Jupiter and Saturn",
+      "Uranus and Neptune",
+      "Mercury and Mars"
+     ],
+     "answerIndex": 2,
+     "explanation": "Voyager 2 is still humanity's only visitor to Uranus and Neptune, having flown by them in 1986 and 1989. No later mission has returned to either ice giant.",
+     "b": 1
+    },
+    {
+     "question": "In 2012, Voyager 1 became the first human-made object to do what?",
+     "choices": [
+      "Enter orbit around another star",
+      "Leave the Solar System entirely",
+      "Cross the heliopause into interstellar space",
+      "Pass beyond the Kuiper Belt"
+     ],
+     "answerIndex": 2,
+     "explanation": "Voyager 1 crossed the heliopause, the boundary where the Sun's solar wind gives way to the interstellar medium. It's still under the Sun's gravity, so this is not the same as leaving the Solar System entirely.",
+     "b": 2
+    }
+   ],
+   "intro": "From Jupiter's storms to the edge of interstellar space, this quiz tracks the twin spacecraft that turned a planetary tour into one of the greatest exploration stories ever told."
+  },
+  {
+   "title": "Golden Era Beats: 90s Hip-Hop Production Quiz",
+   "questions": [
+    {
+     "question": "Which sampler became a studio staple for many 1990s hip-hop producers because of its pads and sequencing workflow?",
+     "choices": [
+      "Roland TR-808",
+      "Akai MPC60",
+      "Korg Triton",
+      "Yamaha DX7"
+     ],
+     "answerIndex": 1,
+     "explanation": "The Akai MPC line, especially the MPC60 and later models, became central to hip-hop production thanks to its tactile pads, onboard sequencing, and swing feel. The TR-808 is iconic too, but it's a drum machine rather than the all-in-one sampler-sequencer many producers built tracks around.",
+     "b": -1
+    },
+    {
+     "question": "DJ Premier is especially known for which production signature?",
+     "choices": [
+      "Live bass guitar solos on choruses",
+      "Fast four-on-the-floor kick patterns",
+      "Chopped scratch choruses built from vocal snippets",
+      "Layering orchestral strings recorded with a full symphony"
+     ],
+     "answerIndex": 2,
+     "explanation": "Premier helped define a classic East Coast sound with hard drums, filtered samples, and hook sections cut together from scratched vocal phrases. That scratched-chorus style became one of his most recognizable trademarks.",
+     "b": 0
+    },
+    {
+     "question": "The Bomb Squad, famous for producing Public Enemy, were known in part for what kind of sonic approach?",
+     "choices": [
+      "Sparse minimal beats with one drum machine line",
+      "Dense, layered collages of samples and noise",
+      "G-funk synthesizer leads over slow grooves",
+      "Jazz-rap built mostly from upright bass and brushed drums"
+     ],
+     "answerIndex": 1,
+     "explanation": "The Bomb Squad stacked sirens, funk breaks, speech fragments, and noise into dense, confrontational productions. Their layered sample collage style was hugely influential heading into the early 1990s.",
+     "b": 0
+    },
+    {
+     "question": "What does the term 'crate digging' refer to in hip-hop production culture?",
+     "choices": [
+      "Testing speaker cabinets before mixing",
+      "Searching through records for breakbeats and samples",
+      "Building custom wooden boxes for storing drum machines",
+      "Recording drums in small, untreated rooms"
+     ],
+     "answerIndex": 1,
+     "explanation": "Crate digging means hunting through vinyl bins for obscure records to sample, especially drums, basslines, and unusual textures. It became a core part of producer identity in the 1990s sample-based era.",
+     "b": -1
+    },
+    {
+     "question": "Dr. Dre's 1990s G-funk sound drew especially heavily from grooves and synth textures associated with which artist?",
+     "choices": [
+      "George Clinton",
+      "Miles Davis",
+      "Brian Eno",
+      "Nile Rodgers"
+     ],
+     "answerIndex": 0,
+     "explanation": "G-funk leaned hard on the P-Funk world of George Clinton and Parliament-Funkadelic, often interpolating or sampling those records. Dre's productions turned that influence into a polished, rolling West Coast sound.",
+     "b": 0
+    },
+    {
+     "question": "Why was sample clearance such a major issue for hip-hop producers in the 1990s?",
+     "choices": [
+      "Most samplers could only hold copyrighted sounds",
+      "Record labels began aggressively enforcing rights over sampled recordings and compositions",
+      "Radio stations banned songs that used any drum breaks",
+      "Digital recording made all uncleared samples immediately public domain"
+     ],
+     "answerIndex": 1,
+     "explanation": "As lawsuits and licensing demands increased, producers and labels had to clear both the master recording and the underlying composition. That legal pressure made dense, sample-heavy production more expensive and risky.",
+     "b": 1
+    },
+    {
+     "question": "Which producer is most closely associated with the 1990s 'Soulquarians'-adjacent, behind-the-beat feel built from warm, off-kilter loops on records by A Tribe Called Quest, De La Soul, and later Common?",
+     "choices": [
+      "RZA",
+      "J Dilla",
+      "Pete Rock",
+      "Large Professor"
+     ],
+     "answerIndex": 1,
+     "explanation": "J Dilla became renowned for a loose, human rhythmic feel that pushed drums slightly off the grid without losing groove. While his biggest crossover influence landed in the late 1990s and 2000s, that feel is central to how many listeners understand the era's evolution in hip-hop production.",
+     "b": 2
+    }
+   ],
+   "intro": "From MPC pads to sample lawsuits, this one digs into the sounds, techniques, and signatures that shaped 90s hip-hop behind the boards. It starts friendly and ends deep in producer-nerd territory."
+  },
+  {
+   "title": "Deep Sea Biology: Life Below the Sunlight",
+   "questions": [
+    {
+     "question": "In ocean science, which zone is commonly called the “midnight zone”?",
+     "choices": [
+      "Epipelagic zone",
+      "Mesopelagic zone",
+      "Bathypelagic zone",
+      "Littoral zone"
+     ],
+     "answerIndex": 2,
+     "explanation": "The bathypelagic zone lies roughly 1,000 to 4,000 meters deep, where sunlight does not penetrate at all. It’s one of the classic deep-sea regions and is perpetually dark.",
+     "b": -1
+    },
+    {
+     "question": "What is the main source of energy for many ecosystems around deep-sea hydrothermal vents?",
+     "choices": [
+      "Photosynthesis by giant kelp",
+      "Chemosynthesis by microbes",
+      "Tidal heating of seawater",
+      "Falling whale songs converted to sound energy"
+     ],
+     "answerIndex": 1,
+     "explanation": "At vents, microbes use chemicals such as hydrogen sulfide to build organic matter through chemosynthesis. That makes them the foundation of vent food webs, replacing sunlight-driven photosynthesis.",
+     "b": 0
+    },
+    {
+     "question": "Why do many deep-sea animals appear red or black?",
+     "choices": [
+      "Those colors are easiest to produce under high pressure",
+      "Red and black help them avoid detection in dim or absent light",
+      "They are warning colors to scare large predators",
+      "Those pigments absorb salt from seawater"
+     ],
+     "answerIndex": 1,
+     "explanation": "Red light is quickly absorbed by seawater, so red animals can appear black at depth. Black and dark coloration also helps with camouflage in a world with very little light.",
+     "b": 0
+    },
+    {
+     "question": "Which adaptation helps many deep-sea fishes avoid being silhouetted when predators look upward?",
+     "choices": [
+      "Counterillumination",
+      "Electroreception",
+      "Mirror scales",
+      "Seasonal color change"
+     ],
+     "answerIndex": 0,
+     "explanation": "Counterillumination uses light-producing organs on the underside of the body to match faint downwelling light from above. That reduces the animal’s silhouette and makes it harder to spot from below.",
+     "b": 1
+    },
+    {
+     "question": "The pressure in the deep sea increases by about how much for every 10 meters of depth?",
+     "choices": [
+      "About 1 atmosphere",
+      "About 10 atmospheres",
+      "About 0.1 atmosphere",
+      "About 100 atmospheres"
+     ],
+     "answerIndex": 0,
+     "explanation": "A good rule of thumb is that pressure rises by roughly 1 atmosphere for every 10 meters of seawater depth. That means animals thousands of meters down live under hundreds of atmospheres of pressure.",
+     "b": 0
+    },
+    {
+     "question": "What are marine snow and marine aggregates most important for in the deep ocean?",
+     "choices": [
+      "Reflecting sunlight back into space",
+      "Transporting organic matter from surface waters to depth",
+      "Reducing salinity in abyssal plains",
+      "Creating hydrothermal vent chimneys"
+     ],
+     "answerIndex": 1,
+     "explanation": "Marine snow is a steady rain of dead plankton, fecal pellets, mucus, and other particles sinking from the upper ocean. It is a major food source for many deep-sea organisms away from vents and seeps.",
+     "b": 1
+    },
+    {
+     "question": "Which of these animals is famous for having extremely pressure-tolerant snailfish species recorded from some of the greatest ocean depths?",
+     "choices": [
+      "Clownfish",
+      "Anglerfish",
+      "Snailfish",
+      "Blue tang"
+     ],
+     "answerIndex": 2,
+     "explanation": "Hadal snailfishes are among the deepest-living fishes known, with species observed in ocean trenches thousands of meters down. They’ve become emblematic of vertebrate life near the limits of extreme pressure.",
+     "b": 2
+    }
+   ],
+   "intro": "From glowing predators to microbial vent cities, this quiz dives into how life survives where sunlight doesn’t. It starts approachable and gets a bit darker, stranger, and deeper as you go."
+  },
+  {
+   "title": "From Manuscripts to Moveable Type: A History of Typography Quiz",
+   "questions": [
+    {
+     "question": "Which invention is most closely associated with Johannes Gutenberg’s impact on typography in 15th-century Europe?",
+     "choices": [
+      "The first wood-pulp paper mill",
+      "Movable metal type combined with a screw press",
+      "The linotype machine",
+      "Offset lithography"
+     ],
+     "answerIndex": 1,
+     "explanation": "Gutenberg’s breakthrough was not just type, but a practical system: durable movable metal type, oil-based ink, and a press adapted from screw presses. That combination made large-scale book production viable in Europe.",
+     "b": -1
+    },
+    {
+     "question": "The typefaces now called “Roman” first took shape in Renaissance Italy by drawing on which earlier letterform tradition?",
+     "choices": [
+      "Carolingian minuscule and classical Roman capitals",
+      "Runic inscriptions from northern Europe",
+      "Arabic chancery scripts",
+      "Byzantine uncial manuscripts alone"
+     ],
+     "answerIndex": 0,
+     "explanation": "Humanist scribes in Renaissance Italy admired Carolingian manuscripts, mistaking them for ancient Roman writing, and paired that lowercase model with inscriptional Roman capitals. The result became the basis of Roman type.",
+     "b": 0
+    },
+    {
+     "question": "Why is Aldus Manutius especially important in the history of typography?",
+     "choices": [
+      "He introduced the first color printing press",
+      "He popularized compact books and helped establish italic type",
+      "He invented the point system for measuring type",
+      "He designed Times New Roman"
+     ],
+     "answerIndex": 1,
+     "explanation": "Aldus Manutius, working in Venice, issued influential pocket-sized editions and used italic type associated with Francesco Griffo. His press helped shape both book format and typographic style.",
+     "b": 0
+    },
+    {
+     "question": "In the traditional classification of type, Garamond and Caslon are usually grouped as which kind of serif faces?",
+     "choices": [
+      "Slab serif",
+      "Old-style",
+      "Didone",
+      "Sans serif"
+     ],
+     "answerIndex": 1,
+     "explanation": "Garamond and Caslon are classic old-style serifs, with moderate contrast and calligraphic roots. They predate the sharper contrast and vertical stress of later transitional and Didone faces.",
+     "b": 0
+    },
+    {
+     "question": "What was the main significance of Ottmar Mergenthaler’s Linotype machine, introduced in the late 19th century?",
+     "choices": [
+      "It allowed printers to cast an entire line of type at once",
+      "It replaced metal type with photographic film",
+      "It standardized Unicode for newspaper printing",
+      "It made hand illumination faster and cheaper"
+     ],
+     "answerIndex": 0,
+     "explanation": "Linotype mechanized composition by casting a whole line, or 'slug,' of metal type in one go. That dramatically sped up newspaper and book production compared with setting individual sorts by hand.",
+     "b": 1
+    },
+    {
+     "question": "Jan Tschichold’s early book 'Die neue Typographie' is most associated with which design approach?",
+     "choices": [
+      "Decorative Victorian ornament and dense borders",
+      "A return to blackletter as the universal German script",
+      "Asymmetrical layouts, sans serifs, and functional modernism",
+      "Phototypesetting for digital screens"
+     ],
+     "answerIndex": 2,
+     "explanation": "In 'Die neue Typographie' (1928), Tschichold argued for clarity, asymmetry, sans serifs, and standardized forms influenced by modernist movements. It became a landmark statement of functional graphic design.",
+     "b": 1
+    },
+    {
+     "question": "Which 20th-century typeface was designed in Switzerland by Max Miedinger and became a global symbol of the International Typographic Style?",
+     "choices": [
+      "Gill Sans",
+      "Helvetica",
+      "Futura",
+      "Baskerville"
+     ],
+     "answerIndex": 1,
+     "explanation": "Helvetica was developed in 1957 by Max Miedinger with Eduard Hoffmann at the Haas Type Foundry. Its neutral, clean appearance made it closely identified with Swiss modernist typography and later corporate design worldwide.",
+     "b": 2
+    }
+   ],
+   "intro": "A quick trip through the big turning points in type: humanist letters, printing revolutions, machine composition, and modernist design. It starts friendly and finishes with a couple for people who’ve spent time around type specimens."
+  },
+  {
+   "title": "Volcanology: Fire, Ash, and Magma",
+   "questions": [
+    {
+     "question": "What is the term for molten rock once it reaches Earth's surface?",
+     "choices": [
+      "Lava",
+      "Magma",
+      "Tephra",
+      "Pumice"
+     ],
+     "answerIndex": 0,
+     "explanation": "Underground, molten rock is called magma; once it erupts onto the surface, it is lava. The change in name marks the change in setting, not composition.",
+     "b": -1.5
+    },
+    {
+     "question": "Which volcanic hazard is generally the fastest and most immediately deadly?",
+     "choices": [
+      "Lahar",
+      "Ash fall",
+      "Pyroclastic flow",
+      "Lava flow"
+     ],
+     "answerIndex": 2,
+     "explanation": "Pyroclastic flows are searing mixtures of gas, ash, and rock that can race down volcano slopes at highway-to-jetliner speeds. Their heat and speed make them among the most lethal volcanic phenomena.",
+     "b": 0
+    },
+    {
+     "question": "Which tectonic setting produces most of Earth's volcanoes?",
+     "choices": [
+      "Transform plate boundaries",
+      "Subduction zones",
+      "Continental collision zones",
+      "Passive continental margins"
+     ],
+     "answerIndex": 1,
+     "explanation": "Most volcanoes form above subduction zones, where water-rich oceanic crust sinks and helps generate magma in the mantle. This is why the Pacific 'Ring of Fire' is so volcanically active.",
+     "b": 0
+    },
+    {
+     "question": "Which gas is typically the most abundant in volcanic emissions?",
+     "choices": [
+      "Sulfur dioxide",
+      "Carbon dioxide",
+      "Hydrogen sulfide",
+      "Water vapor"
+     ],
+     "answerIndex": 3,
+     "explanation": "Water vapor usually makes up the largest share of volcanic gases, with carbon dioxide and sulfur dioxide also important. The exact mix varies by magma and eruption style.",
+     "b": 0.5
+    },
+    {
+     "question": "The 1980 eruption of Mount St. Helens is especially famous for beginning with what unusual feature?",
+     "choices": [
+      "A lateral blast",
+      "A volcanic tsunami",
+      "A caldera lake outburst",
+      "A fissure eruption through snow"
+     ],
+     "answerIndex": 0,
+     "explanation": "Mount St. Helens' eruption famously began with a lateral blast triggered by a massive slope failure. Instead of shooting mainly upward, the initial explosion blasted sideways and devastated the north flank.",
+     "b": 1
+    },
+    {
+     "question": "What does the Volcanic Explosivity Index (VEI) primarily measure?",
+     "choices": [
+      "The chemical silica content of magma",
+      "The duration of a volcano's active life",
+      "The size and explosiveness of eruptions",
+      "The depth of the magma chamber"
+     ],
+     "answerIndex": 2,
+     "explanation": "The VEI is a logarithmic scale based mainly on erupted volume, plume height, and qualitative explosiveness. It compares eruptions from relatively modest blasts to colossal events like Tambora.",
+     "b": 1
+    },
+    {
+     "question": "Which famous eruption is most closely linked to the 'Year Without a Summer' in 1816?",
+     "choices": [
+      "Krakatoa",
+      "Mount Pelée",
+      "Mount Pinatubo",
+      "Mount Tambora"
+     ],
+     "answerIndex": 3,
+     "explanation": "Tambora's 1815 eruption injected so much material into the atmosphere that global climate was affected the following year. The result was widespread cooling and severe crop failures in 1816.",
+     "b": 2
+    }
+   ],
+   "intro": "From lava and lahars to Tambora and tectonic plates, this quiz starts with the basics and climbs toward the kind of facts volcano nerds love."
+  },
+  {
+   "title": "Crackling Airwaves: Early Radio Quiz",
+   "questions": [
+    {
+     "question": "Before radio became practical, whose equations first showed that electromagnetic waves could exist?",
+     "choices": [
+      "Thomas Edison",
+      "James Clerk Maxwell",
+      "Nikola Tesla",
+      "Michael Faraday"
+     ],
+     "answerIndex": 1,
+     "explanation": "Maxwell’s 1860s equations unified electricity and magnetism and implied waves moving at the speed of light. That theoretical groundwork came before anyone generated and detected radio waves in the lab.",
+     "b": -1
+    },
+    {
+     "question": "Which experimenter is best known for demonstrating the existence of radio waves in the late 1880s?",
+     "choices": [
+      "Guglielmo Marconi",
+      "Heinrich Hertz",
+      "Lee de Forest",
+      "Reginald Fessenden"
+     ],
+     "answerIndex": 1,
+     "explanation": "Hertz produced and detected electromagnetic waves in laboratory experiments, confirming Maxwell’s theory. The unit of frequency, the hertz, was later named for him.",
+     "b": 0
+    },
+    {
+     "question": "What was the main limitation of early spark-gap transmitters?",
+     "choices": [
+      "They could only work underwater",
+      "They mainly produced bursts suitable for Morse code rather than clear voice transmission",
+      "They required vacuum tubes to operate",
+      "They could receive signals but not send them"
+     ],
+     "answerIndex": 1,
+     "explanation": "Spark transmitters generated damped waves spread across a wide range of frequencies, making them noisy and poorly suited to high-quality audio. That’s why early radio traffic was dominated by wireless telegraphy rather than broadcasting speech or music.",
+     "b": 0
+    },
+    {
+     "question": "Which inventor is closely associated with the triode vacuum tube, a key device that amplified radio signals?",
+     "choices": [
+      "Edwin Howard Armstrong",
+      "Lee de Forest",
+      "John Ambrose Fleming",
+      "Alexander Popov"
+     ],
+     "answerIndex": 1,
+     "explanation": "Lee de Forest’s Audion, introduced in 1906, added a control grid and became the basis of the triode amplifier. Amplification transformed radio reception and later enabled more capable transmitters and electronics.",
+     "b": 1
+    },
+    {
+     "question": "The 1906 Brant Rock transmission by Reginald Fessenden is famous because it is often described as an early broadcast of what?",
+     "choices": [
+      "Weather satellite images",
+      "Live voice and music",
+      "Television pictures",
+      "FM stereo programming"
+     ],
+     "answerIndex": 1,
+     "explanation": "Fessenden’s Christmas Eve transmission is often cited as an early broadcast of speech and music, heard by some shipboard operators expecting Morse code. It became one of the classic milestones in the shift from wireless telegraphy to audio broadcasting.",
+     "b": 1
+    },
+    {
+     "question": "What major improvement did Edwin Howard Armstrong’s superheterodyne receiver provide?",
+     "choices": [
+      "It eliminated the need for antennas",
+      "It converted incoming signals to a fixed intermediate frequency for easier amplification and tuning",
+      "It made spark-gap transmitters legal again",
+      "It allowed radio to work without electricity"
+     ],
+     "answerIndex": 1,
+     "explanation": "The superheterodyne mixes the incoming signal with a local oscillator to produce a constant intermediate frequency. That made selective tuning and high-gain amplification much more practical, and the architecture became standard in radio design.",
+     "b": 2
+    },
+    {
+     "question": "In the 1912 Radio Act in the United States, what change followed in large part from the Titanic disaster?",
+     "choices": [
+      "Radio ownership was banned for private citizens",
+      "Only universities could operate transmitters",
+      "Wireless stations were required to be licensed and assigned wavelengths",
+      "AM broadcasting was replaced by FM"
+     ],
+     "answerIndex": 2,
+     "explanation": "After the Titanic disaster highlighted chaotic interference and poor coordination, the U.S. government required stations to obtain licenses and operate on assigned wavelengths. It was an early attempt to bring order to a crowded spectrum.",
+     "b": 2
+    }
+   ],
+   "intro": "From Maxwell’s theory to the first voices over the air, this quiz traces how radio went from sparks in a lab to a world-changing medium. It starts friendly and ends with a couple of deeper cuts for history-of-technology fans."
+  }
+ ]
+}
