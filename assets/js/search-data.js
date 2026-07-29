@@ -44,12 +44,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-wordle",
-          title: "wordle",
-          description: "A daily word puzzle — a new word every day at 2 AM.",
+        },{id: "nav-playground",
+          title: "playground",
+          description: "A crew of agents that build playable things — and the measurements underneath them.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/wordle/";
+            window.location.href = "/playground/";
           },
         },{id: "post-graph-neural-networks-and-foundation-models-for-science",
         

@@ -1,0 +1,333 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> profiler | Sadjad Alikhani </title> <meta name="author" content="Sadjad Alikhani"> <meta name="description" content="Four short decisions from behavioural economics, and what they actually show."> <meta name="keywords" content="wireless communications, digital twins, foundation models, machine learning"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%A1&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://sadjadalikhani.github.io/playground/profiler/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Sadjad Alikhani </a> </li> <li class="nav-item "> <a class="nav-link" href="/404.html">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/404.html">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">others </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> </div> </li> <li class="nav-item active"> <a class="nav-link" href="/playground/">playground <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">profiler</h1> <p class="post-description">Four short decisions from behavioural economics, and what they actually show.</p> </header> <article> <style>#prof-wrap{max-width:640px;margin:0 auto;padding:8px 0 40px}.pf-intro{color:var(--global-text-color-light);line-height:1.6;margin-bottom:24px}.pf-progress{font-family:var(--global-code-font-family,monospace);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--global-text-color-light);margin-bottom:12px}.pf-task{border:1px solid var(--global-divider-color);border-radius:10px;padding:20px;background:var(--global-card-bg-color)}.pf-task h3{margin:0 0 10px;font-size:1.1rem}.pf-prompt{line-height:1.65;margin:0 0 18px;color:var(--global-text-color)}.pf-paradigm{margin:16px 0 0;font-family:var(--global-code-font-family,monospace);font-size:.7rem;color:var(--global-text-color-light)}.pf-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pf-num{flex:0 1 140px;padding:8px 14px;border-radius:999px;border:1px solid var(--global-divider-color);background:var(--global-bg-color);color:var(--global-text-color);font:inherit;font-size:.95rem}.pf-btn{padding:8px 18px;border-radius:999px;border:1px solid var(--global-theme-color);background:var(--global-theme-color);color:#fff;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}.pf-btn:disabled{opacity:.45;cursor:not-allowed}.pf-ghost{background:transparent;color:var(--global-text-color-light);border-color:var(--global-divider-color)}.pf-ladder{display:grid;gap:8px;margin-bottom:18px}.pf-lrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:.85rem}.pf-ln{font-family:var(--global-code-font-family,monospace);font-size:.7rem;color:var(--global-text-color-light);width:14px;flex:none}.pf-ltext{flex:1 1 18rem;font-family:var(--global-code-font-family,monospace);font-size:.72rem;color:var(--global-text-color-light)}.pf-seg{display:inline-flex;border:1px solid var(--global-divider-color);border-radius:999px;padding:2px}.pf-seg button{border:0;background:transparent;color:var(--global-text-color-light);font:inherit;font-size:.75rem;padding:4px 12px;border-radius:999px;cursor:pointer}.pf-seg button[aria-checked="true"]{background:var(--global-theme-color);color:#fff;font-weight:600}.pf-measures{width:100%;border-collapse:collapse;margin:10px 0 26px;font-size:.85rem}.pf-measures th{text-align:left;font-weight:500;color:var(--global-text-color-light);padding:5px 16px 5px 0;white-space:nowrap}.pf-measures td{font-family:var(--global-code-font-family,monospace);padding:5px 0}.pf-reading{border:1px solid var(--global-divider-color);border-radius:10px;padding:16px 18px;margin-bottom:12px;background:var(--global-card-bg-color)}.pf-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}.pf-conf{font-family:var(--global-code-font-family,monospace);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--global-theme-color)}.pf-vote{margin-left:auto;display:flex;gap:6px}.pf-thumb{border:1px solid var(--global-divider-color);background:var(--global-bg-color);color:var(--global-text-color-light);border-radius:6px;width:30px;height:26px;cursor:pointer;font-size:.75rem}.pf-thumb.on-up{background:#4ade80;color:#05210f;border-color:transparent}.pf-thumb.on-down{background:#f87171;color:#fff;border-color:transparent}.pf-thumb:disabled{cursor:default}.pf-text{margin:0 0 8px;line-height:1.6}.pf-basis{margin:0;font-family:var(--global-code-font-family,monospace);font-size:.72rem;line-height:1.6;color:var(--global-text-color-light)}.pf-caveat{margin-top:24px;padding:14px 18px;border-left:3px solid #fbbf24;background:rgba(251,191,36,0.08);border-radius:0 8px 8px 0}.pf-caveat p{margin:0;font-size:.85rem;line-height:1.6;color:var(--global-text-color-light)}.pf-refs{margin-top:22px;font-size:.8rem;color:var(--global-text-color-light);line-height:1.7}</style> <div id="prof-wrap"> <p class="pf-intro"> Four short decisions, no right answers, a couple of minutes. Each one is a published elicitation instrument used as published — what comes out is a reading of how you played these particular games, which is not the same thing as who you are. </p> <div class="pf-progress" id="pf-progress"></div> <div id="pf-stage"></div> <div id="pf-results"></div> </div> <script>
+  (function () {
+    "use strict";
+
+    /* ── The instruments ──────────────────────────────────────────────
+       Every task, score and reading below is a deterministic function of
+       published paradigms. Nothing here calls a model: a fluent paragraph
+       about someone's character reads as accurate whether or not it is,
+       which is exactly the Barnum effect this is built to avoid. It also
+       means the whole thing runs on a static page with no backend.        */
+
+    const HOLT_LAURY = [
+      "10% chance of £2.00, else £1.60  —or—  10% chance of £3.85, else £0.10",
+      "30% chance of £2.00, else £1.60  —or—  30% chance of £3.85, else £0.10",
+      "50% chance of £2.00, else £1.60  —or—  50% chance of £3.85, else £0.10",
+      "70% chance of £2.00, else £1.60  —or—  70% chance of £3.85, else £0.10",
+      "90% chance of £2.00, else £1.60  —or—  90% chance of £3.85, else £0.10",
+      "100% chance of £2.00             —or—  100% chance of £3.85",
+    ];
+
+    const TASKS = [
+      {
+        id: "beauty",
+        title: "Pick a number",
+        paradigm: "p-beauty contest (Nagel 1995)",
+        prompt:
+          "Everyone playing picks a whole number from 0 to 100. The winner is whoever lands " +
+          "closest to two-thirds of the average of all numbers chosen.",
+        input: { kind: "number", min: 0, max: 100, label: "Your number" },
+      },
+      {
+        id: "trust",
+        title: "Send what you like",
+        paradigm: "Trust game, sender (Berg, Dickhaut & McCabe 1995)",
+        prompt:
+          "You have 100 tokens. You may send any amount to a stranger, and whatever you send is " +
+          "tripled on the way. They then decide how much, if any, to send back. You will never " +
+          "meet them, and nothing stops them keeping all of it.",
+        input: { kind: "number", min: 0, max: 100, label: "Tokens to send" },
+      },
+      {
+        id: "reciprocity",
+        title: "Now the other chair",
+        paradigm: "Trust game, responder",
+        prompt:
+          "Roles reversed. Someone you will never meet has sent you 60 of their 100 tokens. " +
+          "Tripled, that is 180 in front of you, and you keep your own 100 regardless. How much " +
+          "do you send back? Nothing compels you to send anything.",
+        input: { kind: "number", min: 0, max: 180, label: "Tokens to return" },
+      },
+      {
+        id: "risk",
+        title: "Safe or swing",
+        paradigm: "Holt–Laury lottery ladder (2002)",
+        prompt:
+          "Six pairs of gambles. Pick the safer or riskier option in each. Most people take the " +
+          "safe option at the top and switch somewhere down the list — where you switch is the " +
+          "measurement.",
+        input: { kind: "ladder", rows: HOLT_LAURY },
+      },
+    ];
+
+    /* level-k from a beauty-contest guess: k = log(g/50) / log(2/3) */
+    function levelK(g) {
+      if (g >= 50) return 0;
+      if (g <= 0.5) return 4;
+      return Math.max(0, Math.min(4, Math.log(g / 50) / Math.log(2 / 3)));
+    }
+
+    /* Holt–Laury switch row → CRRA bands, per the original paper */
+    function crra(row) {
+      const bands = [
+        [-0.95, -1.7, -0.5], [-0.3, -0.5, -0.15], [0.15, -0.15, 0.15],
+        [0.4, 0.15, 0.41], [0.7, 0.41, 0.68], [1.1, 0.68, 1.37],
+      ];
+      const b = bands[Math.max(0, Math.min(bands.length - 1, row))];
+      return { r: b[0], low: b[1], high: b[2] };
+    }
+
+    function score(r) {
+      const out = [];
+      if (r.beauty !== undefined) {
+        const k = levelK(r.beauty);
+        out.push({ id: "beauty", label: "Strategic depth", raw: r.beauty, value: k,
+          unit: "levels of reasoning", low: Math.max(0, k - 1), high: Math.min(4, k + 1) });
+      }
+      if (r.trust !== undefined) {
+        const v = r.trust / 100;
+        out.push({ id: "trust", label: "Trust in a stranger", raw: r.trust, value: v,
+          unit: "share sent", low: Math.max(0, v - 0.15), high: Math.min(1, v + 0.15) });
+      }
+      if (r.reciprocity !== undefined) {
+        const v = r.reciprocity / 180;
+        out.push({ id: "reciprocity", label: "Reciprocity", raw: r.reciprocity, value: v,
+          unit: "share returned", low: Math.max(0, v - 0.12), high: Math.min(1, v + 0.12) });
+      }
+      if (r.risk !== undefined) {
+        const c = crra(r.risk);
+        out.push({ id: "risk", label: "Risk attitude", raw: r.risk, value: c.r,
+          unit: "CRRA coefficient", low: c.low, high: c.high });
+      }
+      return out;
+    }
+
+    const pct = (x) => Math.round(x * 100) + "%";
+
+    function readingsFor(m) {
+      const out = [];
+      if (m.id === "beauty") {
+        if (m.value < 0.5) out.push({ id: "beauty-l0", confidence: 0.7,
+          text: "You answered the question as asked rather than working through what everyone else would do. That is the intuitive response, and in this game it is the one most people give.",
+          basis: "Guess " + m.raw + " implies level-k ≈ " + m.value.toFixed(1) + ". A guess at or above 50 is level-0: no iteration of others' reasoning." });
+        else if (m.value < 1.6) out.push({ id: "beauty-l1", confidence: 0.72,
+          text: "You thought one step ahead — you worked out what a naive answer would be, then undercut it. That is where most people who reason about it at all end up.",
+          basis: "Guess " + m.raw + " implies level-k ≈ " + m.value.toFixed(1) + ", one iteration: best response to a level-0 population." });
+        else out.push({ id: "beauty-l2", confidence: 0.65,
+          text: "You went two or more steps deep — anticipating not just what others would pick, but that they would be anticipating too. Fewer than a fifth of people go this far.",
+          basis: "Guess " + m.raw + " implies level-k ≈ " + m.value.toFixed(1) + ". Nagel's populations concentrate at k = 1–2; k ≥ 2 is the minority tail." });
+      }
+      if (m.id === "trust") {
+        if (m.value >= 0.6) out.push({ id: "trust-high", confidence: 0.62,
+          text: "You handed over most of what you had to someone with no reason to give it back. That is a bet on other people rather than on the odds.",
+          basis: "Sent " + pct(m.value) + " of endowment. Berg et al. report a mean near 50%; you are above it." });
+        else if (m.value <= 0.25) out.push({ id: "trust-low", confidence: 0.62,
+          text: "You kept most of it back. The arithmetic favoured sending more — tripling is a good return — so this reads as caution about the person, not the maths.",
+          basis: "Sent " + pct(m.value) + ", below the ~50% typical in Berg et al. Expected value is maximised by sending everything if any reciprocity is expected." });
+        else out.push({ id: "trust-mid", confidence: 0.55,
+          text: "You split the difference — enough to gain if they play fair, not so much that it stings if they don't.",
+          basis: "Sent " + pct(m.value) + ", close to the ~50% modal response in the original study." });
+      }
+      if (m.id === "reciprocity") {
+        const fair = m.raw >= 60;
+        out.push({ id: fair ? "recip-fair" : "recip-selfish", confidence: 0.68,
+          text: fair
+            ? "When it cost you to be fair, you were. You returned more than enough to leave them whole, with nothing forcing you to."
+            : "You kept the larger share. The sender ended up worse off for having trusted you — the self-interested play, and the one standard game theory predicts.",
+          basis: "Returned " + m.raw + " of 180. Returning 60 restores the sender's stake exactly; the subgame-perfect prediction under pure self-interest is 0." });
+      }
+      if (m.id === "risk") {
+        if (m.value <= 0.15) out.push({ id: "risk-seeking", confidence: 0.6,
+          text: "You went for the bigger prize early, accepting a real chance of the poor outcome. Relative to most people tested this way, you are comfortable with variance.",
+          basis: "Switch row " + m.raw + " implies CRRA r ≈ " + m.value.toFixed(2) + " [" + m.low.toFixed(2) + ", " + m.high.toFixed(2) + "]. Holt & Laury's modal subject sits near r ≈ 0.3–0.5." });
+        else if (m.value >= 0.68) out.push({ id: "risk-averse", confidence: 0.64,
+          text: "You stayed with the safe option well past the point where the gamble paid better on average. You are buying certainty, and knowingly paying for it.",
+          basis: "Switch row " + m.raw + " implies CRRA r ≈ " + m.value.toFixed(2) + " [" + m.low.toFixed(2) + ", " + m.high.toFixed(2) + "], above the ~0.3–0.5 mode." });
+        else out.push({ id: "risk-mid", confidence: 0.58,
+          text: "You switched about where most people do — mildly risk-averse, which is the ordinary human setting rather than a quirk.",
+          basis: "Switch row " + m.raw + " implies CRRA r ≈ " + m.value.toFixed(2) + ", inside the modal band reported by Holt & Laury." });
+      }
+      return out;
+    }
+
+    function combined(ms) {
+      const by = {}; ms.forEach((m) => (by[m.id] = m));
+      const t = by.trust, r = by.reciprocity, out = [];
+      if (t && r) {
+        const gap = r.value - t.value;
+        if (gap > 0.15) out.push({ id: "combo-trustworthy", confidence: 0.55,
+          text: "You gave back more readily than you gave — more reliable as the person being trusted than willing to trust first. Those are different things, and most measures conflate them.",
+          basis: "Return share " + pct(r.value) + " exceeds send share " + pct(t.value) + ". Berg et al. treat trust and trustworthiness as separate constructs; they correlate only weakly." });
+        else if (gap < -0.2) out.push({ id: "combo-optimist", confidence: 0.55,
+          text: "You extended more trust than you returned. You expect good faith from others more readily than you supply it — worth noticing, since it is the pattern that gets exploited.",
+          basis: "Send share " + pct(t.value) + " exceeds return share " + pct(r.value) + "." });
+      }
+      return out;
+    }
+
+    /* Feedback is kept in this browser only. Cross-visitor calibration would
+       need a backend, and pretending otherwise on a static page would be a
+       lie about where the data goes.                                        */
+    const FEEDBACK_KEY = "profiler.feedback";
+    const loadFeedback = () => { try { return JSON.parse(localStorage.getItem(FEEDBACK_KEY)) || {}; } catch (e) { return {}; } };
+    function recordFeedback(id, agreed) {
+      const f = loadFeedback();
+      f[id] = f[id] || { up: 0, down: 0 };
+      f[id][agreed ? "up" : "down"]++;
+      try { localStorage.setItem(FEEDBACK_KEY, JSON.stringify(f)); } catch (e) { /* private mode */ }
+    }
+    function calibrate(readings) {
+      const f = loadFeedback();
+      return readings.map(function (r) {
+        const c = f[r.id], n = c ? c.up + c.down : 0;
+        const agreement = c ? (c.up + 1) / (n + 2) : null;
+        const factor = agreement === null ? 1 : 0.6 + 0.8 * agreement;
+        return Object.assign({}, r, {
+          confidence: Math.max(0.15, Math.min(0.9, r.confidence * factor)), agreement: agreement, n: n,
+        });
+      });
+    }
+
+    /* ── UI ─────────────────────────────────────────────────────────── */
+    const el = (t, c, txt) => { const n = document.createElement(t); if (c) n.className = c; if (txt != null) n.textContent = txt; return n; };
+    const stage = document.getElementById("pf-stage");
+    const results = document.getElementById("pf-results");
+    const progress = document.getElementById("pf-progress");
+
+    let i = 0;
+    const answers = {};
+
+    function drawTask() {
+      results.replaceChildren();
+      if (i >= TASKS.length) { progress.textContent = ""; stage.replaceChildren(); return drawResults(); }
+      progress.textContent = "Task " + (i + 1) + " of " + TASKS.length;
+
+      const t = TASKS[i];
+      const card = el("div", "pf-task");
+      card.append(el("h3", null, t.title), el("p", "pf-prompt", t.prompt));
+      const row = el("div", "pf-row");
+
+      if (t.input.kind === "number") {
+        const inp = el("input", "pf-num");
+        inp.type = "number"; inp.min = t.input.min; inp.max = t.input.max; inp.placeholder = t.input.label;
+        const go = el("button", "pf-btn", "Lock it in");
+        const submit = function () {
+          const v = Number(inp.value);
+          if (!isFinite(v) || inp.value === "") return;
+          answers[t.id] = Math.max(t.input.min, Math.min(t.input.max, Math.round(v)));
+          i++; drawTask();
+        };
+        go.addEventListener("click", submit);
+        inp.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); submit(); } });
+        row.append(inp, go);
+        card.append(row);
+        setTimeout(function () { inp.focus(); }, 30);
+      } else {
+        const picks = new Array(t.input.rows.length).fill(null);
+        const ladder = el("div", "pf-ladder");
+        const go = el("button", "pf-btn", "Done");
+        go.disabled = true;
+        t.input.rows.forEach(function (text, idx) {
+          const r = el("div", "pf-lrow");
+          r.append(el("span", "pf-ln", String(idx + 1)), el("span", "pf-ltext", text));
+          const seg = el("div", "pf-seg");
+          [["A", "Safer"], ["B", "Riskier"]].forEach(function (pair) {
+            const b = el("button", null, pair[1]);
+            b.type = "button";
+            b.addEventListener("click", function () {
+              picks[idx] = pair[0];
+              seg.querySelectorAll("button").forEach(function (s) { s.setAttribute("aria-checked", "false"); });
+              b.setAttribute("aria-checked", "true");
+              go.disabled = picks.indexOf(null) !== -1;
+            });
+            seg.append(b);
+          });
+          r.append(seg); ladder.append(r);
+        });
+        go.addEventListener("click", function () {
+          const first = picks.indexOf("B");
+          answers[t.id] = first < 0 ? t.input.rows.length : first;
+          i++; drawTask();
+        });
+        row.append(go);
+        card.append(ladder, row);
+      }
+
+      card.append(el("p", "pf-paradigm", t.paradigm));
+      stage.replaceChildren(card);
+    }
+
+    function drawResults() {
+      const measures = score(answers);
+      const readings = calibrate(readingsFor ? measures.reduce(function (acc, m) { return acc.concat(readingsFor(m)); }, []).concat(combined(measures)) : []);
+
+      results.replaceChildren();
+      results.append(el("h3", null, "What was measured"));
+      const table = el("table", "pf-measures");
+      measures.forEach(function (m) {
+        const tr = el("tr");
+        tr.append(el("th", null, m.label));
+        tr.append(el("td", null, m.value.toFixed(2) + " " + m.unit + "  [" + m.low.toFixed(2) + ", " + m.high.toFixed(2) + "]"));
+        table.append(tr);
+      });
+      results.append(table);
+
+      results.append(el("h3", null, "What that suggests"));
+      readings.forEach(function (r) {
+        const card = el("div", "pf-reading");
+        const head = el("div", "pf-head");
+        head.append(el("span", "pf-conf", Math.round(r.confidence * 100) + "% confidence"));
+        const vote = el("div", "pf-vote");
+        [[true, "▲", "This fits"], [false, "▼", "This misses"]].forEach(function (v) {
+          const b = el("button", "pf-thumb", v[1]);
+          b.type = "button"; b.title = v[2];
+          b.addEventListener("click", function () {
+            vote.querySelectorAll(".pf-thumb").forEach(function (s) { s.disabled = true; });
+            b.classList.add(v[0] ? "on-up" : "on-down");
+            recordFeedback(r.id, v[0]);
+          });
+          vote.append(b);
+        });
+        head.append(vote);
+        card.append(head, el("p", "pf-text", r.text), el("p", "pf-basis", r.basis));
+        results.append(card);
+      });
+
+      const caveat = el("div", "pf-caveat");
+      caveat.append(el("p", null,
+        "These are four decisions in a few minutes. They measure how you played these particular " +
+        "games, which is not the same as who you are, and one short session cannot establish a " +
+        "stable trait. Nothing here is diagnostic, and it should not be used to judge anyone — " +
+        "including yourself — for anything that matters."));
+      results.append(caveat);
+
+      const refs = el("div", "pf-refs");
+      refs.innerHTML =
+        "<strong>Instruments.</strong> Nagel, R. (1995), <em>Unraveling in guessing games</em>, AER 85(5). " +
+        "Berg, J., Dickhaut, J. &amp; McCabe, K. (1995), <em>Trust, reciprocity, and social history</em>, " +
+        "Games and Economic Behavior 10(1). Holt, C. &amp; Laury, S. (2002), <em>Risk aversion and incentive " +
+        "effects</em>, AER 92(5).<br><br>" +
+        "<strong>On the limits.</strong> Game-based assessment has weaker psychometric support than its " +
+        "popularity suggests — a 2025 meta-analysis of convergent validity across 18 studies found internal " +
+        "reliability largely unestablished. Yee et al.'s widely cited personality findings from World of " +
+        "Warcraft used four months of telemetry from 1,040 players. Four decisions cannot support that kind " +
+        "of inference, which is why this reports decision parameters with intervals rather than traits.";
+      results.append(refs);
+
+      const again = el("button", "pf-btn pf-ghost", "Start over");
+      again.style.marginTop = "22px";
+      again.addEventListener("click", function () {
+        i = 0;
+        Object.keys(answers).forEach(function (k) { delete answers[k]; });
+        drawTask();
+      });
+      results.append(again);
+    }
+
+    drawTask();
+  })();
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Sadjad Alikhani. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
