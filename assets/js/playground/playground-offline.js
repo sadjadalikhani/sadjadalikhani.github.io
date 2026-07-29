@@ -255,7 +255,7 @@
     // Asking for a live-only game has to win over every keyword below, or
     // "let's play mafia" gets caught by the piano's "play" and quietly hands
     // back the wrong thing instead of saying it can't.
-    if (/\b(mafia|spy|haggle|bargain|negotiat|playlist|spotify)\b/.test(p)) return unavailable(p);
+    if (/\b(mafia|spy|haggle|bargain|negotiat|playlist|spotify|tiles)\b/.test(p)) return unavailable(p);
 
     let want = OFFLINE_AGENTS.find((a) => p.indexOf(a) !== -1);
     if (!want) {
@@ -584,6 +584,11 @@
           },
           // Shown so the crew is visible in full, marked so nobody wastes a
           // prompt on them. All four need a model in the loop turn by turn.
+          {
+            id: "tiles", label: "Piano Tiles", examples: [],
+            blurb: "Four lanes, faster and faster, one miss and it's over — then what your limit actually was.",
+            unavailable: "Needs the live server",
+          },
           {
             id: "mafia", label: "Mafia", examples: [],
             blurb: "Night and day, with the town played by agents who lie to keep their cover.",

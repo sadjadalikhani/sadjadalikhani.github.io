@@ -26,6 +26,7 @@ const AUDIO_BASE = (window.PLAYGROUND_AUDIO || "/audio/piano").replace(/\/$/, ""
 const TINTS = {
   spotify: "var(--spotify)",
   piano: "var(--piano)",
+  tiles: "var(--tiles, #f0abfc)",
   spy: "var(--spy)",
   profiler: "var(--profiler)",
   mafia: "var(--mafia)",
@@ -390,6 +391,7 @@ function render(data) {
     return;
   }
   if (artifacts.playlist) return stage.replaceChildren(renderPlaylist(result, artifacts.playlist, label));
+  if (artifacts.tiles) return stage.replaceChildren(renderTiles(result, artifacts.tiles, label));
   if (artifacts.piano) return stage.replaceChildren(renderPiano(result, artifacts.piano, label));
   if (artifacts.spy) return stage.replaceChildren(renderSpy(result, artifacts.spy, label));
   if (artifacts.mafia) return stage.replaceChildren(renderMafia(result, artifacts.mafia, label));
@@ -1411,6 +1413,255 @@ function renderSpy(result, game, label) {
   draw();
   updateLeft();
   status.textContent = "Three of them know the word. One is guessing.";
+  return p;
+}
+
+
+// ------------------------------------------------------------- piano tiles
+
+/**
+ * Four lanes, tiles falling faster and faster, one miss and it ends.
+ *
+ * Distinct from the Piano Teacher on purpose. The tutor holds a fixed tempo and
+ * scores how close to it you play; this one keeps tightening until you break, and
+ * the interesting output is where that happened.
+ *
+ * Timing is judged here rather than on the server, because whether a tile was
+ * struck as it crossed the line cannot survive a network round trip. The taps are
+ * posted at the end and scored there, so the psychometric fit stays server-side
+ * and out of reach of the page.
+ */
+const TILE_KEYS = ["d", "f", "j", "k"];
+
+function renderTiles(result, run, label) {
+  const p = panel("tiles", label, run.title, result.intro);
+
+  const meta = el("div", "meta");
+  for (const t of [run.attribution, `${run.difficulty}`, `${run.tiles.length} tiles`]) {
+    meta.append(el("span", "pill", t), document.createTextNode(" "));
+  }
+  p.append(meta);
+
+  const hud = el("div", "tiles-hud");
+  const scoreEl = el("span", "tiles-score", "0");
+  const speedEl = el("span", "tiles-speed", "");
+  hud.append(scoreEl, speedEl);
+  p.append(hud);
+
+  const board = el("div", "tiles-board");
+  const lanes = [];
+  for (let l = 0; l < 4; l++) {
+    const lane = el("div", "tiles-lane");
+    lane.append(el("div", "tiles-key", TILE_KEYS[l].toUpperCase()));
+    lanes.push(lane);
+    board.append(lane);
+  }
+  const line = el("div", "tiles-line");
+  board.append(line);
+  p.append(board);
+
+  const actions = el("div", "crow-actions");
+  const startBtn = el("button", "btn", "Start");
+  startBtn.type = "button";
+  const status = el("div", "meta");
+  actions.append(startBtn);
+  p.append(actions, status);
+  const reportBox = el("div", "tiles-report");
+  p.append(reportBox);
+
+  // --- run state ---
+  let live = false;
+  let cursor = 0;          // next tile to spawn
+  let active = [];         // { tile, node, dueAt }
+  let taps = [];
+  let score = 0;
+  let raf = null;
+  let spawnTimer = null;
+  const FALL_MS = 900;     // time a tile takes to travel the board
+  const HIT_WINDOW = 260;  // ms either side of the line that still counts
+
+  function cleanup() {
+    live = false;
+    if (raf) cancelAnimationFrame(raf);
+    if (spawnTimer) clearTimeout(spawnTimer);
+    for (const a of active) a.node.remove();
+    active = [];
+  }
+
+  function spawn() {
+    if (!live || cursor >= run.tiles.length) return;
+    const tile = run.tiles[cursor++];
+    const node = el("div", "tiles-tile", "");
+    node.style.setProperty("--fall", `${FALL_MS}ms`);
+    lanes[tile.lane].append(node);
+    // dueAt is when it reaches the line, which is what a tap is measured against.
+    active.push({ tile, node, dueAt: performance.now() + FALL_MS });
+    speedEl.textContent = `${Math.round(tile.interval)}ms`;
+    spawnTimer = setTimeout(spawn, tile.interval);
+  }
+
+  function finish(reason) {
+    cleanup();
+    startBtn.disabled = false;
+    startBtn.textContent = "Play again";
+    status.textContent = reason + " Scoring…";
+    status.style.color = "var(--ink-faint)";
+    submit();
+  }
+
+  function tick() {
+    if (!live) return;
+    const now = performance.now();
+    for (const a of [...active]) {
+      // Past the window without a press: that is the miss that ends it.
+      if (now - a.dueAt > HIT_WINDOW) {
+        taps.push({ i: a.tile.i, hit: false, dtMs: null });
+        a.node.classList.add("miss");
+        active = active.filter((x) => x !== a);
+        setTimeout(() => a.node.remove(), 200);
+        finish("Missed one.");
+        return;
+      }
+    }
+    if (cursor >= run.tiles.length && active.length === 0) {
+      finish("You cleared the whole run.");
+      return;
+    }
+    raf = requestAnimationFrame(tick);
+  }
+
+  function press(lane) {
+    if (!live) return;
+    const now = performance.now();
+    // The nearest unhit tile in this lane, if it is close enough to count.
+    let best = null;
+    for (const a of active) {
+      if (a.tile.lane !== lane) continue;
+      if (!best || Math.abs(a.dueAt - now) < Math.abs(best.dueAt - now)) best = a;
+    }
+    lanes[lane].classList.add("lit");
+    setTimeout(() => lanes[lane].classList.remove("lit"), 90);
+
+    if (!best || Math.abs(now - best.dueAt) > HIT_WINDOW) {
+      // A press with nothing under it is a miss too — mashing must not pay.
+      taps.push({ i: cursor, hit: false, dtMs: null });
+      finish("Pressed an empty lane.");
+      return;
+    }
+    taps.push({ i: best.tile.i, hit: true, dtMs: Math.round(now - best.dueAt) });
+    score++;
+    scoreEl.textContent = String(score);
+    best.node.classList.add("hit");
+    active = active.filter((x) => x !== best);
+    setTimeout(() => best.node.remove(), 140);
+    try {
+      noteOn(best.tile.midi, 0.9);
+      setTimeout(() => noteOff(best.tile.midi), 220);
+    } catch (e) {
+      /* audio is a bonus, not the game */
+    }
+  }
+
+  function onKey(e) {
+    const k = e.key.toLowerCase();
+    const lane = TILE_KEYS.indexOf(k);
+    if (lane === -1 || e.repeat) return;
+    e.preventDefault();
+    press(lane);
+  }
+
+  lanes.forEach((lane, i) => {
+    lane.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      press(i);
+    });
+  });
+
+  async function submit() {
+    try {
+      const res = await fetch(api(`/api/play/tiles/${run.id}/finish`), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ taps }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+      status.textContent = "";
+      showReport(data.report);
+    } catch (err) {
+      status.textContent = err.message || "Couldn't score that run.";
+      status.style.color = "var(--bad)";
+    }
+  }
+
+  function showReport(r) {
+    reportBox.replaceChildren();
+    const table = el("table", "measures");
+    const row = (k, v) => {
+      const tr = el("tr");
+      tr.append(el("th", null, k), el("td", null, v));
+      table.append(tr);
+    };
+    row("Tiles cleared", String(r.streak));
+    row("Accuracy", `${Math.round(r.accuracy * 100)}%`);
+    if (r.sustainedMs !== null) {
+      row("Speed sustained", `${r.sustainedTilesPerSec} tiles/sec (one every ${r.sustainedMs}ms)`);
+    }
+    // Only present when several failures made the curve identifiable. One miss
+    // ends the run, so most of the time there is honestly nothing to fit.
+    if (r.thresholdMs !== null) {
+      row("Fitted limit", `${r.thresholdTilesPerSec} tiles/sec (one every ${r.thresholdMs}ms)`);
+    }
+    if (r.medianErrorMs !== null) row("Median timing error", `${Math.round(r.medianErrorMs)}ms`);
+    if (r.biasMs !== null) {
+      row("Bias", `${r.biasMs < 0 ? "early" : "late"} by ${Math.abs(Math.round(r.biasMs))}ms`);
+    }
+    if (r.fitQuality !== null) row("Fit quality", `pseudo-R² ${r.fitQuality}`);
+    reportBox.append(table);
+
+    reportBox.append(el("p", "lesson-plain", r.plain));
+    const tech = el("details", "lesson-tech");
+    tech.append(el("summary", null, "How that was measured"), el("p", null, r.technical));
+    reportBox.append(tech);
+  }
+
+  startBtn.addEventListener("click", async () => {
+    reportBox.replaceChildren();
+    cleanup();
+    cursor = 0;
+    taps = [];
+    score = 0;
+    scoreEl.textContent = "0";
+    startBtn.disabled = true;
+    startBtn.textContent = "Loading piano…";
+    status.textContent = "";
+
+    ensureAudio();
+    try {
+      await loadSamplesFor(run.tiles.map((t) => t.midi));
+    } catch (e) {
+      /* the synth fallback covers this */
+    }
+
+    startBtn.textContent = "Playing…";
+    status.textContent = `Press ${TILE_KEYS.map((k) => k.toUpperCase()).join(" ")} — or tap a lane.`;
+    live = true;
+    spawn();
+    raf = requestAnimationFrame(tick);
+    board.focus();
+  });
+
+  window.addEventListener("keydown", onKey);
+  // Panels are replaced wholesale when a new run is asked for; drop the listener
+  // with the node so an old board cannot keep swallowing keystrokes.
+  new MutationObserver((_, obs) => {
+    if (!p.isConnected) {
+      window.removeEventListener("keydown", onKey);
+      cleanup();
+      obs.disconnect();
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+
   return p;
 }
 

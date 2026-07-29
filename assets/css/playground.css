@@ -778,3 +778,66 @@ body {
   .wcell { width: 46px; height: 46px; font-size: 1.3rem; }
   .shell { padding-top: 2.25rem; }
 }
+
+/* --------------------------------------------------------- piano tiles */
+/* Four lanes, tiles falling to a line. Deliberately plainer than the piano
+   keyboard: at 200ms a tile is on screen for a fifth of a second, so anything
+   decorative is noise the player has to look past. */
+.tiles-hud {
+  display: flex; align-items: baseline; gap: .8rem;
+  margin: .2rem 0 .6rem; font-family: var(--mono, monospace);
+}
+.tiles-score { font-size: 1.6rem; font-weight: 700; color: var(--ink); }
+.tiles-speed { font-size: .75rem; color: var(--ink-faint); }
+
+.tiles-board {
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+  height: 340px; overflow: hidden;
+  background: var(--bg-lift);
+  border: 1px solid var(--line-soft); border-radius: var(--r);
+  touch-action: manipulation; /* stop double-tap zoom eating a press */
+  user-select: none;
+}
+.tiles-lane { position: relative; border-right: 1px solid var(--line-soft); }
+.tiles-lane:last-child { border-right: 0; }
+.tiles-lane.lit { background: color-mix(in srgb, var(--tint) 14%, transparent); }
+
+/* The key letter sits at the bottom, where the eye already is. */
+.tiles-key {
+  position: absolute; bottom: 6px; left: 0; right: 0;
+  text-align: center; font-family: var(--mono, monospace);
+  font-size: .7rem; color: var(--ink-faint); pointer-events: none;
+}
+
+.tiles-tile {
+  position: absolute; left: 6%; width: 88%; height: 54px;
+  border-radius: 6px;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--tint) 85%, #000 0%),
+    color-mix(in srgb, var(--tint) 55%, #000 15%));
+  animation: tiles-fall var(--fall, 900ms) linear forwards;
+  will-change: transform;
+}
+@keyframes tiles-fall {
+  /* Ends at the line — 300px of a 340px board — not off the bottom, so "reached
+     the line" and "animation finished" are the same instant. */
+  from { transform: translateY(-60px); }
+  to   { transform: translateY(300px); }
+}
+.tiles-tile.hit  { background: var(--good); opacity: .35; transition: opacity .14s; }
+.tiles-tile.miss { background: var(--bad);  opacity: .5;  transition: opacity .2s; }
+
+.tiles-line {
+  position: absolute; left: 0; right: 0; top: 300px; height: 2px;
+  background: color-mix(in srgb, var(--ink) 35%, transparent);
+  pointer-events: none;
+}
+
+.tiles-report { margin-top: 1rem; }
+.tiles-report:empty { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The game is unplayable without the motion, so only soften the flourishes. */
+  .tiles-tile.hit, .tiles-tile.miss { transition: none; }
+}
