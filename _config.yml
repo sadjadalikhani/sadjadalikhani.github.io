@@ -658,4 +658,4 @@ jsonresume:
 # Base URL of a deployed agent server, e.g. https://playground.fly.dev
 # Leave empty and /playground/ falls back to pre-baked content packs.
 # The OpenAI key belongs on that server, never here.
-playground_api: ""
+playground_api: "https://sadjad-playground.sadjadalikhani.workers.dev"
