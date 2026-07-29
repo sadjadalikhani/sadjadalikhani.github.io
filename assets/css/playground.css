@@ -119,6 +119,18 @@ body {
 }
 .agent-card .blurb { color: var(--ink-faint); font-size: .8rem; line-height: 1.4; }
 
+/* Agents this deployment can't run. Dimmed rather than hidden, so the crew
+   reads as complete and the reason sits on the card instead of in a footnote. */
+.agent-card-off { opacity: .5; cursor: default; }
+.agent-card-off:hover { border-color: var(--line-soft); transform: none; }
+.agent-card-off .agent-off-note {
+  margin-top: .45rem;
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
 /* ------------------------------------------------------------------ ask */
 .ask { margin-bottom: 1.5rem; }
 .ask-row {

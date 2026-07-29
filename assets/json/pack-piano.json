@@ -4,8 +4,8 @@
   {
    "result": {
     "title": "Ode to Joy",
-    "teacher_note": "Keep your hand relaxed in a five-finger C-position with thumb on C and third finger ready for E-F-G work. The common stumble is the ending of each line, where the repeated notes change direction, so say the note names out loud as you play. Once the right hand feels easy, add simple left-hand single bass notes like C and G on the first beat of each bar.",
-    "listen_for": "It’s recognisable from the opening stepwise rise E E F G and the balanced answer that falls back down to C.",
+    "teacher_note": "Keep your hand relaxed and let each group of four notes flow evenly; the common stumble is the longer note near the end of the first line, so count it carefully instead of rushing. Once the right hand feels easy, try a simple left-hand pulse on C and G with single whole notes or blocked fifths.",
+    "listen_for": "It is recognisable from the smooth stepwise rise and fall of the opening phrase starting E E F G.",
     "substituted": "no"
    },
    "artifact": {
@@ -84,12 +84,12 @@
      {
       "midi": 62,
       "name": "D4",
-      "beats": 1
+      "beats": 0.5
      },
      {
       "midi": 62,
       "name": "D4",
-      "beats": 2
+      "beats": 1.5
      },
      {
       "midi": 64,
@@ -154,11 +154,6 @@
      {
       "midi": 62,
       "name": "D4",
-      "beats": 1
-     },
-     {
-      "midi": 60,
-      "name": "C4",
       "beats": 1
      },
      {
@@ -174,101 +169,46 @@
   {
    "result": {
     "title": "Greensleeves",
-    "teacher_note": "Keep the long first notes singing, and watch the small stepwise descent in the middle so it stays smooth rather than bumpy. The usual trip-up is the reach up to A5 and the late G-sharp near the end; once your right hand feels easy, try holding simple left-hand A minor notes or broken A-E-A patterns underneath.",
-    "listen_for": "The melody is recognisable from its rising opening and the graceful falling answer that follows.",
+    "teacher_note": "Let the long notes sing, especially the opening G and the high D, because that rise-and-fall shape gives the tune its wistful feeling. The usual stumble is around the dotted rhythms like B4:1.5 C5:0.5, so count them carefully as \"long-short\" instead of rushing. Once the right hand feels easy, try a very simple left hand with single bass notes on G and D underneath the stronger beats.",
+    "listen_for": "The melody is recognisable from its opening climb E-G-A-B and the graceful drop back down afterward.",
     "substituted": "no"
    },
    "artifact": {
     "title": "Greensleeves",
-    "attribution": "English traditional",
+    "attribution": "Traditional English melody",
     "provenance": "traditional-folk",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 110,
+    "tempo": 100,
     "notes": [
      {
-      "midi": 69,
-      "name": "A4",
-      "beats": 2
-     },
-     {
-      "midi": 72,
-      "name": "C5",
-      "beats": 3
-     },
-     {
-      "midi": 74,
-      "name": "D5",
+      "midi": 64,
+      "name": "E4",
       "beats": 1
-     },
-     {
-      "midi": 76,
-      "name": "E5",
-      "beats": 2
-     },
-     {
-      "midi": 77,
-      "name": "F5",
-      "beats": 3
-     },
-     {
-      "midi": 79,
-      "name": "G5",
-      "beats": 1
-     },
-     {
-      "midi": 81,
-      "name": "A5",
-      "beats": 2
-     },
-     {
-      "midi": 79,
-      "name": "G5",
-      "beats": 2
-     },
-     {
-      "midi": 77,
-      "name": "F5",
-      "beats": 2
-     },
-     {
-      "midi": 76,
-      "name": "E5",
-      "beats": 3
-     },
-     {
-      "midi": 72,
-      "name": "C5",
-      "beats": 1
-     },
-     {
-      "midi": 69,
-      "name": "A4",
-      "beats": 2
-     },
-     {
-      "midi": 71,
-      "name": "B4",
-      "beats": 3
-     },
-     {
-      "midi": 72,
-      "name": "C5",
-      "beats": 1
-     },
-     {
-      "midi": 74,
-      "name": "D5",
-      "beats": 2
-     },
-     {
-      "midi": 71,
-      "name": "B4",
-      "beats": 3
      },
      {
       "midi": 67,
       "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
       "beats": 1
      },
      {
@@ -277,53 +217,88 @@
       "beats": 2
      },
      {
-      "midi": 72,
-      "name": "C5",
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1.5
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
       "beats": 3
      },
      {
       "midi": 74,
       "name": "D5",
-      "beats": 1
+      "beats": 1.5
      },
      {
-      "midi": 76,
-      "name": "E5",
-      "beats": 2
+      "midi": 73,
+      "name": "C#5",
+      "beats": 0.5
      },
      {
-      "midi": 77,
-      "name": "F5",
-      "beats": 3
-     },
-     {
-      "midi": 79,
-      "name": "G5",
-      "beats": 1
-     },
-     {
-      "midi": 81,
-      "name": "A5",
-      "beats": 2
-     },
-     {
-      "midi": 79,
-      "name": "G5",
-      "beats": 2
-     },
-     {
-      "midi": 77,
-      "name": "F5",
-      "beats": 2
-     },
-     {
-      "midi": 76,
-      "name": "E5",
-      "beats": 3
-     },
-     {
-      "midi": 72,
-      "name": "C5",
+      "midi": 71,
+      "name": "B4",
       "beats": 1
      },
      {
@@ -332,34 +307,84 @@
       "beats": 2
      },
      {
-      "midi": 68,
-      "name": "G#4",
-      "beats": 3
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
      },
      {
-      "midi": 69,
-      "name": "A4",
+      "midi": 62,
+      "name": "D4",
+      "beats": 1.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
       "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1.5
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 3
      }
     ],
-    "lowMidi": 67,
-    "highMidi": 81
+    "lowMidi": 59,
+    "highMidi": 74
    }
   },
   {
    "result": {
     "title": "Scarborough Fair",
-    "teacher_note": "Keep a gentle 3-beat sway, since this tune feels like a slow waltz rather than a march. The trickiest spot is the climb up to D5 and E5, so practise that little section on its own and let your hand stay relaxed. Once the right hand feels easy, the left hand can simply play single bass notes or soft open fifths on beat 1 of each bar.",
-    "listen_for": "The melody is recognisable from its calm repeated opening notes and the haunting rise toward the high E before it falls back down.",
+    "teacher_note": "Let the long notes sing and keep a gentle 3-beat waltz pulse underneath: count '1-2-3, 1-2-3' all the way through. The usual stumble is the move up to D5 and E5, so practise that middle phrase slowly in small chunks; once the right hand feels easy, the left hand can simply play single bass notes on beat 1 of each bar, such as E then B then A.",
+    "listen_for": "Its recognisable sound comes from the haunting rise from E up to B and then the higher peak at E5 in a calm waltz flow.",
     "substituted": "no"
    },
    "artifact": {
     "title": "Scarborough Fair",
     "attribution": "English traditional",
-    "provenance": "traditional-archive",
+    "provenance": "traditional-folk",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 96,
+    "tempo": 108,
     "notes": [
      {
       "midi": 64,
@@ -498,18 +523,18 @@
   },
   {
    "result": {
-    "title": "Für Elise — opening phrase",
-    "teacher_note": "Keep your hand relaxed and let the first five notes sound like a gentle whisper, not accents. The usual trip-up is the jump down to B4 and then the little turn into A4, so practise that tiny group separately until it feels easy. Once the right hand is comfortable, try holding a soft A in the left hand under the first phrase, then add broken A minor notes very lightly.",
-    "listen_for": "The recognisable sound comes from the repeating E–D#–E figure and the sighing fall down to C and A.",
+    "title": "Für Elise, opening",
+    "teacher_note": "Keep the first five notes light and even, then let the little drop to B-D-C-A sing out as one shape rather than four separate pokes. The usual trip-up is the jump down to C4-E4-A4, so practise that move slowly a few times by itself; once the right hand feels easy, the left hand can simply add single A and E bass notes underneath.",
+    "listen_for": "The recognisable sound comes from the repeated E–D# turn at the start, followed by the falling B–D–C–A answer.",
     "substituted": "no"
    },
    "artifact": {
-    "title": "Für Elise — opening phrase",
+    "title": "Für Elise, opening",
     "attribution": "Ludwig van Beethoven, 1810",
     "provenance": "public-domain-classical",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 126,
+    "tempo": 125,
     "notes": [
      {
       "midi": 76,
@@ -654,17 +679,17 @@
   {
    "result": {
     "title": "Amazing Grace",
-    "teacher_note": "Keep your hand relaxed and sing the tune in your head as you play; this melody sounds best when the longer notes are really given time to bloom. The usual stumble is the small stepwise turn A-G-B near the start, so practise that little group slowly a few times. Once the right hand feels easy, add simple left-hand single bass notes on the first beat of each bar, starting with G and D.",
-    "listen_for": "The recognisable shape comes from the opening leap up and the gentle answering descent that follows.",
+    "teacher_note": "Keep the beat steady and let the longer notes sing; this tune sounds best when you avoid rushing the ends of phrases. The usual tricky spot is the move up to D5 and back down, so practise that small group slowly first. Once the right hand feels easy, the left hand can simply play single G notes or broken G and D chords underneath.",
+    "listen_for": "The melody is recognisable from its calm opening rise and the long held notes at the ends of each phrase.",
     "substituted": "no"
    },
    "artifact": {
     "title": "Amazing Grace",
-    "attribution": "Traditional hymn tune, from thesession.org transcription",
-    "provenance": "traditional-archive",
+    "attribution": "Traditional hymn tune, text by John Newton (1779), melody 'New Britain' traditional",
+    "provenance": "traditional-folk",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 96,
+    "tempo": 100,
     "notes": [
      {
       "midi": 62,
@@ -672,9 +697,19 @@
       "beats": 1
      },
      {
-      "midi": 69,
-      "name": "A4",
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
       "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
      },
      {
       "midi": 71,
@@ -684,47 +719,67 @@
      {
       "midi": 69,
       "name": "A4",
-      "beats": 0.5
+      "beats": 2
      },
      {
       "midi": 67,
       "name": "G4",
-      "beats": 0.5
-     },
-     {
-      "midi": 71,
-      "name": "B4",
-      "beats": 2
-     },
-     {
-      "midi": 69,
-      "name": "A4",
       "beats": 1
-     },
-     {
-      "midi": 67,
-      "name": "G4",
-      "beats": 2
      },
      {
       "midi": 64,
       "name": "E4",
-      "beats": 1
-     },
-     {
-      "midi": 62,
-      "name": "D4",
       "beats": 2
      },
      {
       "midi": 62,
       "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
       "beats": 1
      },
      {
       "midi": 74,
       "name": "D5",
+      "beats": 3
+     },
+     {
+      "midi": 71,
+      "name": "B4",
       "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
      },
      {
       "midi": 71,
@@ -734,36 +789,16 @@
      {
       "midi": 69,
       "name": "A4",
-      "beats": 0.5
+      "beats": 2
      },
      {
       "midi": 67,
       "name": "G4",
-      "beats": 0.5
-     },
-     {
-      "midi": 71,
-      "name": "B4",
-      "beats": 2
-     },
-     {
-      "midi": 69,
-      "name": "A4",
       "beats": 1
-     },
-     {
-      "midi": 67,
-      "name": "G4",
-      "beats": 2
      },
      {
       "midi": 64,
       "name": "E4",
-      "beats": 1
-     },
-     {
-      "midi": 62,
-      "name": "D4",
       "beats": 2
      },
      {
@@ -774,7 +809,17 @@
      {
       "midi": 67,
       "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
       "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
      },
      {
       "midi": 71,
@@ -784,32 +829,12 @@
      {
       "midi": 69,
       "name": "A4",
-      "beats": 0.5
+      "beats": 2
      },
      {
       "midi": 67,
       "name": "G4",
-      "beats": 0.5
-     },
-     {
-      "midi": 71,
-      "name": "B4",
-      "beats": 2
-     },
-     {
-      "midi": 69,
-      "name": "A4",
       "beats": 1
-     },
-     {
-      "midi": 67,
-      "name": "G4",
-      "beats": 3
-     },
-     {
-      "midi": 67,
-      "name": "G4",
-      "beats": 2
      }
     ],
     "lowMidi": 62,
@@ -818,18 +843,18 @@
   },
   {
    "result": {
-    "title": "The Entertainer (main strain, opening)",
-    "teacher_note": "Keep the short-long ragtime bounce clear: the quick pickup notes should feel light, and the longer notes should land neatly without rushing. The usual trip-up is the drop from the upper notes down to A4 and then farther to the lower hand area, so practise those jumps in little groups of four notes. Once the right hand feels easy, let the left hand add a simple steady bass pulse on the beat.",
-    "listen_for": "It is recognisable from the jaunty syncopated opening that hops downward in little stair-steps before rising again.",
+    "title": "The Entertainer (main strain opening)",
+    "teacher_note": "Keep the wrist loose and let the short ragtime notes bounce lightly rather than poking at them. The usual trip-up is the little descending pattern crossing from the upper notes down toward middle C, so practise that in small groups of four notes. Once the right hand feels easy, try a simple left-hand steady oom-pah on low D then A to feel the ragtime character.",
+    "listen_for": "The jaunty syncopated drop from the high opening notes into the lower reply is what makes this strain instantly recognisable.",
     "substituted": "no"
    },
    "artifact": {
-    "title": "The Entertainer (main strain, opening)",
+    "title": "The Entertainer (main strain opening)",
     "attribution": "Scott Joplin, 1902",
     "provenance": "public-domain-classical",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 84,
+    "tempo": 100,
     "notes": [
      {
       "midi": 74,
@@ -844,12 +869,12 @@
      {
       "midi": 72,
       "name": "C5",
-      "beats": 1
+      "beats": 0.5
      },
      {
       "midi": 69,
       "name": "A4",
-      "beats": 1
+      "beats": 0.5
      },
      {
       "midi": 71,
@@ -862,9 +887,34 @@
       "beats": 0.5
      },
      {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
       "midi": 64,
       "name": "E4",
-      "beats": 1
+      "beats": 0.5
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
      },
      {
       "midi": 62,
@@ -874,12 +924,12 @@
      {
       "midi": 64,
       "name": "E4",
-      "beats": 0.5
+      "beats": 1
      },
      {
       "midi": 60,
       "name": "C4",
-      "beats": 0.5
+      "beats": 1
      },
      {
       "midi": 57,
@@ -887,29 +937,24 @@
       "beats": 1
      },
      {
-      "midi": 55,
-      "name": "G3",
-      "beats": 1
-     },
-     {
-      "midi": 57,
-      "name": "A3",
+      "midi": 74,
+      "name": "D5",
       "beats": 0.5
      },
      {
-      "midi": 60,
-      "name": "C4",
+      "midi": 76,
+      "name": "E5",
       "beats": 0.5
      },
      {
-      "midi": 64,
-      "name": "E4",
-      "beats": 1
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
      },
      {
       "midi": 69,
       "name": "A4",
-      "beats": 1
+      "beats": 0.5
      },
      {
       "midi": 71,
@@ -917,49 +962,64 @@
       "beats": 0.5
      },
      {
-      "midi": 72,
-      "name": "C5",
+      "midi": 67,
+      "name": "G4",
       "beats": 0.5
-     },
-     {
-      "midi": 74,
-      "name": "D5",
-      "beats": 1
-     },
-     {
-      "midi": 76,
-      "name": "E5",
-      "beats": 1
-     },
-     {
-      "midi": 72,
-      "name": "C5",
-      "beats": 1
      },
      {
       "midi": 69,
       "name": "A4",
-      "beats": 1
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
+     },
+     {
+      "midi": 57,
+      "name": "A3",
+      "beats": 2
      }
     ],
-    "lowMidi": 55,
+    "lowMidi": 57,
     "highMidi": 76
    }
   },
   {
    "result": {
-    "title": "Danny Boy (The Derry Air)",
-    "teacher_note": "Let the long notes sing and keep the phrase smooth; this melody sounds best when you connect each note rather than poking at them. The main trip-up is the leap up to the higher G and F-sharp, so practise that bar slowly in isolation first. Once the right hand feels easy, add a very simple left hand with single G notes or broken G and D chords on the strong beats.",
-    "listen_for": "The tune is recognisable from its rising opening and the expressive long held notes at the ends of phrases.",
+    "title": "Danny Boy",
+    "teacher_note": "Let the long notes sing, especially the high peaks, and keep your fingers close to the keys so the leaps feel calmer. Most beginners trip over the jump up to the higher G and the following step down, so practise just that little group a few times on its own. Once the right hand feels easy, add a very simple left hand by holding single bass notes or open fifths on G and D underneath the longer melody notes.",
+    "listen_for": "The tune is recognisable because it rises gently at first, then opens into those broad, emotional long notes at the top of the phrase.",
     "substituted": "no"
    },
    "artifact": {
-    "title": "Danny Boy (The Derry Air)",
-    "attribution": "Irish traditional",
-    "provenance": "traditional-folk",
+    "title": "Danny Boy",
+    "attribution": "Irish traditional (The Derry Air)",
+    "provenance": "traditional-archive",
     "difficulty": "beginner",
     "hand": "right",
-    "tempo": 96,
+    "tempo": 100,
     "notes": [
      {
       "midi": 66,
@@ -1204,13 +1264,13 @@
   {
    "result": {
     "title": "Twinkle Twinkle Little Star",
-    "teacher_note": "Keep your hand relaxed in a five-finger C position and try to make the repeated notes sound even. The usual trip-up is the middle section where the tune steps downward, so play that slowly first; once the right hand feels easy, add simple left-hand single bass notes on C and G under each line.",
-    "listen_for": "The opening leap from C up to G, repeated twice, is what makes the melody instantly recognisable.",
+    "teacher_note": "Keep your hand relaxed and let each pair of repeated notes sound even. The usual tricky spot is the change from A down to G, and later from E down to D, so practise those little step-downs slowly first. Once the right hand feels easy, try the left hand playing single bass notes C for the first line, F for the second, and G then C for the ending.",
+    "listen_for": "The melody is recognisable because it begins with the simple leap up from C to G and the matching repeated-note pattern in each phrase.",
     "substituted": "no"
    },
    "artifact": {
     "title": "Twinkle Twinkle Little Star",
-    "attribution": "Traditional / French folk melody, 18th century",
+    "attribution": "Traditional / Jane Taylor, 1806",
     "provenance": "public-domain-classical",
     "difficulty": "first-time",
     "hand": "right",
@@ -1420,6 +1480,3061 @@
       "midi": 62,
       "name": "D4",
       "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 69
+   }
+  },
+  {
+   "result": {
+    "title": "Auld Lang Syne",
+    "teacher_note": "Keep a gentle, singing pulse and let the longer notes breathe, especially at the ends of phrases. The usual trip-up is the small climb into D5 and E5, so practise that bar slowly and keep your fingers close to the keys. Once the right hand feels easy, add simple left-hand single bass notes on strong beats: G for the opening, then D, then back to G.",
+    "listen_for": "The tune is recognisable from its opening rise from D up to G and the long, held E near the middle of each phrase.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Auld Lang Syne",
+    "attribution": "Scottish traditional",
+    "provenance": "traditional-archive",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 100,
+    "notes": [
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 3
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 3
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 3
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 6
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 3
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 3
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 3
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 6
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 3
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 3
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 3
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 6
+     }
+    ],
+    "lowMidi": 62,
+    "highMidi": 79
+   }
+  },
+  {
+   "result": {
+    "title": "House of the Rising Sun",
+    "teacher_note": "Keep the line smooth and a little mournful rather than choppy; the longer notes are where the tune breathes. Beginners often rush from B4 up to C5 and back, so pause enough to feel that small rise and fall. Once your right hand is comfortable, let the left hand quietly pulse single bass notes or broken A-minor and E-major chords underneath.",
+    "listen_for": "The melody is recognisable from its plaintive climb up to C5 and the answering fall back down.",
+    "substituted": "yes"
+   },
+   "artifact": {
+    "title": "House of the Rising Sun",
+    "attribution": "Traditional American folk song",
+    "provenance": "traditional-folk",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 108,
+    "notes": [
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 3
+     }
+    ],
+    "lowMidi": 64,
+    "highMidi": 72
+   }
+  },
+  {
+   "result": {
+    "title": "Canon in D (opening simple line)",
+    "teacher_note": "Keep the notes very even and legato, almost like you are singing one long sentence. Beginners often rush the climb up to A4, so count steadily and let the longer notes settle; once your right hand is comfortable, try a very simple left hand by holding single bass notes D-A-B-F# underneath in slow whole notes.",
+    "listen_for": "The recognisable sound comes from the smooth descending-and-rising stepwise shape over the famous Canon harmony.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Canon in D (opening simple line)",
+    "attribution": "Johann Pachelbel, c. 1680",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 96,
+    "notes": [
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 57,
+      "name": "A3",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 57,
+      "name": "A3",
+      "beats": 1
+     },
+     {
+      "midi": 55,
+      "name": "G3",
+      "beats": 1
+     },
+     {
+      "midi": 57,
+      "name": "A3",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 55,
+    "highMidi": 69
+   }
+  },
+  {
+   "result": {
+    "title": "Silent Night",
+    "teacher_note": "Keep the melody very smooth and gentle, almost like singing a lullaby. The trickiest spot is where it climbs up to E5 and then walks back down, so practise that small section by itself before joining it up. Once your right hand feels easy, try a simple left hand with single bass notes on beat 1 of each bar.",
+    "listen_for": "The recognisable shape comes from the calm repeated opening note and the warm rise to the higher phrase in the middle.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Silent Night",
+    "attribution": "Franz Xaver Gruber, 1818",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 100,
+    "notes": [
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.75
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.25
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.75
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.25
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.75
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.25
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.75
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.25
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.75
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 0.25
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 76
+   }
+  },
+  {
+   "result": {
+    "title": "Clair de Lune (opening phrase, simplified melody)",
+    "teacher_note": "Keep your hand relaxed and let the line feel like one long breath rather than separate taps. The usual snag is the gentle rise to Ab and the return back down without tensing up, so practise that small arch a few times on its own. Once the right hand feels easy, try adding very soft left-hand single bass notes or broken chords on the long beats to support the moonlit feel.",
+    "listen_for": "Its recognisable sound comes from the smooth, floating stepwise rise to the high note and the equally gentle fall back down.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Clair de Lune (opening phrase, simplified melody)",
+    "attribution": "Claude Debussy, 1905",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 66,
+    "notes": [
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 75,
+      "name": "D#5",
+      "beats": 1
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 1
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 80,
+      "name": "G#5",
+      "beats": 2
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 1
+     },
+     {
+      "midi": 75,
+      "name": "D#5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 2
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 1
+     },
+     {
+      "midi": 75,
+      "name": "D#5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 3
+     }
+    ],
+    "lowMidi": 72,
+    "highMidi": 80
+   }
+  },
+  {
+   "result": {
+    "title": "Moonlight Sonata — First Movement Theme",
+    "teacher_note": "Keep your hand relaxed and let the notes flow very evenly, almost like a quiet bell pattern rather than separate pokes. The usual sticking point is the repeated broken-chord shape: practise each 5-note group slowly until you can land the top note without tension. Once the right hand feels easy, let the left hand simply play single low bass notes on the first beat of each group.",
+    "listen_for": "What makes it recognisable is the steady triplet-like broken-chord motion and the dark, hushed rise to the top note of each pattern.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Moonlight Sonata — First Movement Theme",
+    "attribution": "Beethoven, 1801",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 54,
+    "notes": [
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 75,
+      "name": "D#5",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 75,
+      "name": "D#5",
+      "beats": 1
+     },
+     {
+      "midi": 57,
+      "name": "A3",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 61,
+      "name": "C#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 56,
+      "name": "G#3",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 1
+     },
+     {
+      "midi": 63,
+      "name": "D#4",
+      "beats": 1
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 56,
+    "highMidi": 76
+   }
+  },
+  {
+   "result": {
+    "title": "Gymnopédie No. 1 (opening melody)",
+    "teacher_note": "Keep the hand loose and let each two-beat note sing; this melody works best when it feels calm rather than strict. The usual stumble is around the turn back down from B4 to A4 to G4, so practise that little three-note shape on its own. Once the right hand is comfortable, add a very simple left-hand pulse on low Gs or open fifths to suggest Satie’s gentle accompaniment.",
+    "listen_for": "The recognisable sound is the slow, floating stepwise rise D–E–F#–G repeated like a quiet question.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Gymnopédie No. 1 (opening melody)",
+    "attribution": "Erik Satie, 1888",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 76,
+    "notes": [
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 4
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 4
+     }
+    ],
+    "lowMidi": 62,
+    "highMidi": 71
+   }
+  },
+  {
+   "result": {
+    "title": "Prelude in C (opening pattern)",
+    "teacher_note": "Keep your hand soft and let each group of eight notes flow like one smooth gesture rather than eight separate pokes. The usual trip-up is reaching too tensely for the top note, so stay close to the keys and rotate the wrist a little as the pattern rises and falls. Once the right hand feels easy, let the left hand quietly play the bass roots underneath as single whole notes: C, D, G, A, C, G, C.",
+    "listen_for": "What makes it recognisable is the continuous broken-chord ripple that gently changes harmony every bar.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Prelude in C (opening pattern)",
+    "attribution": "J. S. Bach, 1722",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 96,
+    "notes": [
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 84,
+      "name": "C6",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 0.5
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 0.5
+     },
+     {
+      "midi": 86,
+      "name": "D6",
+      "beats": 0.5
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 0.5
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 0.5
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 86,
+      "name": "D6",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 59,
+      "name": "B3",
+      "beats": 0.5
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 0.5
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 0.5
+     }
+    ],
+    "lowMidi": 59,
+    "highMidi": 86
+   }
+  },
+  {
+   "result": {
+    "title": "Jingle Bells",
+    "teacher_note": "Keep the repeated E notes light and even, then let the longer notes ring so the tune sounds bouncy instead of choppy. Most beginners stumble where the melody drops to C and climbs back through D to E, so practise that little turn slowly a few times. Once the right hand feels easy, try tapping a steady left-hand beat on low C or G with each bar.",
+    "listen_for": "The tune is recognisable from the opening run of repeated E notes followed by the jump up to G and the walk C–D–E.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Jingle Bells",
+    "attribution": "James Lord Pierpont, 1857",
+    "provenance": "public-domain-classical",
+    "difficulty": "first-time",
+    "hand": "right",
+    "tempo": 120,
+    "notes": [
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 4
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 67
+   }
+  },
+  {
+   "result": {
+    "title": "When the Saints Go Marching In",
+    "teacher_note": "Keep the rhythm bouncy and march-like rather than heavy. The usual sticky spot is repeating the opening pattern evenly, so count out loud and let the longer notes ring. Once the right hand feels easy, try simple left-hand bass notes on C for the first phrase and G before you return to C.",
+    "listen_for": "The recognisable sound comes from the repeated rising opening phrase that climbs up to G like a little parade call.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "When the Saints Go Marching In",
+    "attribution": "Traditional gospel song",
+    "provenance": "traditional-folk",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 120,
+    "notes": [
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 67
+   }
+  },
+  {
+   "result": {
+    "title": "Swan Lake – Main Theme",
+    "teacher_note": "Keep the hand relaxed and let the long notes sing; this melody sounds best when each 2-beat note has a gentle, sustained tone. The usual trip-up is the F# and C#, so notice they both belong to D major. Once the right hand feels easy, try the left hand with single bass notes on the first beat of each bar: D, A, B, G.",
+    "listen_for": "Its recognisable shape comes from the rising minor-feeling leap into a long note, followed by the smooth stepwise fall.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Swan Lake – Main Theme",
+    "attribution": "Pyotr Ilyich Tchaikovsky, 1876",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 108,
+    "notes": [
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 2
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 1
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 69,
+    "highMidi": 81
+   }
+  },
+  {
+   "result": {
+    "title": "In the Hall of the Mountain King",
+    "teacher_note": "Keep the repeated four-note idea very even at first, then let the built-in creep of excitement come from clean repetition rather than rushing. Most beginners stumble where the pattern starts climbing higher, so practise the A-B-C-A shape and then the C-D-E shape separately. Once the right hand feels easy, try a simple left hand with single low A notes on the strong beats.",
+    "listen_for": "The melody is recognisable because of its sneaky repeated rising pattern that keeps returning before climbing a little higher each time.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "In the Hall of the Mountain King",
+    "attribution": "Edvard Grieg, 1875",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 120,
+    "notes": [
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 2
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 77,
+      "name": "F5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     }
+    ],
+    "lowMidi": 69,
+    "highMidi": 77
+   }
+  },
+  {
+   "result": {
+    "title": "The Blue Danube (opening phrase)",
+    "teacher_note": "Keep the wrist loose for the little three-note pickups, and aim for a gentle waltz lilt rather than playing everything heavily. The usual trip-up is the quick half-beat notes before each longer note, so count '1-and-2' carefully. Once the right hand feels easy, add a simple left-hand waltz pattern: low bass note on beat 1, then two light chord taps on beats 2 and 3.",
+    "listen_for": "Its recognisable sound comes from the lilting 3/4 waltz pulse and the rising arpeggio shapes that sweep upward through the opening.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "The Blue Danube (opening phrase)",
+    "attribution": "Johann Strauss II, 1866",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 120,
+    "notes": [
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 0.5
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 1
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 73,
+      "name": "C#5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 0.5
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 0.5
+     },
+     {
+      "midi": 83,
+      "name": "B5",
+      "beats": 1
+     },
+     {
+      "midi": 81,
+      "name": "A5",
+      "beats": 0.5
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 0.5
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 62,
+    "highMidi": 83
+   }
+  },
+  {
+   "result": {
+    "title": "Air on the G String (opening phrase)",
+    "teacher_note": "Keep the hand relaxed and aim for a smooth, singing line with no gaps between notes. The usual tricky spot is the move around B4 to C5 and back down, so practise that little turn slowly first. Once the right hand feels easy, add a very simple left hand by holding single D or G bass notes for two beats at a time.",
+    "listen_for": "Its recognisable character comes from the calm stepwise rise and fall and the long, lyrical note values.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Air on the G String (opening phrase)",
+    "attribution": "J. S. Bach, from Orchestral Suite No. 3, 1731",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 96,
+    "notes": [
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     },
+     {
+      "midi": 66,
+      "name": "F#4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 62,
+    "highMidi": 72
+   }
+  },
+  {
+   "result": {
+    "title": "Habanera (opening phrase)",
+    "teacher_note": "Keep the fingers close to the keys and aim for a smooth, slightly teasing character rather than playing it heavily. The common trip-up is repeating the A cleanly before stepping down; once the right hand feels easy, try a very simple left hand with single bass notes on the first beat of each bar.",
+    "listen_for": "Its recognisable sound comes from the sultry rise to A and the repeated-note pattern that then curls downward step by step.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Habanera (opening phrase)",
+    "attribution": "Georges Bizet, 1875",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 126,
+    "notes": [
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 2
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 62,
+    "highMidi": 69
+   }
+  },
+  {
+   "result": {
+    "title": "Nocturne in E-flat major, Op. 9 No. 2 — opening theme",
+    "teacher_note": "Keep the wrist loose and let this sing like a voice rather than poking each note. The usual trip-up is overholding while the melody turns back on itself, so practise in tiny 3- to 4-note groups and aim for a smooth connection. Once the right hand feels easy, the left hand can simply place soft broken E-flat major chords underneath on each beat.",
+    "listen_for": "The recognisable sound is the gentle, ornamented rise and fall around G–A–G, with the melody leaning expressively into longer held notes.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Nocturne in E-flat major, Op. 9 No. 2 — opening theme",
+    "attribution": "Frédéric Chopin, 1832",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 108,
+    "notes": [
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 0.5
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 0.5
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 64,
+    "highMidi": 74
+   }
+  },
+  {
+   "result": {
+    "title": "Minuet in G",
+    "teacher_note": "Keep the wrist loose and aim for a light, dance-like touch rather than playing it heavily. The usual trip-up is the climb up to F# and G near the middle, so practise that little rise separately until it feels easy. Once the right hand is comfortable, the left hand can add simple single bass notes on the first beat of each bar: G, D, G, D.",
+    "listen_for": "The tune is recognisable from its tidy stepwise opening and the little lift up to the higher G in the middle.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Minuet in G",
+    "attribution": "Christian Petzold, c.1725",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 112,
+    "notes": [
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 76,
+      "name": "E5",
+      "beats": 1
+     },
+     {
+      "midi": 78,
+      "name": "F#5",
+      "beats": 1
+     },
+     {
+      "midi": 79,
+      "name": "G5",
+      "beats": 2
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 74,
+      "name": "D5",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 67,
+    "highMidi": 79
+   }
+  },
+  {
+   "result": {
+    "title": "William Tell Overture – Finale (opening theme)",
+    "teacher_note": "Keep the wrist light and let the repeated bounce between E and G feel springy rather than hammered. The usual sticking point is the quick move up to B4 and then C5, so practise just those four-note groups slowly before linking them. Once the right hand feels easy, the left hand can simply play single bass notes on the first beat of each bar—try C, G, C, G—to give it that galloping energy.",
+    "listen_for": "What makes it recognisable is the bright repeated-note fanfare shape that climbs from E–G patterns into the higher B and C before landing firmly back down.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "William Tell Overture – Finale (opening theme)",
+    "attribution": "Gioachino Rossini, 1829",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 152,
+    "notes": [
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 2
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 67,
+      "name": "G4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 72
+   }
+  },
+  {
+   "result": {
+    "title": "Für Elise – middle section theme",
+    "teacher_note": "Keep the wrist loose and let the short pickup notes lead into the longer beats instead of accenting every note the same. The usual trip-up is the G-sharp appearing in the second half, so notice that color change early; once the right hand feels easy, try holding simple left-hand A bass notes under each bar.",
+    "listen_for": "What makes this section recognizable is the rising A-minor shape that keeps returning, then the brief brighter twist with G-sharp before it settles back.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "Für Elise – middle section theme",
+    "attribution": "Ludwig van Beethoven, 1810",
+    "provenance": "public-domain-classical",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 126,
+    "notes": [
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 0.5
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 68,
+      "name": "G#4",
+      "beats": 0.5
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 0.5
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 0.5
+     },
+     {
+      "midi": 72,
+      "name": "C5",
+      "beats": 1
+     },
+     {
+      "midi": 71,
+      "name": "B4",
+      "beats": 1
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     }
+    ],
+    "lowMidi": 60,
+    "highMidi": 72
+   }
+  },
+  {
+   "result": {
+    "title": "La Cucaracha",
+    "teacher_note": "Keep the repeated C notes light and steady, then let the jump up to F and A feel like the tune opening out. Most beginners rush the repeated notes or hesitate at the A, so practise just those two-bar shapes first; once the right hand feels easy, try a left-hand pulse on low C for each beat.",
+    "listen_for": "The tune is recognisable from its three repeated opening notes followed by the cheerful leap upward.",
+    "substituted": "no"
+   },
+   "artifact": {
+    "title": "La Cucaracha",
+    "attribution": "Mexican traditional",
+    "provenance": "traditional-folk",
+    "difficulty": "beginner",
+    "hand": "right",
+    "tempo": 120,
+    "notes": [
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 60,
+      "name": "C4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 2
+     },
+     {
+      "midi": 69,
+      "name": "A4",
+      "beats": 2
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 65,
+      "name": "F4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 64,
+      "name": "E4",
+      "beats": 1
+     },
+     {
+      "midi": 62,
+      "name": "D4",
+      "beats": 2
      },
      {
       "midi": 60,

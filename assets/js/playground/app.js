@@ -109,7 +109,17 @@ async function loadRoster() {
       const name = el("div", "name");
       name.append(el("span", "dot"), document.createTextNode(a.label));
       card.append(name, el("div", "blurb", a.blurb));
+      // An agent the current deployment can't run is shown, not hidden — the
+      // crew is the crew, and a missing card just looks like it was forgotten.
+      if (a.unavailable) {
+        card.classList.add("agent-card-off");
+        card.title = a.unavailable;
+        card.append(el("div", "agent-off-note", a.unavailable));
+      }
       card.addEventListener("click", () => {
+        // An agent that lives on its own page opens it rather than seeding a
+        // prompt the concierge has no way to route.
+        if (a.href) { window.location.href = a.href; return; }
         promptEl.value = a.examples[0] ?? "";
         promptEl.focus();
         autosize();

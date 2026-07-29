@@ -2,53 +2,53 @@
  "stamp": "2026-07-29",
  "puzzles": [
   {
-   "title": "Under Pressure",
+   "title": "Volcanic Connections",
    "words": [
-    "VOLCANO",
-    "LAVA",
+    "KILAUEA",
+    "GAS",
     "ROAD",
     "ASH",
-    "PINE",
+    "MUD",
     "WORM",
-    "ACNE",
-    "SNOW",
-    "GAS",
-    "MOON",
+    "ETNA",
+    "CASH",
+    "MAGMA",
+    "FUJI",
     "FIRE",
-    "STEAM",
+    "PUMICE",
     "TONE",
-    "CINDER",
-    "GOLF",
-    "SILENCE"
+    "LAVA",
+    "HOOD",
+    "AIR"
    ],
    "groups": [
     {
-     "label": "Volcanic hazards",
+     "label": "Volcanic materials",
      "words": [
       "ASH",
+      "MAGMA",
       "GAS",
-      "LAVA",
-      "STEAM"
+      "PUMICE"
      ],
      "difficulty": 1
     },
     {
-     "label": "Things with craters",
+     "label": "Famous volcanoes",
      "words": [
-      "ACNE",
-      "GOLF",
-      "MOON",
-      "VOLCANO"
+      "ETNA",
+      "HOOD",
+      "FUJI",
+      "KILAUEA"
      ],
      "difficulty": 2
     },
     {
-     "label": "___ cone",
+     "label": "___ FLOW compounds",
      "words": [
-      "CINDER",
-      "PINE",
-      "SILENCE",
-      "SNOW"
+      "LAVA",
+      "MUD",
+      "AIR",
+      "CASH"
      ],
      "difficulty": 3
     },
@@ -63,93 +63,93 @@
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen words, four groups. Some of the most volcanic-looking tiles are there to lure you the wrong way.",
-   "trap": "Several words seem to form a straightforward volcano set, but some actually hide in wordplay groups like RING ___ and ___ CONE."
+   "intro": "Sixteen tiles, four hidden sets. Expect eruption-adjacent vocabulary, but not every word is there for the reason you think.",
+   "trap": "The main feint is that several words look purely volcanic at first glance, while one group actually hinges on common compounds and another on words that follow the same lead word."
   },
   {
    "title": "After Dark",
    "words": [
-    "LIME",
-    "SATELLITE",
-    "COMET",
-    "AURORA",
-    "LION",
-    "NOVA",
-    "DAY",
-    "SCALES",
-    "METEOR",
-    "HEAD",
+    "PHONE",
+    "DRACO",
+    "GALLERY",
+    "ORION",
+    "BLUE",
+    "IRON",
+    "SATURN",
+    "BADGER",
+    "LYRA",
+    "BOXER",
     "STAR",
-    "ECLIPSE",
-    "MOON",
-    "CRAB",
-    "FLASH",
-    "RAM"
+    "ARIES",
+    "GUARD",
+    "HONEY",
+    "TREE",
+    "PAPER"
    ],
    "groups": [
     {
-     "label": "Seen in the night sky",
+     "label": "Constellations missing a final letter",
      "words": [
-      "AURORA",
-      "METEOR",
-      "SATELLITE",
-      "ECLIPSE"
+      "ORION",
+      "LYRA",
+      "DRACO",
+      "ARIES"
      ],
      "difficulty": 1
     },
     {
-     "label": "___ light",
+     "label": "Things with RINGS",
      "words": [
-      "DAY",
-      "FLASH",
-      "HEAD",
-      "LIME"
+      "SATURN",
+      "TREE",
+      "BOXER",
+      "PHONE"
      ],
      "difficulty": 2
     },
     {
-     "label": "Zodiac signs by symbol",
+     "label": "___ MOON compounds",
      "words": [
-      "CRAB",
-      "LION",
-      "RAM",
-      "SCALES"
+      "HONEY",
+      "BLUE",
+      "PAPER",
+      "BADGER"
      ],
      "difficulty": 3
     },
     {
-     "label": "Night-sky words with first letter removed become animals",
+     "label": "Words after SHOOTING",
      "words": [
       "STAR",
-      "COMET",
-      "MOON",
-      "NOVA"
+      "GALLERY",
+      "GUARD",
+      "IRON"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen tiles, four hidden sets. Expect a few celestial-looking words to point the wrong way before the real pattern emerges.",
-   "trap": "The bait is the obvious astronomy reading: several words feel like they should cluster as sky objects, but some are actually there for wordplay and symbol-based categories instead."
+   "intro": "Sixteen words, four hidden links. A few celestial-looking tiles are there to lure you into the wrong corners first.",
+   "trap": "The bait is night-sky vocabulary: some words look like they should form a straightforward astronomy set, but several actually belong to phrase-based groups like SHOOTING ___, ___ MOON, and things with RINGS."
   },
   {
-   "title": "Grounds for Confusion",
+   "title": "Coffee Break Confusion",
    "words": [
-    "TABLE",
-    "AMERICANO",
-    "SHOT",
+    "VANILLA",
+    "CAPPUCCINO",
+    "GROUND",
     "LATTE",
-    "SPRING",
-    "DRIP",
-    "BEAN",
-    "DAY",
+    "TAWNY",
+    "MUG",
+    "JELLY",
+    "UMBER",
     "MOCHA",
-    "GRINDER",
-    "CAP",
-    "MACCHIATO",
-    "PRESS",
-    "COFFEE",
+    "STRING",
+    "RING",
+    "ESPRESSO",
     "FILTER",
-    "HEART"
+    "TAN",
+    "KIDNEY",
+    "CHESTNUT"
    ],
    "groups": [
     {
@@ -157,499 +157,1149 @@
      "words": [
       "LATTE",
       "MOCHA",
-      "AMERICANO",
-      "MACCHIATO"
+      "CAPPUCCINO",
+      "ESPRESSO"
      ],
      "difficulty": 1
     },
     {
-     "label": "Things that can follow COFFEE",
+     "label": "___ bean",
      "words": [
-      "BEAN",
+      "JELLY",
+      "KIDNEY",
+      "STRING",
+      "VANILLA"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "Words meaning brown",
+     "words": [
+      "TAN",
+      "TAWNY",
+      "CHESTNUT",
+      "UMBER"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Things a coffee can have",
+     "words": [
+      "RING",
+      "GROUND",
       "FILTER",
-      "GRINDER",
-      "TABLE"
-     ],
-     "difficulty": 2
-    },
-    {
-     "label": "___ BREAK",
-     "words": [
-      "COFFEE",
-      "SPRING",
-      "HEART",
-      "DAY"
-     ],
-     "difficulty": 3
-    },
-    {
-     "label": "Words hidden at the starts of coffee terms",
-     "words": [
-      "CAP",
-      "SHOT",
-      "PRESS",
-      "DRIP"
+      "MUG"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen coffee-adjacent tiles conceal four sets. Some look like café menu items, but a few belong somewhere sneakier.",
-   "trap": "The main misdirection is that several words feel at home in straightforward coffee categories, while actually slotting into pattern-based groups like compounds and hidden term starts."
+   "intro": "Sixteen words, four groups. Some of the coffee-flavored surface links are real, and some are there to lead you astray.",
+   "trap": "I leaned on coffee-adjacent words like BEAN-type items, drink names, and cafe imagery so several tiles look like they belong together before the cleaner patterns emerge."
   },
   {
-   "title": "Reel Tricks",
+   "title": "Roll Camera",
    "words": [
-    "WILDER",
-    "LONG",
-    "MOVIE",
-    "CLOSEUP",
-    "MATCH",
-    "NIGHT",
-    "HITCHCOCK",
-    "ROUGH",
-    "MEDIUM",
-    "SCORSESE",
-    "FILM",
+    "GLADIATOR",
+    "HORROR",
+    "SILVER",
+    "NOIR",
+    "UNIVERSAL",
+    "SPLIT",
+    "MOONLIGHT",
+    "MGM",
+    "WESTERN",
+    "CRASH",
+    "GREEN",
+    "MUSICAL",
     "WIDE",
-    "PARTNER",
-    "JUMP",
-    "KUBRICK",
-    "SMASH"
+    "PARAMOUNT",
+    "CHICAGO",
+    "COLUMBIA"
    ],
    "groups": [
     {
-     "label": "Camera shot sizes",
+     "label": "Film genres",
      "words": [
-      "CLOSEUP",
-      "MEDIUM",
-      "LONG",
-      "WIDE"
+      "NOIR",
+      "WESTERN",
+      "HORROR",
+      "MUSICAL"
      ],
      "difficulty": 1
     },
     {
-     "label": "Famous film directors' surnames",
+     "label": "Best Picture winners, familiarly",
      "words": [
-      "HITCHCOCK",
-      "KUBRICK",
-      "SCORSESE",
-      "WILDER"
+      "MOONLIGHT",
+      "CHICAGO",
+      "CRASH",
+      "GLADIATOR"
      ],
      "difficulty": 2
     },
     {
-     "label": "___ CUT",
+     "label": "Words in classic studio names",
      "words": [
-      "JUMP",
-      "MATCH",
-      "SMASH",
-      "ROUGH"
+      "PARAMOUNT",
+      "UNIVERSAL",
+      "COLUMBIA",
+      "MGM"
      ],
      "difficulty": 3
     },
     {
-     "label": "Words that can follow \"silent\"",
+     "label": "___ SCREEN",
      "words": [
-      "FILM",
-      "MOVIE",
-      "PARTNER",
-      "NIGHT"
+      "GREEN",
+      "SILVER",
+      "WIDE",
+      "SPLIT"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen cinema-flavored tiles hide four sets. Some of the most film-y words are there to lead you toward the wrong screen test first.",
-   "trap": "Words like FILM, MOVIE, WIDE, and LONG are meant to suggest straightforward movie vocabulary before the real wordplay categories snap into focus."
+   "intro": "Sixteen film-flavored tiles hide four sets. Some look like they belong with movies in one way, but pair up better in another.",
+   "trap": "Several words tempt you toward obvious cinema buckets like genres or Oscar winners, while the real late-game twist is the phrase set built from common screen compounds."
   },
   {
-   "title": "Mapped Out",
+   "title": "You Are Here",
    "words": [
-    "TREE",
-    "GRID",
-    "NORTHSTAR",
+    "ASTRAL",
+    "INSET",
+    "CHAIR",
     "LEGEND",
-    "LETTER",
-    "WESTERN",
-    "ROAD",
-    "HANDS",
+    "RUNNER",
+    "TABLE",
+    "MERCATOR",
+    "HOUSE",
     "SCALE",
-    "HEAT",
-    "EASTWOOD",
-    "KEY",
-    "SOUTHPAW",
+    "SCREEN",
+    "NAPKIN",
+    "GRID",
+    "ARMS",
     "MAP",
-    "MIND",
-    "CHAIR"
+    "AERIAL",
+    "BLOCK"
    ],
    "groups": [
     {
-     "label": "MAP FEATURES",
+     "label": "Map elements",
      "words": [
       "LEGEND",
       "SCALE",
-      "GRID",
-      "KEY"
+      "INSET",
+      "GRID"
      ],
      "difficulty": 1
     },
     {
-     "label": "___ MAP",
+     "label": "___ projection",
      "words": [
-      "ROAD",
-      "MIND",
-      "HEAT",
-      "TREE"
+      "MERCATOR",
+      "AERIAL",
+      "SCREEN",
+      "ASTRAL"
      ],
      "difficulty": 2
     },
     {
-     "label": "THINGS YOU CAN FOLD",
+     "label": "Words that can follow ROAD",
      "words": [
       "MAP",
-      "LETTER",
-      "CHAIR",
-      "HANDS"
+      "RUNNER",
+      "BLOCK",
+      "HOUSE"
      ],
      "difficulty": 3
     },
     {
-     "label": "WORDS HIDING CARDINAL DIRECTIONS",
+     "label": "Things you might unfold",
      "words": [
-      "EASTWOOD",
-      "NORTHSTAR",
-      "SOUTHPAW",
-      "WESTERN"
+      "NAPKIN",
+      "CHAIR",
+      "ARMS",
+      "TABLE"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen words are arranged in a grid, but several seem to point toward geography in more than one way. Untangle the overlaps carefully.",
-   "trap": "I seeded obvious cartography terms alongside words that only become map-related in compounds or by hiding directions inside them, so some tiles look like they belong with the wrong set."
+   "intro": "Sixteen words, four hidden groups. Since this one circles around maps, a few tiles may look like they belong somewhere more obvious at first glance.",
+   "trap": "The main feint is that several words lean geographic, but some of the trickiest ones are actually phrase-completion groups rather than map vocabulary."
   },
   {
    "title": "Dry Heat",
    "words": [
-    "PARFAIT",
-    "ATACAMA",
-    "PRIMROSE",
-    "GOBI",
-    "SPEEDBUMP",
-    "WIND",
-    "TORTE",
-    "SHOULDER",
-    "SAHARA",
-    "SHERBET",
-    "COMPASS",
+    "MIRAGE",
     "MOJAVE",
-    "TEA",
-    "CAMEL",
+    "TORTE",
+    "GOBI",
+    "JUST",
+    "ECLAIR",
+    "DUNE",
+    "ISLE",
+    "SAHARA",
+    "CACTUS",
+    "PIE",
+    "SONORAN",
     "SUNDAE",
-    "HILL"
+    "ICED",
+    "OASIS",
+    "STRESS"
    ],
    "groups": [
     {
-     "label": "Major world deserts",
+     "label": "Famous deserts",
      "words": [
       "GOBI",
       "SAHARA",
-      "ATACAMA",
-      "MOJAVE"
+      "MOJAVE",
+      "SONORAN"
      ],
      "difficulty": 1
     },
     {
-     "label": "Desserts minus one letter",
+     "label": "Things found in a desert",
      "words": [
-      "TORTE",
-      "SUNDAE",
-      "SHERBET",
-      "PARFAIT"
+      "DUNE",
+      "OASIS",
+      "CACTUS",
+      "MIRAGE"
      ],
      "difficulty": 2
     },
     {
-     "label": "Things with humps",
+     "label": "Words that become deserts when a letter is added",
      "words": [
-      "CAMEL",
-      "SPEEDBUMP",
-      "HILL",
-      "SHOULDER"
+      "ICED",
+      "JUST",
+      "STRESS",
+      "ISLE"
      ],
      "difficulty": 3
     },
     {
-     "label": "___ ROSE",
+     "label": "Desserts minus a letter",
      "words": [
-      "COMPASS",
-      "PRIMROSE",
-      "TEA",
-      "WIND"
+      "PIE",
+      "TORTE",
+      "SUNDAE",
+      "ECLAIR"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Some tiles point straight at sand, but others are only playing in the same dune field. Watch out for words that look like they belong with the obvious desert set but actually connect somewhere else.",
-   "trap": "The main misdirection is between actual deserts and lookalikes: several words evoke arid landscapes or camels, while a sneakier set hides in near-spelling with desserts and another in phrases ending with ROSE."
+   "intro": "Sixteen words hide four sets. The theme points one way, but not every sandy-looking tile belongs where you first think.",
+   "trap": "Several entries look like straightforward desert vocabulary, but some are actually wordplay routes to dessert/desert via added or removed letters."
   },
   {
    "title": "Into the Woods",
    "words": [
-    "WILLOW",
-    "MARTEN",
+    "PLOT",
+    "WOODLAND",
+    "AGE",
+    "JUNGLE",
+    "JACK",
+    "PHONE",
     "RAIN",
-    "DEER",
+    "OUT",
+    "TAIGA",
+    "NATIONAL",
+    "TRUNK",
+    "RAINFOREST",
+    "RECORD",
     "BIRD",
-    "STONE",
-    "ASH",
-    "PINE",
-    "MOOSE",
-    "LAUREL",
     "KELP",
-    "BOAR",
-    "SHERWOOD",
-    "BEAR",
-    "HOLLY",
-    "JACK"
+    "MAIL"
    ],
    "groups": [
     {
-     "label": "Forest mammals",
+     "label": "Forest biomes",
      "words": [
-      "DEER",
-      "MOOSE",
-      "MARTEN",
-      "BOAR"
+      "JUNGLE",
+      "TAIGA",
+      "WOODLAND",
+      "RAINFOREST"
      ],
      "difficulty": 1
     },
     {
-     "label": "Trees whose names are also common first names",
+     "label": "___ FOREST compounds/phrases",
      "words": [
-      "ASH",
-      "HOLLY",
-      "LAUREL",
-      "WILLOW"
+      "RAIN",
+      "KELP",
+      "NATIONAL",
+      "PLOT"
      ],
      "difficulty": 2
     },
     {
      "label": "Words that can follow BLACK",
      "words": [
-      "BEAR",
       "BIRD",
       "JACK",
-      "PINE"
+      "MAIL",
+      "OUT"
      ],
      "difficulty": 3
     },
     {
-     "label": "Seen in the phrase “___ forest”",
+     "label": "Things with tree rings",
      "words": [
-      "KELP",
-      "RAIN",
-      "SHERWOOD",
-      "STONE"
+      "TRUNK",
+      "AGE",
+      "RECORD",
+      "PHONE"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen words wander through the woods here, but several apparent nature clusters are decoys. Look for one very direct set, then watch for words that pair with something outside the grid.",
-   "trap": "The main misdirection is that many entries look like forest flora and fauna, but some actually belong to phrase-based groups like BLACK ___ or ___ forest."
+   "intro": "Sixteen words are tangled together here, with a leafy surface theme that won’t always help as much as it seems. Some belong deep in the forest; others only look like they do.",
+   "trap": "The big misdirection is that several words feel like they should make simple tree-or-forest sets, but some actually belong to phrase categories like BLACK ___ or ___ FOREST, and others hide in the much trickier “things with rings” group."
   },
   {
-   "title": "Forecast Feints",
+   "title": "Deep Space Static",
    "words": [
-    "TRIGGER",
-    "FOG",
-    "MAN",
-    "RAIN",
-    "STORE",
-    "PROOF",
-    "TORNADO",
-    "WAVE",
-    "SLEET",
-    "MIRROR",
-    "VANE",
-    "HAIL",
-    "CAST",
-    "COLD",
-    "STORM",
-    "HOME"
+    "EXPANSE",
+    "PLANET",
+    "DUST",
+    "STAR",
+    "BOX",
+    "LATTE",
+    "ALIEN",
+    "OUT",
+    "COMET",
+    "FOUNDATION",
+    "RAY",
+    "MOON",
+    "STRING",
+    "HOLE",
+    "DUNE",
+    "JACK"
    ],
    "groups": [
     {
-     "label": "Weather phenomena",
+     "label": "Seen in the night sky",
      "words": [
-      "RAIN",
-      "SLEET",
-      "FOG",
-      "HAIL"
+      "STAR",
+      "COMET",
+      "PLANET",
+      "MOON"
      ],
      "difficulty": 1
     },
     {
-     "label": "___ warning",
+     "label": "Sci-fi franchises/settings",
      "words": [
-      "TORNADO",
-      "STORM",
-      "MIRROR",
-      "TRIGGER"
+      "ALIEN",
+      "DUNE",
+      "FOUNDATION",
+      "EXPANSE"
      ],
      "difficulty": 2
     },
     {
-     "label": "Things with fronts",
+     "label": "Words after BLACK",
      "words": [
-      "COLD",
-      "STORE",
-      "HOME",
-      "WAVE"
+      "HOLE",
+      "BOX",
+      "JACK",
+      "OUT"
      ],
      "difficulty": 3
     },
     {
-     "label": "Second words in weather-related compounds",
+     "label": "Cosmic ___",
      "words": [
-      "VANE",
-      "MAN",
-      "CAST",
-      "PROOF"
+      "RAY",
+      "DUST",
+      "STRING",
+      "LATTE"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen words are on the board, and several seem to point straight at the sky. Don’t trust the first storm front you see.",
-   "trap": "The main misdirection is that weather words like COLD, STORM, and WAVE look ready to cluster semantically, but several actually belong to phrase-based categories instead."
+   "intro": "Sixteen tiles, four hidden groups. Some of the most spacey-looking words are there to lure you away from the real connections.",
+   "trap": "Several words seem to belong in a straightforward astronomy set, but some actually work only through phrases like BLACK ___ or Cosmic ___."
   },
   {
-   "title": "For the Birds",
+   "title": "Tacking Points",
    "words": [
-    "GROUSE",
-    "HERON",
-    "LAYUP",
-    "ROBIN",
-    "MOCKING",
-    "ALLEYOO",
-    "DUCK",
-    "THUNDER",
-    "RAVEN",
-    "CRANE",
-    "DUNK",
-    "FINCH",
-    "HOOK",
-    "JAIL",
-    "SWALLOW",
-    "SONG"
+    "REEF",
+    "HULL",
+    "MAIN",
+    "MAST",
+    "SHEET",
+    "SET",
+    "TACK",
+    "SQUARE",
+    "KEEL",
+    "DRIFT",
+    "HEAD",
+    "DECK",
+    "TOP",
+    "BOWLINE",
+    "JIBE",
+    "SLIP"
    ],
    "groups": [
     {
-     "label": "Common birds",
+     "label": "Basic parts of a sailboat",
      "words": [
-      "ROBIN",
-      "RAVEN",
-      "HERON",
-      "FINCH"
+      "MAST",
+      "KEEL",
+      "HULL",
+      "DECK"
      ],
      "difficulty": 1
     },
     {
-     "label": "Birds that are also verbs",
+     "label": "Nautical words that are also everyday verbs",
      "words": [
-      "DUCK",
-      "SWALLOW",
-      "CRANE",
-      "GROUSE"
+      "TACK",
+      "JIBE",
+      "DRIFT",
+      "REEF"
      ],
      "difficulty": 2
     },
     {
-     "label": "___ bird",
+     "label": "___ KNOT",
      "words": [
-      "JAIL",
-      "MOCKING",
-      "SONG",
-      "THUNDER"
+      "BOWLINE",
+      "SHEET",
+      "SLIP",
+      "SQUARE"
      ],
      "difficulty": 3
     },
     {
-     "label": "Basketball shots/terms minus last letter",
+     "label": "Words that can precede SAIL",
      "words": [
-      "DUNK",
-      "LAYUP",
-      "HOOK",
-      "ALLEYOO"
+      "HEAD",
+      "MAIN",
+      "TOP",
+      "SET"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen words, four groups. Expect plenty of avian vibes, but not every bird belongs with the obvious flock.",
-   "trap": "Several tiles look like they should sort into simple bird species, but some actually hinge on wordplay and bird-related phrases instead."
+   "intro": "Sixteen sailing-flavored words hide four groups. Some look like obvious boat terms, but a few are steering you somewhere else.",
+   "trap": "Several tiles seem to belong with generic boat parts or sailing actions, but some are actually there for wordplay like ___ KNOT and ___ SAIL."
   },
   {
-   "title": "Stacks and Such",
+   "title": "In the Frame",
    "words": [
-    "RED",
-    "SUBJECT",
-    "BRITISH",
-    "AUTHOR",
-    "HOLD",
-    "BODLEIAN",
-    "INDEX",
-    "RETURN",
-    "TITLE",
-    "WILD",
-    "PUBLIC",
-    "CALL",
-    "CONGRESS",
+    "WASH",
+    "TIMER",
+    "COPY",
+    "ISO",
+    "TAKE",
+    "GRAPH",
+    "DEVELOP",
+    "POINT",
+    "AUTO",
+    "PRINT",
+    "BOMB",
+    "MACRO",
+    "FINISH",
+    "SNAP",
+    "FIX",
+    "CAPTURE"
+   ],
+   "groups": [
+    {
+     "label": "Camera settings/modes",
+     "words": [
+      "ISO",
+      "AUTO",
+      "TIMER",
+      "MACRO"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Darkroom verbs",
+     "words": [
+      "DEVELOP",
+      "FIX",
+      "PRINT",
+      "WASH"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "Things with “shoot” meanings beyond photography",
+     "words": [
+      "SNAP",
+      "TAKE",
+      "CAPTURE",
+      "POINT"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Words after PHOTO-",
+     "words": [
+      "BOMB",
+      "COPY",
+      "FINISH",
+      "GRAPH"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen words, four hidden groups. Since the theme is photography, expect some terms to look like they belong together before they actually do.",
+   "trap": "Several words read like generic camera actions or settings, but the main feint is that some photo-looking terms really work only through wordplay, especially the PHOTO- compounds."
+  },
+  {
+   "title": "Storm Warning",
+   "words": [
+    "FALL",
+    "THREE",
+    "MOON",
+    "ONE",
+    "DUST",
+    "WIND",
+    "BOW",
+    "SNOW",
+    "TWO",
+    "DROP",
+    "SUN",
+    "FOUR",
+    "LIGHTNING",
+    "BRAIN",
+    "COAT",
+    "FIRE"
+   ],
+   "groups": [
+    {
+     "label": "Hurricane categories on the Saffir–Simpson scale",
+     "words": [
+      "ONE",
+      "TWO",
+      "THREE",
+      "FOUR"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Words that can follow RAIN",
+     "words": [
+      "BOW",
+      "COAT",
+      "DROP",
+      "FALL"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ STORM",
+     "words": [
+      "BRAIN",
+      "DUST",
+      "FIRE",
+      "SNOW"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Things represented by cloud symbols in weather forecasts",
+     "words": [
+      "SUN",
+      "MOON",
+      "LIGHTNING",
+      "WIND"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen weathery words, but the real patterns don’t all blow in from the same direction. Some apparent storm terms are only there to cloud the forecast.",
+   "trap": "I leaned on overlapping weather imagery: words like FIRE, SNOW, WIND, and LIGHTNING look like they should form a straightforward storm set, but they split across wordplay-based groups instead."
+  },
+  {
+   "title": "Cold Cuts",
+   "words": [
+    "POP",
+    "SERAC",
+    "SCOOP",
+    "MORAINE",
+    "STONE",
+    "CALVE",
+    "BAR",
+    "SPACE",
+    "CIRQUE",
+    "SANDWICH",
+    "KLONDIKE",
+    "ARETE",
+    "TONGUE",
+    "BRONZE",
+    "CONE",
+    "ICE"
+   ],
+   "groups": [
+    {
+     "label": "Glaciology terms",
+     "words": [
+      "MORAINE",
+      "CIRQUE",
+      "SERAC",
+      "ARETE"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Ice cream truck treats",
+     "words": [
+      "BAR",
+      "CONE",
+      "SANDWICH",
+      "POP"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ age",
+     "words": [
+      "BRONZE",
+      "STONE",
+      "ICE",
+      "SPACE"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Words hiding mountain ranges backward",
+     "words": [
+      "KLONDIKE",
+      "SCOOP",
+      "TONGUE",
+      "CALVE"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "A chilly grid with some very tempting overlaps. Don’t stop at the first cold-looking set you see.",
+   "trap": "Several words point toward ice, mountains, or frozen treats, so the glacier vocabulary is meant to blur with the age phrases and the snack words before the last set clicks."
+  },
+  {
+   "title": "Woven In",
+   "words": [
+    "HEM",
+    "HERRINGBONE",
+    "PAPER",
+    "PLAID",
+    "WOOLLY",
+    "TREAD",
+    "WEAVE",
+    "LACEWING",
     "CHECK",
-    "LIBRARY",
-    "RENEW"
+    "FRAY",
+    "COTTON",
+    "PAISLEY",
+    "PEPPER",
+    "SILKEN",
+    "DRAPE",
+    "SATINY"
    ],
    "groups": [
     {
-     "label": "Parts of a traditional library catalog entry",
+     "label": "Fabric patterns",
      "words": [
-      "AUTHOR",
-      "TITLE",
-      "SUBJECT",
-      "CALL"
+      "PLAID",
+      "CHECK",
+      "HERRINGBONE",
+      "PAISLEY"
      ],
      "difficulty": 1
     },
     {
-     "label": "___ CARD",
+     "label": "Textile verbs",
      "words": [
-      "INDEX",
-      "LIBRARY",
-      "WILD",
-      "RED"
+      "WEAVE",
+      "DRAPE",
+      "FRAY",
+      "HEM"
      ],
      "difficulty": 2
     },
     {
-     "label": "Things you might do with a book",
+     "label": "Words ending with fabrics",
      "words": [
-      "CHECK",
-      "HOLD",
-      "RENEW",
-      "RETURN"
+      "SILKEN",
+      "WOOLLY",
+      "SATINY",
+      "LACEWING"
      ],
      "difficulty": 3
     },
     {
-     "label": "Words in famous library names",
+     "label": "___ mill",
      "words": [
-      "PUBLIC",
-      "BRITISH",
-      "CONGRESS",
-      "BODLEIAN"
+      "COTTON",
+      "PAPER",
+      "PEPPER",
+      "TREAD"
      ],
      "difficulty": 4
     }
    ],
-   "intro": "Sixteen library-flavored tiles hide four sets. Some words want to send you toward borrowing, others toward catalogs or institutions.",
-   "trap": "The main feint is that CHECK, HOLD, RENEW, and RETURN all feel like circulation actions, while CALL looks like it belongs there too—but it actually lives in the catalog group."
+   "intro": "Sixteen words, four hidden sets. Some of the textile-looking ones are exactly where you expect, and some are stitched in for a different reason.",
+   "trap": "The main misdirection is that several words read like straightforward fabric or sewing terms, but a few actually belong to wordplay groups instead."
+  },
+  {
+   "title": "Field Work",
+   "words": [
+    "SAW",
+    "GOAT",
+    "CORNER",
+    "COW",
+    "MINE",
+    "OATEN",
+    "COMB",
+    "PLAY",
+    "PIG",
+    "GEAR",
+    "BARLEY",
+    "HEN",
+    "RICEST",
+    "LEFT",
+    "RAKE",
+    "OUT"
+   ],
+   "groups": [
+    {
+     "label": "Basic farm animals",
+     "words": [
+      "COW",
+      "PIG",
+      "GOAT",
+      "HEN"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Things with teeth",
+     "words": [
+      "COMB",
+      "RAKE",
+      "GEAR",
+      "SAW"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ field",
+     "words": [
+      "LEFT",
+      "MINE",
+      "OUT",
+      "PLAY"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Words hiding grains",
+     "words": [
+      "BARLEY",
+      "CORNER",
+      "RICEST",
+      "OATEN"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen farm-flavored words are hiding four sets of four. Some of the most obvious-looking agricultural tiles are there to send you in the wrong direction.",
+   "trap": "The main feint is that several words seem to sort into straightforward farm buckets, but some actually belong to wordplay groups like ___ FIELD or terms with hidden grains."
+  },
+  {
+   "title": "In the Press",
+   "words": [
+    "ETCH",
+    "JACKET",
+    "RUN",
+    "SPINE",
+    "BITMAP",
+    "MAKER",
+    "OFFSET",
+    "DISPLAY",
+    "LEAF",
+    "LETTERPRESS",
+    "SHOP",
+    "INDEX",
+    "HEAD",
+    "SANS",
+    "SCREEN",
+    "SCRIPT"
+   ],
+   "groups": [
+    {
+     "label": "Parts of a book",
+     "words": [
+      "SPINE",
+      "LEAF",
+      "JACKET",
+      "INDEX"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Printing methods",
+     "words": [
+      "OFFSET",
+      "SCREEN",
+      "LETTERPRESS",
+      "ETCH"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ FONT",
+     "words": [
+      "SANS",
+      "BITMAP",
+      "SCRIPT",
+      "DISPLAY"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Words that can follow \"PRINT\"",
+     "words": [
+      "SHOP",
+      "RUN",
+      "HEAD",
+      "MAKER"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen printing-adjacent words hide four different connections. Some will seem to point toward the page before they point toward the press.",
+   "trap": "I leaned on words like SCREEN, SCRIPT, and JACKET to suggest the wrong kind of print-related grouping before the more technical connections emerge."
+  },
+  {
+   "title": "Orchard Tangles",
+   "words": [
+    "CHRISTMAS",
+    "CHERRY",
+    "DATE",
+    "PEACH",
+    "CPU",
+    "QUINCE",
+    "FAMILY",
+    "REACTOR",
+    "PLUM",
+    "DIRECTORY",
+    "GRAPE",
+    "APRICOT",
+    "OLIVE",
+    "EARTH",
+    "DECISION",
+    "DRILL"
+   ],
+   "groups": [
+    {
+     "label": "Stone fruits",
+     "words": [
+      "PEACH",
+      "PLUM",
+      "CHERRY",
+      "APRICOT"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "___ tree",
+     "words": [
+      "FAMILY",
+      "DECISION",
+      "DIRECTORY",
+      "CHRISTMAS"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "Things with cores",
+     "words": [
+      "EARTH",
+      "CPU",
+      "DRILL",
+      "REACTOR"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Words hidden across fruit names",
+     "words": [
+      "GRAPE",
+      "DATE",
+      "OLIVE",
+      "QUINCE"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen words, four groups. Since this one grows out of orchards, expect some fruitful wrong turns.",
+   "trap": "Several tiles look like they should sort by fruit first, but some are doing wordplay jobs instead — especially the ones nudging you toward trees and fruit anatomy."
+  },
+  {
+   "title": "Shop Talk",
+   "words": [
+    "STUD",
+    "LEVEL",
+    "SAID",
+    "HAMMER",
+    "BOX",
+    "TOOL",
+    "BOARD",
+    "MITER",
+    "PLANE",
+    "POST",
+    "CUT",
+    "SQUARE",
+    "SEEN",
+    "BUTT",
+    "BEAM",
+    "LAP"
+   ],
+   "groups": [
+    {
+     "label": "Basic hand tools",
+     "words": [
+      "HAMMER",
+      "PLANE",
+      "LEVEL",
+      "SQUARE"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Lumber cuts sold at a yard",
+     "words": [
+      "BOARD",
+      "BEAM",
+      "POST",
+      "STUD"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ joint",
+     "words": [
+      "BUTT",
+      "BOX",
+      "LAP",
+      "MITER"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "What \"saw\" can mean",
+     "words": [
+      "CUT",
+      "SAID",
+      "SEEN",
+      "TOOL"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen shop-flavored words hide four sets. Some of the most carpenter-ish tiles actually belong to a wordplay group instead.",
+   "trap": "The main feint is that several words look interchangeable as tools or lumber terms, but some of them only lock in when you notice phrases with JOINT or alternate meanings of SAW."
+  },
+  {
+   "title": "Volcanic Islands",
+   "words": [
+    "HEAD",
+    "KAUAI",
+    "ELLIS",
+    "MAUI",
+    "VENT",
+    "STATEN",
+    "SPOT",
+    "ASH",
+    "OAHU",
+    "WIRE",
+    "CONEY",
+    "LANAI",
+    "RHODE",
+    "CONE",
+    "DOG",
+    "LAVA"
+   ],
+   "groups": [
+    {
+     "label": "Hawaiian islands",
+     "words": [
+      "MAUI",
+      "OAHU",
+      "KAUAI",
+      "LANAI"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Things that can follow HOT",
+     "words": [
+      "SPOT",
+      "DOG",
+      "WIRE",
+      "HEAD"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "Volcanic terms",
+     "words": [
+      "CONE",
+      "VENT",
+      "LAVA",
+      "ASH"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "___ ISLAND",
+     "words": [
+      "CONEY",
+      "ELLIS",
+      "RHODE",
+      "STATEN"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen words, four hidden groups. Some island-looking entries belong somewhere much less geographic.",
+   "trap": "The main feint is that several place names suggest one big islands theme, but some actually belong to phrase-based categories instead."
+  },
+  {
+   "title": "Cycle Tricks",
+   "words": [
+    "REVOLVE",
+    "PEDAL",
+    "NEWS",
+    "CHAIN",
+    "MEMORY",
+    "MENSTRUAL",
+    "SPIN",
+    "BOWLING",
+    "SADDLE",
+    "ROLL",
+    "WASH",
+    "SPOKE",
+    "SLEEP",
+    "BIKE",
+    "TURN",
+    "FAST"
+   ],
+   "groups": [
+    {
+     "label": "Bike parts",
+     "words": [
+      "CHAIN",
+      "SADDLE",
+      "PEDAL",
+      "SPOKE"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Words meaning rotate",
+     "words": [
+      "SPIN",
+      "TURN",
+      "ROLL",
+      "REVOLVE"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "___ lane",
+     "words": [
+      "BIKE",
+      "MEMORY",
+      "FAST",
+      "BOWLING"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "Things with cycles",
+     "words": [
+      "WASH",
+      "NEWS",
+      "SLEEP",
+      "MENSTRUAL"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen words, four hidden groups. Since this one’s built around cycling, expect a few terms to seem like they belong together before the real pattern emerges.",
+   "trap": "I loaded the grid with spinny-looking words and bike-adjacent terms so tiles like ROLL, TURN, BIKE, and CHAIN would tempt you into the wrong set first."
+  },
+  {
+   "title": "Off the Map",
+   "words": [
+    "TRIP",
+    "GRID",
+    "ORTHOGRAPHIC",
+    "LEGEND",
+    "EAST",
+    "GNOMONIC",
+    "MAP",
+    "WESTERN",
+    "SCALE",
+    "RUNNER",
+    "MERCATOR",
+    "INSET",
+    "CONIC",
+    "NEWS",
+    "BLOCK",
+    "SOUTH"
+   ],
+   "groups": [
+    {
+     "label": "Map features",
+     "words": [
+      "LEGEND",
+      "SCALE",
+      "GRID",
+      "INSET"
+     ],
+     "difficulty": 1
+    },
+    {
+     "label": "Words after ROAD",
+     "words": [
+      "MAP",
+      "BLOCK",
+      "RUNNER",
+      "TRIP"
+     ],
+     "difficulty": 2
+    },
+    {
+     "label": "Hidden cardinal directions at the start",
+     "words": [
+      "NEWS",
+      "EAST",
+      "SOUTH",
+      "WESTERN"
+     ],
+     "difficulty": 3
+    },
+    {
+     "label": "___ projection",
+     "words": [
+      "MERCATOR",
+      "ORTHOGRAPHIC",
+      "CONIC",
+      "GNOMONIC"
+     ],
+     "difficulty": 4
+    }
+   ],
+   "intro": "Sixteen tiles, four groups. Some cartographic terms are doing double duty, so don’t trust the first neat set you see.",
+   "trap": "The main feint is that several words look like they belong in straightforward map-terminology buckets, but some actually work better through wordplay and naming conventions."
   }
  ]
 }

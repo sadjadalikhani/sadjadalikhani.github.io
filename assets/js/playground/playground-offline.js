@@ -21,6 +21,7 @@
   if (window.PLAYGROUND_API) return; // live backend: nothing to intercept
 
   const PACKS = window.PLAYGROUND_PACKS || "/assets/json";
+  const PROFILER_URL = window.PLAYGROUND_PROFILER || "/playground/profiler/";
   const cache = {};
   const state = {};
 
@@ -40,6 +41,66 @@
     try { seen = Number(localStorage.getItem(key) || 0); } catch (e) { /* private mode */ }
     try { localStorage.setItem(key, String(seen + 1)); } catch (e) { /* ignore */ }
     return seen % len;
+  }
+
+  /* Matching the prompt to the pack --------------------------------------
+     A live agent writes a puzzle for whatever you asked. Offline there is a
+     fixed shelf, but ignoring the prompt entirely is worse than picking the
+     closest thing on it: asking for a wordle about volcanoes and getting one
+     about coffee reads as broken. So score each item against the prompt and
+     take the best, falling back to rotation only when nothing matches. */
+
+  const STOP = new Set(["a", "an", "the", "me", "my", "i", "to", "of", "on", "in", "for", "about",
+    "with", "and", "or", "please", "can", "you", "give", "make", "some", "something", "want",
+    "play", "teach", "show", "read", "let", "lets", "wordle", "connections", "trivia", "quiz",
+    "alibi", "piano", "poem", "poetry", "puzzle", "game", "grid", "case", "song", "lesson"]);
+
+  const words = (s) =>
+    String(s || "").toLowerCase().split(/[^a-z0-9']+/).filter((w) => w.length > 2 && !STOP.has(w));
+
+  /**
+   * Overlap between the prompt and an item's descriptive text.
+   *
+   * Whole-word hits count most; a prefix match still counts, so "volcano"
+   * finds "volcanoes" and "harbour" finds "harbours".
+   */
+  function score(promptWords, text) {
+    const hay = String(text || "").toLowerCase();
+    const hayWords = new Set(words(hay));
+    let s = 0;
+    for (const w of promptWords) {
+      if (hayWords.has(w)) { s += 3; continue; }
+      if (hay.indexOf(w) !== -1) { s += 2; continue; }
+      // Stemming-lite, so plurals and -ing forms don't miss.
+      const stem = w.replace(/(ies|es|s|ing|ed)$/, "");
+      if (stem.length > 3 && hay.indexOf(stem) !== -1) s += 1;
+    }
+    return s;
+  }
+
+  /** The text of an item a prompt could plausibly be describing. */
+  function describe(agent, item) {
+    if (agent === "wordle") return [item.theme, item.hint, item.intro].join(" ");
+    if (agent === "connections") return [item.title, item.intro, (item.words || []).join(" ")].join(" ");
+    if (agent === "trivia") return [item.title, item.intro].join(" ");
+    if (agent === "alibi") return [item.setting, item.crime, item.brief].join(" ");
+    if (agent === "piano") return [item.artifact?.title, item.artifact?.attribution].join(" ");
+    return "";
+  }
+
+  /** Best match for the prompt, or the next in rotation if nothing fits. */
+  function pick(agent, list, task) {
+    const pw = words(task);
+    if (pw.length) {
+      let best = null, bestScore = 0;
+      for (const item of list) {
+        const s = score(pw, describe(agent, item));
+        if (s > bestScore) { bestScore = s; best = item; }
+      }
+      // One solid word in common is enough; below that it's coincidence.
+      if (best && bestScore >= 3) return best;
+    }
+    return list[nextIndex(agent, list.length)];
   }
 
   const id = () => Math.random().toString(36).slice(2, 11);
@@ -203,7 +264,9 @@
       else if (/quiz|trivia|question/.test(p)) want = "trivia";
       else if (/alibi|suspect|crime|who did/.test(p)) want = "alibi";
       else if (/poem|poet|verse|sonnet|read me/.test(p)) want = "poetry";
-      else if (/song|tune|keys|teach me|melody|lesson|piano/.test(p)) want = "piano";
+      // "play" is safe to claim for the piano only because the live-only games
+      // are matched above — otherwise "let's play mafia" lands here.
+      else if (/song|tune|keys|teach me|melody|lesson|piano|\bplay\b/.test(p)) want = "piano";
     }
     // Nothing recognisable and nothing live-only asked for — "surprise me" is a
     // reasonable request, so answer it with a game rather than a refusal.
@@ -252,7 +315,7 @@
 
     const data = await pack(agent);
     const list = data.puzzles || data.quizzes || data.cases || data.lessons;
-    const item = list[nextIndex(agent, list.length)];
+    const item = pick(agent, list, task);
     const gid = id();
     state[gid] = { agent: agent, item: item, history: [] };
 
@@ -512,6 +575,35 @@
           { id: "alibi", label: "The Alibi", blurb: "Four accounts of one hour. Exactly two cannot both be true.", examples: ["an alibi case"] },
           { id: "piano", label: "Piano Tutor", blurb: "A falling-note lesson on a sampled piano, for a piece out of copyright.", examples: ["teach me Für Elise"] },
           { id: "poetry", label: "The Poetry Shelf", blurb: "A reading from the public-domain archive — the real text, not a recollection of it.", examples: ["read me something by Blake"] },
+          // Runs entirely in the browser off published instruments, so it needs
+          // no backend at all — it just lives on its own page.
+          {
+            id: "profiler", label: "The Profiler",
+            blurb: "Four decisions from behavioural economics, and what they actually measure.",
+            examples: [], href: PROFILER_URL,
+          },
+          // Shown so the crew is visible in full, marked so nobody wastes a
+          // prompt on them. All four need a model in the loop turn by turn.
+          {
+            id: "mafia", label: "Mafia", examples: [],
+            blurb: "Night and day, with the town played by agents who lie to keep their cover.",
+            unavailable: "Needs the live server",
+          },
+          {
+            id: "spy", label: "Who Is the Spy?", examples: [],
+            blurb: "Everyone shares a word except one. Ask, answer, and find the odd one out.",
+            unavailable: "Needs the live server",
+          },
+          {
+            id: "haggle", label: "The Haggle", examples: [],
+            blurb: "A bargaining benchmark: the agent plays a named tactic and the report scores you against it.",
+            unavailable: "Needs the live server",
+          },
+          {
+            id: "spotify", label: "Spotify Curator", examples: [],
+            blurb: "Builds real, playable playlists from a mood, genre or era.",
+            unavailable: "Needs the live server",
+          },
         ],
       });
     }
